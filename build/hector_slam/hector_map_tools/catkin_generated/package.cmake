@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_map_tools")
-set(hector_map_tools_VERSION "0.5.1")
+set(hector_map_tools_VERSION "0.5.2")
 set(hector_map_tools_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_map_tools_PACKAGE_FORMAT "1")
 set(hector_map_tools_BUILD_DEPENDS "nav_msgs" "eigen")

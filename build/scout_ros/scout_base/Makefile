@@ -48,25 +48,13 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -89,6 +77,29 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -126,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/scout_ros/scout_base/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/speed.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/speed.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/speed.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/speed.dir/rule
 
 # Convenience name for target.
@@ -168,12 +179,12 @@ speed: scout_ros/scout_base/CMakeFiles/speed.dir/rule
 
 # fast build rule for target.
 speed/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/build
 .PHONY : speed/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/scout_base_node.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/scout_base_node.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/scout_base_node.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_base_node.dir/rule
 
 # Convenience name for target.
@@ -183,12 +194,12 @@ scout_base_node: scout_ros/scout_base/CMakeFiles/scout_base_node.dir/rule
 
 # fast build rule for target.
 scout_base_node/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build
 .PHONY : scout_base_node/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -198,12 +209,12 @@ actionlib_generate_messages_eus: scout_ros/scout_base/CMakeFiles/actionlib_gener
 
 # fast build rule for target.
 actionlib_generate_messages_eus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_eus.dir/build
 .PHONY : actionlib_generate_messages_eus/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -213,12 +224,12 @@ actionlib_generate_messages_cpp: scout_ros/scout_base/CMakeFiles/actionlib_gener
 
 # fast build rule for target.
 actionlib_generate_messages_cpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_cpp.dir/build
 .PHONY : actionlib_generate_messages_cpp/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -228,12 +239,12 @@ actionlib_generate_messages_lisp: scout_ros/scout_base/CMakeFiles/actionlib_gene
 
 # fast build rule for target.
 actionlib_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_lisp.dir/build
 .PHONY : actionlib_generate_messages_lisp/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -243,12 +254,12 @@ actionlib_generate_messages_nodejs: scout_ros/scout_base/CMakeFiles/actionlib_ge
 
 # fast build rule for target.
 actionlib_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
 .PHONY : actionlib_generate_messages_nodejs/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -258,12 +269,12 @@ actionlib_generate_messages_py: scout_ros/scout_base/CMakeFiles/actionlib_genera
 
 # fast build rule for target.
 actionlib_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/build.make scout_ros/scout_base/CMakeFiles/actionlib_generate_messages_py.dir/build
 .PHONY : actionlib_generate_messages_py/fast
 
 # Convenience name for target.
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/rule
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_messenger.dir/rule
 
 # Convenience name for target.
@@ -273,7 +284,7 @@ scout_messenger: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/rule
 
 # fast build rule for target.
 scout_messenger/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build
 .PHONY : scout_messenger/fast
 
 src/scout_base_node.o: src/scout_base_node.cpp.o
@@ -282,7 +293,7 @@ src/scout_base_node.o: src/scout_base_node.cpp.o
 
 # target to build an object file
 src/scout_base_node.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.o
 .PHONY : src/scout_base_node.cpp.o
 
 src/scout_base_node.i: src/scout_base_node.cpp.i
@@ -291,7 +302,7 @@ src/scout_base_node.i: src/scout_base_node.cpp.i
 
 # target to preprocess a source file
 src/scout_base_node.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.i
 .PHONY : src/scout_base_node.cpp.i
 
 src/scout_base_node.s: src/scout_base_node.cpp.s
@@ -300,7 +311,7 @@ src/scout_base_node.s: src/scout_base_node.cpp.s
 
 # target to generate assembly for a file
 src/scout_base_node.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_base_node.dir/build.make scout_ros/scout_base/CMakeFiles/scout_base_node.dir/src/scout_base_node.cpp.s
 .PHONY : src/scout_base_node.cpp.s
 
 src/scout_messenger.o: src/scout_messenger.cpp.o
@@ -309,7 +320,7 @@ src/scout_messenger.o: src/scout_messenger.cpp.o
 
 # target to build an object file
 src/scout_messenger.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
 .PHONY : src/scout_messenger.cpp.o
 
 src/scout_messenger.i: src/scout_messenger.cpp.i
@@ -318,7 +329,7 @@ src/scout_messenger.i: src/scout_messenger.cpp.i
 
 # target to preprocess a source file
 src/scout_messenger.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i
 .PHONY : src/scout_messenger.cpp.i
 
 src/scout_messenger.s: src/scout_messenger.cpp.s
@@ -327,7 +338,7 @@ src/scout_messenger.s: src/scout_messenger.cpp.s
 
 # target to generate assembly for a file
 src/scout_messenger.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s
 .PHONY : src/scout_messenger.cpp.s
 
 src/speed.o: src/speed.cpp.o
@@ -336,7 +347,7 @@ src/speed.o: src/speed.cpp.o
 
 # target to build an object file
 src/speed.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.o
 .PHONY : src/speed.cpp.o
 
 src/speed.i: src/speed.cpp.i
@@ -345,7 +356,7 @@ src/speed.i: src/speed.cpp.i
 
 # target to preprocess a source file
 src/speed.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.i
 .PHONY : src/speed.cpp.i
 
 src/speed.s: src/speed.cpp.s
@@ -354,7 +365,7 @@ src/speed.s: src/speed.cpp.s
 
 # target to generate assembly for a file
 src/speed.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f scout_ros/scout_base/CMakeFiles/speed.dir/build.make scout_ros/scout_base/CMakeFiles/speed.dir/src/speed.cpp.s
 .PHONY : src/speed.cpp.s
 
 # Help Target
@@ -363,9 +374,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... install/local"
+	@echo "... test"
 	@echo "... speed"
 	@echo "... scout_base_node"
 	@echo "... actionlib_generate_messages_eus"
@@ -397,6 +409,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

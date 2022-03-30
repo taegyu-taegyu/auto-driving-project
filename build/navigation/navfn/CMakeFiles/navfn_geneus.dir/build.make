@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for navfn_geneus.
 
@@ -63,10 +63,10 @@ navigation/navfn/CMakeFiles/navfn_geneus.dir/build: navfn_geneus
 .PHONY : navigation/navfn/CMakeFiles/navfn_geneus.dir/build
 
 navigation/navfn/CMakeFiles/navfn_geneus.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/navfn && $(CMAKE_COMMAND) -P CMakeFiles/navfn_geneus.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn && $(CMAKE_COMMAND) -P CMakeFiles/navfn_geneus.dir/cmake_clean.cmake
 .PHONY : navigation/navfn/CMakeFiles/navfn_geneus.dir/clean
 
 navigation/navfn/CMakeFiles/navfn_geneus.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/navfn /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/navfn /home/wego/wego_ws/build/navigation/navfn/CMakeFiles/navfn_geneus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/navfn /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn/CMakeFiles/navfn_geneus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/navfn/CMakeFiles/navfn_geneus.dir/depend
 

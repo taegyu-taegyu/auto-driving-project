@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_nav_msgs_generate_messages_nodejs"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetNormal.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetDistanceToObstacle.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetRecoveryInfo.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetRobotTrajectory.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetSearchPosition.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetNormal.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetDistanceToObstacle.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetRecoveryInfo.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetRobotTrajectory.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_nav_msgs/srv/GetSearchPosition.js"
 )
 
 # Per-language clean rules from dependency scanning.

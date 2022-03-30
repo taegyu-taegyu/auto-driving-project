@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libmap_server_image_loader.pdb"
-  "/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/wego/wego_ws/src/hector_slam/hector_imu_attitude_to_tf/src/imu_attitude_to_tf_node.cpp
+/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_imu_attitude_to_tf/src/imu_attitude_to_tf_node.cpp
 ros/ros.h
-/home/wego/wego_ws/src/hector_slam/hector_imu_attitude_to_tf/src/ros/ros.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_imu_attitude_to_tf/src/ros/ros.h
 tf/transform_broadcaster.h
-/home/wego/wego_ws/src/hector_slam/hector_imu_attitude_to_tf/src/tf/transform_broadcaster.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_imu_attitude_to_tf/src/tf/transform_broadcaster.h
 sensor_msgs/Imu.h
-/home/wego/wego_ws/src/hector_slam/hector_imu_attitude_to_tf/src/sensor_msgs/Imu.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_imu_attitude_to_tf/src/sensor_msgs/Imu.h
 
 /opt/ros/melodic/include/geometry_msgs/Point.h
 string

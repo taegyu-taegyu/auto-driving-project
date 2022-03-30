@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -67,6 +67,39 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -90,28 +123,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -126,14 +137,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/ugv_sdk/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/ugv_sdk/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 ugv_sdk/CMakeFiles/ugv_sdk.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/CMakeFiles/ugv_sdk.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 ugv_sdk/CMakeFiles/ugv_sdk.dir/rule
 .PHONY : ugv_sdk/CMakeFiles/ugv_sdk.dir/rule
 
 # Convenience name for target.
@@ -168,7 +179,7 @@ ugv_sdk: ugv_sdk/CMakeFiles/ugv_sdk.dir/rule
 
 # fast build rule for target.
 ugv_sdk/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/build
 .PHONY : ugv_sdk/fast
 
 src/async_port/async_can.o: src/async_port/async_can.cpp.o
@@ -177,7 +188,7 @@ src/async_port/async_can.o: src/async_port/async_can.cpp.o
 
 # target to build an object file
 src/async_port/async_can.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.o
 .PHONY : src/async_port/async_can.cpp.o
 
 src/async_port/async_can.i: src/async_port/async_can.cpp.i
@@ -186,7 +197,7 @@ src/async_port/async_can.i: src/async_port/async_can.cpp.i
 
 # target to preprocess a source file
 src/async_port/async_can.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.i
 .PHONY : src/async_port/async_can.cpp.i
 
 src/async_port/async_can.s: src/async_port/async_can.cpp.s
@@ -195,7 +206,7 @@ src/async_port/async_can.s: src/async_port/async_can.cpp.s
 
 # target to generate assembly for a file
 src/async_port/async_can.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_can.cpp.s
 .PHONY : src/async_port/async_can.cpp.s
 
 src/async_port/async_serial.o: src/async_port/async_serial.cpp.o
@@ -204,7 +215,7 @@ src/async_port/async_serial.o: src/async_port/async_serial.cpp.o
 
 # target to build an object file
 src/async_port/async_serial.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.o
 .PHONY : src/async_port/async_serial.cpp.o
 
 src/async_port/async_serial.i: src/async_port/async_serial.cpp.i
@@ -213,7 +224,7 @@ src/async_port/async_serial.i: src/async_port/async_serial.cpp.i
 
 # target to preprocess a source file
 src/async_port/async_serial.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.i
 .PHONY : src/async_port/async_serial.cpp.i
 
 src/async_port/async_serial.s: src/async_port/async_serial.cpp.s
@@ -222,7 +233,7 @@ src/async_port/async_serial.s: src/async_port/async_serial.cpp.s
 
 # target to generate assembly for a file
 src/async_port/async_serial.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/async_port/async_serial.cpp.s
 .PHONY : src/async_port/async_serial.cpp.s
 
 src/mobile_robot/bunker_robot.o: src/mobile_robot/bunker_robot.cpp.o
@@ -231,7 +242,7 @@ src/mobile_robot/bunker_robot.o: src/mobile_robot/bunker_robot.cpp.o
 
 # target to build an object file
 src/mobile_robot/bunker_robot.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.o
 .PHONY : src/mobile_robot/bunker_robot.cpp.o
 
 src/mobile_robot/bunker_robot.i: src/mobile_robot/bunker_robot.cpp.i
@@ -240,7 +251,7 @@ src/mobile_robot/bunker_robot.i: src/mobile_robot/bunker_robot.cpp.i
 
 # target to preprocess a source file
 src/mobile_robot/bunker_robot.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.i
 .PHONY : src/mobile_robot/bunker_robot.cpp.i
 
 src/mobile_robot/bunker_robot.s: src/mobile_robot/bunker_robot.cpp.s
@@ -249,7 +260,7 @@ src/mobile_robot/bunker_robot.s: src/mobile_robot/bunker_robot.cpp.s
 
 # target to generate assembly for a file
 src/mobile_robot/bunker_robot.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/bunker_robot.cpp.s
 .PHONY : src/mobile_robot/bunker_robot.cpp.s
 
 src/mobile_robot/hunter_robot.o: src/mobile_robot/hunter_robot.cpp.o
@@ -258,7 +269,7 @@ src/mobile_robot/hunter_robot.o: src/mobile_robot/hunter_robot.cpp.o
 
 # target to build an object file
 src/mobile_robot/hunter_robot.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.o
 .PHONY : src/mobile_robot/hunter_robot.cpp.o
 
 src/mobile_robot/hunter_robot.i: src/mobile_robot/hunter_robot.cpp.i
@@ -267,7 +278,7 @@ src/mobile_robot/hunter_robot.i: src/mobile_robot/hunter_robot.cpp.i
 
 # target to preprocess a source file
 src/mobile_robot/hunter_robot.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.i
 .PHONY : src/mobile_robot/hunter_robot.cpp.i
 
 src/mobile_robot/hunter_robot.s: src/mobile_robot/hunter_robot.cpp.s
@@ -276,7 +287,7 @@ src/mobile_robot/hunter_robot.s: src/mobile_robot/hunter_robot.cpp.s
 
 # target to generate assembly for a file
 src/mobile_robot/hunter_robot.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/hunter_robot.cpp.s
 .PHONY : src/mobile_robot/hunter_robot.cpp.s
 
 src/mobile_robot/scout_robot.o: src/mobile_robot/scout_robot.cpp.o
@@ -285,7 +296,7 @@ src/mobile_robot/scout_robot.o: src/mobile_robot/scout_robot.cpp.o
 
 # target to build an object file
 src/mobile_robot/scout_robot.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.o
 .PHONY : src/mobile_robot/scout_robot.cpp.o
 
 src/mobile_robot/scout_robot.i: src/mobile_robot/scout_robot.cpp.i
@@ -294,7 +305,7 @@ src/mobile_robot/scout_robot.i: src/mobile_robot/scout_robot.cpp.i
 
 # target to preprocess a source file
 src/mobile_robot/scout_robot.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.i
 .PHONY : src/mobile_robot/scout_robot.cpp.i
 
 src/mobile_robot/scout_robot.s: src/mobile_robot/scout_robot.cpp.s
@@ -303,7 +314,7 @@ src/mobile_robot/scout_robot.s: src/mobile_robot/scout_robot.cpp.s
 
 # target to generate assembly for a file
 src/mobile_robot/scout_robot.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/mobile_robot/scout_robot.cpp.s
 .PHONY : src/mobile_robot/scout_robot.cpp.s
 
 src/protocol_v1/agilex_msg_parser_v1.o: src/protocol_v1/agilex_msg_parser_v1.c.o
@@ -312,7 +323,7 @@ src/protocol_v1/agilex_msg_parser_v1.o: src/protocol_v1/agilex_msg_parser_v1.c.o
 
 # target to build an object file
 src/protocol_v1/agilex_msg_parser_v1.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.o
 .PHONY : src/protocol_v1/agilex_msg_parser_v1.c.o
 
 src/protocol_v1/agilex_msg_parser_v1.i: src/protocol_v1/agilex_msg_parser_v1.c.i
@@ -321,7 +332,7 @@ src/protocol_v1/agilex_msg_parser_v1.i: src/protocol_v1/agilex_msg_parser_v1.c.i
 
 # target to preprocess a source file
 src/protocol_v1/agilex_msg_parser_v1.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.i
 .PHONY : src/protocol_v1/agilex_msg_parser_v1.c.i
 
 src/protocol_v1/agilex_msg_parser_v1.s: src/protocol_v1/agilex_msg_parser_v1.c.s
@@ -330,7 +341,7 @@ src/protocol_v1/agilex_msg_parser_v1.s: src/protocol_v1/agilex_msg_parser_v1.c.s
 
 # target to generate assembly for a file
 src/protocol_v1/agilex_msg_parser_v1.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.s
 .PHONY : src/protocol_v1/agilex_msg_parser_v1.c.s
 
 src/protocol_v2/agilex_msg_parser_v2.o: src/protocol_v2/agilex_msg_parser_v2.c.o
@@ -339,7 +350,7 @@ src/protocol_v2/agilex_msg_parser_v2.o: src/protocol_v2/agilex_msg_parser_v2.c.o
 
 # target to build an object file
 src/protocol_v2/agilex_msg_parser_v2.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.o
 .PHONY : src/protocol_v2/agilex_msg_parser_v2.c.o
 
 src/protocol_v2/agilex_msg_parser_v2.i: src/protocol_v2/agilex_msg_parser_v2.c.i
@@ -348,7 +359,7 @@ src/protocol_v2/agilex_msg_parser_v2.i: src/protocol_v2/agilex_msg_parser_v2.c.i
 
 # target to preprocess a source file
 src/protocol_v2/agilex_msg_parser_v2.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.i
 .PHONY : src/protocol_v2/agilex_msg_parser_v2.c.i
 
 src/protocol_v2/agilex_msg_parser_v2.s: src/protocol_v2/agilex_msg_parser_v2.c.s
@@ -357,7 +368,7 @@ src/protocol_v2/agilex_msg_parser_v2.s: src/protocol_v2/agilex_msg_parser_v2.c.s
 
 # target to generate assembly for a file
 src/protocol_v2/agilex_msg_parser_v2.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.s
 .PHONY : src/protocol_v2/agilex_msg_parser_v2.c.s
 
 src/protocol_v2/protocol_v2_parser.o: src/protocol_v2/protocol_v2_parser.cpp.o
@@ -366,7 +377,7 @@ src/protocol_v2/protocol_v2_parser.o: src/protocol_v2/protocol_v2_parser.cpp.o
 
 # target to build an object file
 src/protocol_v2/protocol_v2_parser.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.o
 .PHONY : src/protocol_v2/protocol_v2_parser.cpp.o
 
 src/protocol_v2/protocol_v2_parser.i: src/protocol_v2/protocol_v2_parser.cpp.i
@@ -375,7 +386,7 @@ src/protocol_v2/protocol_v2_parser.i: src/protocol_v2/protocol_v2_parser.cpp.i
 
 # target to preprocess a source file
 src/protocol_v2/protocol_v2_parser.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.i
 .PHONY : src/protocol_v2/protocol_v2_parser.cpp.i
 
 src/protocol_v2/protocol_v2_parser.s: src/protocol_v2/protocol_v2_parser.cpp.s
@@ -384,7 +395,7 @@ src/protocol_v2/protocol_v2_parser.s: src/protocol_v2/protocol_v2_parser.cpp.s
 
 # target to generate assembly for a file
 src/protocol_v2/protocol_v2_parser.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.s
 .PHONY : src/protocol_v2/protocol_v2_parser.cpp.s
 
 src/utilities/protocol_detector.o: src/utilities/protocol_detector.cpp.o
@@ -393,7 +404,7 @@ src/utilities/protocol_detector.o: src/utilities/protocol_detector.cpp.o
 
 # target to build an object file
 src/utilities/protocol_detector.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.o
 .PHONY : src/utilities/protocol_detector.cpp.o
 
 src/utilities/protocol_detector.i: src/utilities/protocol_detector.cpp.i
@@ -402,7 +413,7 @@ src/utilities/protocol_detector.i: src/utilities/protocol_detector.cpp.i
 
 # target to preprocess a source file
 src/utilities/protocol_detector.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.i
 .PHONY : src/utilities/protocol_detector.cpp.i
 
 src/utilities/protocol_detector.s: src/utilities/protocol_detector.cpp.s
@@ -411,7 +422,7 @@ src/utilities/protocol_detector.s: src/utilities/protocol_detector.cpp.s
 
 # target to generate assembly for a file
 src/utilities/protocol_detector.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f ugv_sdk/CMakeFiles/ugv_sdk.dir/build.make ugv_sdk/CMakeFiles/ugv_sdk.dir/src/utilities/protocol_detector.cpp.s
 .PHONY : src/utilities/protocol_detector.cpp.s
 
 # Help Target
@@ -421,11 +432,12 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... edit_cache"
-	@echo "... ugv_sdk"
-	@echo "... rebuild_cache"
-	@echo "... list_install_components"
 	@echo "... install/local"
+	@echo "... test"
+	@echo "... list_install_components"
+	@echo "... ugv_sdk"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
 	@echo "... install"
 	@echo "... src/async_port/async_can.o"
 	@echo "... src/async_port/async_can.i"
@@ -465,6 +477,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

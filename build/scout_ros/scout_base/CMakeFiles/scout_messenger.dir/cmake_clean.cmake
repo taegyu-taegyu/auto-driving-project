@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libscout_messenger.pdb"
-  "/home/wego/wego_ws/devel/lib/libscout_messenger.a"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a"
 )
 
 # Per-language clean rules from dependency scanning.

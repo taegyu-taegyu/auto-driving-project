@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/geotiff_writer.dir/src/geotiff_writer/geotiff_writer.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libgeotiff_writer.pdb"
-  "/home/wego/wego_ws/devel/lib/libgeotiff_writer.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libgeotiff_writer.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libgeotiff_writer.so"
 )
 
 # Per-language clean rules from dependency scanning.

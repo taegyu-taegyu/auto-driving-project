@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_imu_attitude_to_tf")
-set(hector_imu_attitude_to_tf_VERSION "0.5.1")
+set(hector_imu_attitude_to_tf_VERSION "0.5.2")
 set(hector_imu_attitude_to_tf_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_imu_attitude_to_tf_PACKAGE_FORMAT "2")
 set(hector_imu_attitude_to_tf_BUILD_DEPENDS "roscpp" "sensor_msgs" "tf")

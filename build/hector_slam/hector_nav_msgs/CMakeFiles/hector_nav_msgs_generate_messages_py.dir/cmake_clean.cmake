@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_nav_msgs_generate_messages_py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/__init__.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetNormal.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetDistanceToObstacle.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetRecoveryInfo.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetRobotTrajectory.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/_GetSearchPosition.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/hector_nav_msgs/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

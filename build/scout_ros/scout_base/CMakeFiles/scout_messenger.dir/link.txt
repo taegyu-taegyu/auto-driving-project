@@ -1,2 +1,2 @@
-/usr/bin/ar qc /home/wego/wego_ws/devel/lib/libscout_messenger.a  CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
-/usr/bin/ranlib /home/wego/wego_ws/devel/lib/libscout_messenger.a
+/usr/bin/ar qc /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a  CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
+/usr/bin/ranlib /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a

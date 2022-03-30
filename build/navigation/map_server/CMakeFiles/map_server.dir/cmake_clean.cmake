@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/map_server.dir/src/main.cpp.o"
-  "/home/wego/wego_ws/devel/lib/map_server/map_server.pdb"
-  "/home/wego/wego_ws/devel/lib/map_server/map_server"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/map_server/map_server.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/map_server/map_server"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_nav_msgs")
-set(hector_nav_msgs_VERSION "0.5.1")
+set(hector_nav_msgs_VERSION "0.5.2")
 set(hector_nav_msgs_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_nav_msgs_PACKAGE_FORMAT "2")
 set(hector_nav_msgs_BUILD_DEPENDS "message_generation" "nav_msgs" "geometry_msgs" "std_msgs")

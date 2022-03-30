@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/amcl.dir/src/amcl_node.cpp.o"
-  "/home/wego/wego_ws/devel/lib/amcl/amcl.pdb"
-  "/home/wego/wego_ws/devel/lib/amcl/amcl"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/amcl/amcl.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/amcl/amcl"
 )
 
 # Per-language clean rules from dependency scanning.

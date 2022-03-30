@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/wego
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/wego
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,17 +38,17 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/wego/catkin_generated/installspace/wego.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/wego/catkin_generated/installspace/wego.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wego/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/wego/catkin_generated/installspace/wegoConfig.cmake"
-    "/home/wego/wego_ws/build/wego/catkin_generated/installspace/wegoConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/wego/catkin_generated/installspace/wegoConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/wego/catkin_generated/installspace/wegoConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wego" TYPE FILE FILES "/home/wego/wego_ws/src/wego/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/wego" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/wego/package.xml")
 endif()
 

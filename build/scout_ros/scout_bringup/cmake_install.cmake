@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/scout_ros/scout_bringup
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_bringup
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,24 +38,24 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringup.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringup.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_bringup/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringupConfig.cmake"
-    "/home/wego/wego_ws/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringupConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringupConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_bringup/catkin_generated/installspace/scout_bringupConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_bringup" TYPE FILE FILES "/home/wego/wego_ws/src/scout_ros/scout_bringup/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_bringup" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_bringup/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_bringup" TYPE DIRECTORY FILES
-    "/home/wego/wego_ws/src/scout_ros/scout_bringup/launch"
-    "/home/wego/wego_ws/src/scout_ros/scout_bringup/scripts"
+    "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_bringup/launch"
+    "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_bringup/scripts"
     )
 endif()
 

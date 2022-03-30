@@ -67,14 +67,14 @@ set(dwa_local_planner_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(dwa_local_planner_SOURCE_PREFIX /home/wego/wego_ws/src/navigation/dwa_local_planner)
-  set(dwa_local_planner_DEVEL_PREFIX /home/wego/wego_ws/devel)
+  set(dwa_local_planner_SOURCE_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/dwa_local_planner)
+  set(dwa_local_planner_DEVEL_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/devel)
   set(dwa_local_planner_INSTALL_PREFIX "")
   set(dwa_local_planner_PREFIX ${dwa_local_planner_DEVEL_PREFIX})
 else()
   set(dwa_local_planner_SOURCE_PREFIX "")
   set(dwa_local_planner_DEVEL_PREFIX "")
-  set(dwa_local_planner_INSTALL_PREFIX /home/wego/wego_ws/install)
+  set(dwa_local_planner_INSTALL_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/install)
   set(dwa_local_planner_PREFIX ${dwa_local_planner_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wego/wego_ws/install/lib;/home/wego/wego_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/kw-cobot/wego_ws/auto-driving-project/install/lib;/home/kw-cobot/wego_ws/auto-driving-project/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

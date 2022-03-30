@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,28 +68,6 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -101,16 +79,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
+# Special rule for the target test
+test/fast: test
 
-.PHONY : rebuild_cache/fast
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -124,16 +102,49 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/amcl/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/amcl/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,142 +154,187 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/amcl_map.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_map.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/amcl_map.dir/rule
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
 
 # Convenience name for target.
-amcl_map: navigation/amcl/CMakeFiles/amcl_map.dir/rule
+_run_tests_amcl_rostest_test_rosie_multilaser.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
 
-.PHONY : amcl_map
+.PHONY : _run_tests_amcl_rostest_test_rosie_multilaser.xml
 
 # fast build rule for target.
-amcl_map/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/build
-.PHONY : amcl_map/fast
+_run_tests_amcl_rostest_test_rosie_multilaser.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_rosie_multilaser.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/amcl_pf.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_pf.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/amcl_pf.dir/rule
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
 
 # Convenience name for target.
-amcl_pf: navigation/amcl/CMakeFiles/amcl_pf.dir/rule
+run_tests_amcl_rostest_test_rosie_multilaser.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/rule
 
-.PHONY : amcl_pf
+.PHONY : run_tests_amcl_rostest_test_rosie_multilaser.xml
 
 # fast build rule for target.
-amcl_pf/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/build
-.PHONY : amcl_pf/fast
+run_tests_amcl_rostest_test_rosie_multilaser.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_rosie_multilaser.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_rosie_multilaser.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
 
 # Convenience name for target.
-topic_tools_generate_messages_eus: navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
 
-.PHONY : topic_tools_generate_messages_eus
+.PHONY : _run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml
 
 # fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
+_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
 
 # Convenience name for target.
-topic_tools_generate_messages_cpp: navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/rule
 
-.PHONY : topic_tools_generate_messages_cpp
+.PHONY : run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml
 
 # fast build rule for target.
-topic_tools_generate_messages_cpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-.PHONY : topic_tools_generate_messages_cpp/fast
+run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/amcl_sensors.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
 
 # Convenience name for target.
-amcl_sensors: navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
+_run_tests_amcl_rostest_test_small_loop_prf.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
 
-.PHONY : amcl_sensors
+.PHONY : _run_tests_amcl_rostest_test_small_loop_prf.xml
 
 # fast build rule for target.
-amcl_sensors/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/build
-.PHONY : amcl_sensors/fast
+_run_tests_amcl_rostest_test_small_loop_prf.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_small_loop_prf.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_small_loop_prf.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
 
 # Convenience name for target.
-topic_tools_generate_messages_nodejs: navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+_run_tests_amcl_rostest_test_global_localization_stage.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
 
-.PHONY : topic_tools_generate_messages_nodejs
+.PHONY : _run_tests_amcl_rostest_test_global_localization_stage.xml
 
 # fast build rule for target.
-topic_tools_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
-.PHONY : topic_tools_generate_messages_nodejs/fast
+_run_tests_amcl_rostest_test_global_localization_stage.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_global_localization_stage.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_global_localization_stage.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/amcl.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/amcl.dir/rule
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
 
 # Convenience name for target.
-amcl: navigation/amcl/CMakeFiles/amcl.dir/rule
+run_tests_amcl_rostest_test_global_localization_stage.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/rule
 
-.PHONY : amcl
+.PHONY : run_tests_amcl_rostest_test_global_localization_stage.xml
 
 # fast build rule for target.
-amcl/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/build
-.PHONY : amcl/fast
+run_tests_amcl_rostest_test_global_localization_stage.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_global_localization_stage.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_global_localization_stage.xml/fast
 
 # Convenience name for target.
-navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
 
 # Convenience name for target.
-topic_tools_generate_messages_lisp: navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+_run_tests_amcl_rostest_test_basic_localization_stage.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
 
-.PHONY : topic_tools_generate_messages_lisp
+.PHONY : _run_tests_amcl_rostest_test_basic_localization_stage.xml
 
 # fast build rule for target.
-topic_tools_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-.PHONY : topic_tools_generate_messages_lisp/fast
+_run_tests_amcl_rostest_test_basic_localization_stage.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_basic_localization_stage.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_basic_localization_stage.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_basic_localization_stage.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_basic_localization_stage.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_basic_localization_stage.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_basic_localization_stage.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+
+.PHONY : _run_tests_amcl_rostest_test_set_initial_pose_delayed.xml
+
+# fast build rule for target.
+_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_set_initial_pose_delayed.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_small_loop_prf.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_small_loop_prf.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_small_loop_prf.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_small_loop_prf.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_small_loop_prf.xml/fast
 
 # Convenience name for target.
 navigation/amcl/CMakeFiles/amcl_gencfg.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_gencfg.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_gencfg.dir/rule
 .PHONY : navigation/amcl/CMakeFiles/amcl_gencfg.dir/rule
 
 # Convenience name for target.
@@ -288,12 +344,237 @@ amcl_gencfg: navigation/amcl/CMakeFiles/amcl_gencfg.dir/rule
 
 # fast build rule for target.
 amcl_gencfg/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_gencfg.dir/build.make navigation/amcl/CMakeFiles/amcl_gencfg.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_gencfg.dir/build.make navigation/amcl/CMakeFiles/amcl_gencfg.dir/build
 .PHONY : amcl_gencfg/fast
 
 # Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_small_loop_prf_indexed.bag: navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/rule
+
+.PHONY : amcl_small_loop_prf_indexed.bag
+
+# fast build rule for target.
+amcl_small_loop_prf_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_small_loop_prf_indexed.bag.dir/build
+.PHONY : amcl_small_loop_prf_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_eus: navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
+
+.PHONY : topic_tools_generate_messages_eus
+
+# fast build rule for target.
+topic_tools_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_eus.dir/build
+.PHONY : topic_tools_generate_messages_eus/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+
+.PHONY : _run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml
+
+# fast build rule for target.
+_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_texas_greenroom_loop.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_texas_greenroom_loop.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_texas_greenroom_loop.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_texas_greenroom_loop.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# fast build rule for target.
+std_srvs_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/build.make navigation/amcl/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_eus: navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_eus
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+.PHONY : diagnostic_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_cpp: navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_texas_greenroom_loop_indexed.bag: navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/rule
+
+.PHONY : amcl_texas_greenroom_loop_indexed.bag
+
+# fast build rule for target.
+amcl_texas_greenroom_loop_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_texas_greenroom_loop_indexed.bag.dir/build
+.PHONY : amcl_texas_greenroom_loop_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_lisp: navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_lisp
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_lisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+.PHONY : diagnostic_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_lisp: navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
+
+.PHONY : topic_tools_generate_messages_lisp
+
+# fast build rule for target.
+topic_tools_generate_messages_lisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
+.PHONY : topic_tools_generate_messages_lisp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+.PHONY : std_srvs_generate_messages_lisp
+
+# fast build rule for target.
+std_srvs_generate_messages_lisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make navigation/amcl/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# fast build rule for target.
+std_srvs_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make navigation/amcl/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl_rostest_test_texas_greenroom_loop.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/rule
+
+.PHONY : _run_tests_amcl_rostest_test_texas_greenroom_loop.xml
+
+# fast build rule for target.
+_run_tests_amcl_rostest_test_texas_greenroom_loop.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_texas_greenroom_loop.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_texas_greenroom_loop.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest: navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/rule
+
+.PHONY : run_tests_amcl_rostest
+
+# fast build rule for target.
+run_tests_amcl_rostest/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest.dir/build
+.PHONY : run_tests_amcl_rostest/fast
+
+# Convenience name for target.
 navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 .PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -303,8 +584,368 @@ topic_tools_generate_messages_py: navigation/amcl/CMakeFiles/topic_tools_generat
 
 # fast build rule for target.
 topic_tools_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_py.dir/build
 .PHONY : topic_tools_generate_messages_py/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_sensors.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
+
+# Convenience name for target.
+amcl_sensors: navigation/amcl/CMakeFiles/amcl_sensors.dir/rule
+
+.PHONY : amcl_sensors
+
+# fast build rule for target.
+amcl_sensors/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/build
+.PHONY : amcl_sensors/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_basic_localization_stage_indexed.bag: navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/rule
+
+.PHONY : amcl_basic_localization_stage_indexed.bag
+
+# fast build rule for target.
+amcl_basic_localization_stage_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_basic_localization_stage_indexed.bag.dir/build
+.PHONY : amcl_basic_localization_stage_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_nodejs: navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_srvs_generate_messages_nodejs
+
+# fast build rule for target.
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make navigation/amcl/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_set_initial_pose_delayed.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_set_initial_pose_delayed.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_set_initial_pose_delayed.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose_delayed.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_set_initial_pose_delayed.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/rule
+
+# Convenience name for target.
+amcl_willow-full-0.05.pgm: navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/rule
+
+.PHONY : amcl_willow-full-0.05.pgm
+
+# fast build rule for target.
+amcl_willow-full-0.05.pgm/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/build.make navigation/amcl/CMakeFiles/amcl_willow-full-0.05.pgm.dir/build
+.PHONY : amcl_willow-full-0.05.pgm/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_cpp: navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
+
+.PHONY : topic_tools_generate_messages_cpp
+
+# fast build rule for target.
+topic_tools_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
+.PHONY : topic_tools_generate_messages_cpp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_global_localization_stage_indexed.bag: navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/rule
+
+.PHONY : amcl_global_localization_stage_indexed.bag
+
+# fast build rule for target.
+amcl_global_localization_stage_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_global_localization_stage_indexed.bag.dir/build
+.PHONY : amcl_global_localization_stage_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_nodejs: navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+.PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_texas_willow_hallway_loop_indexed.bag: navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/rule
+
+.PHONY : amcl_texas_willow_hallway_loop_indexed.bag
+
+# fast build rule for target.
+amcl_texas_willow_hallway_loop_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_texas_willow_hallway_loop_indexed.bag.dir/build
+.PHONY : amcl_texas_willow_hallway_loop_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_pf.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_pf.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_pf.dir/rule
+
+# Convenience name for target.
+amcl_pf: navigation/amcl/CMakeFiles/amcl_pf.dir/rule
+
+.PHONY : amcl_pf
+
+# fast build rule for target.
+amcl_pf/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/build
+.PHONY : amcl_pf/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make navigation/amcl/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/rule
+
+# Convenience name for target.
+amcl_small_loop_crazy_driving_prg_indexed.bag: navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/rule
+
+.PHONY : amcl_small_loop_crazy_driving_prg_indexed.bag
+
+# fast build rule for target.
+amcl_small_loop_crazy_driving_prg_indexed.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_small_loop_crazy_driving_prg_indexed.bag.dir/build
+.PHONY : amcl_small_loop_crazy_driving_prg_indexed.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_map.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_map.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_map.dir/rule
+
+# Convenience name for target.
+amcl_map: navigation/amcl/CMakeFiles/amcl_map.dir/rule
+
+.PHONY : amcl_map
+
+# fast build rule for target.
+amcl_map/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/build
+.PHONY : amcl_map/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/rule
+
+# Convenience name for target.
+amcl_rosie_localization_stage.bag: navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/rule
+
+.PHONY : amcl_rosie_localization_stage.bag
+
+# fast build rule for target.
+amcl_rosie_localization_stage.bag/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/build.make navigation/amcl/CMakeFiles/amcl_rosie_localization_stage.bag.dir/build
+.PHONY : amcl_rosie_localization_stage.bag/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+topic_tools_generate_messages_nodejs: navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
+
+.PHONY : topic_tools_generate_messages_nodejs
+
+# fast build rule for target.
+topic_tools_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make navigation/amcl/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
+.PHONY : topic_tools_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/rule
+
+# Convenience name for target.
+amcl_willow-full.pgm: navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/rule
+
+.PHONY : amcl_willow-full.pgm
+
+# fast build rule for target.
+amcl_willow-full.pgm/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/build.make navigation/amcl/CMakeFiles/amcl_willow-full.pgm.dir/build
+.PHONY : amcl_willow-full.pgm/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/amcl.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/amcl.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/amcl.dir/rule
+
+# Convenience name for target.
+amcl: navigation/amcl/CMakeFiles/amcl.dir/rule
+
+.PHONY : amcl
+
+# fast build rule for target.
+amcl/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/build
+.PHONY : amcl/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl.dir/rule
+
+# Convenience name for target.
+run_tests_amcl: navigation/amcl/CMakeFiles/run_tests_amcl.dir/rule
+
+.PHONY : run_tests_amcl
+
+# fast build rule for target.
+run_tests_amcl/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl.dir/build
+.PHONY : run_tests_amcl/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make navigation/amcl/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl_rostest: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/rule
+
+.PHONY : _run_tests_amcl_rostest
+
+# fast build rule for target.
+_run_tests_amcl_rostest/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest.dir/build
+.PHONY : _run_tests_amcl_rostest/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+
+# Convenience name for target.
+run_tests_amcl_rostest_test_set_initial_pose.xml: navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+
+.PHONY : run_tests_amcl_rostest_test_set_initial_pose.xml
+
+# fast build rule for target.
+run_tests_amcl_rostest_test_set_initial_pose.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/build.make navigation/amcl/CMakeFiles/run_tests_amcl_rostest_test_set_initial_pose.xml.dir/build
+.PHONY : run_tests_amcl_rostest_test_set_initial_pose.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl_rostest_test_set_initial_pose.xml: navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/rule
+
+.PHONY : _run_tests_amcl_rostest_test_set_initial_pose.xml
+
+# fast build rule for target.
+_run_tests_amcl_rostest_test_set_initial_pose.xml/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl_rostest_test_set_initial_pose.xml.dir/build
+.PHONY : _run_tests_amcl_rostest_test_set_initial_pose.xml/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/_run_tests_amcl.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/_run_tests_amcl.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/_run_tests_amcl.dir/rule
+
+# Convenience name for target.
+_run_tests_amcl: navigation/amcl/CMakeFiles/_run_tests_amcl.dir/rule
+
+.PHONY : _run_tests_amcl
+
+# fast build rule for target.
+_run_tests_amcl/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/_run_tests_amcl.dir/build.make navigation/amcl/CMakeFiles/_run_tests_amcl.dir/build
+.PHONY : _run_tests_amcl/fast
+
+# Convenience name for target.
+navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/rule
+.PHONY : navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/rule
+
+# Convenience name for target.
+clean_test_results_amcl: navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/rule
+
+.PHONY : clean_test_results_amcl
+
+# fast build rule for target.
+clean_test_results_amcl/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/build.make navigation/amcl/CMakeFiles/clean_test_results_amcl.dir/build
+.PHONY : clean_test_results_amcl/fast
 
 src/amcl/map/map.o: src/amcl/map/map.c.o
 
@@ -312,7 +953,7 @@ src/amcl/map/map.o: src/amcl/map/map.c.o
 
 # target to build an object file
 src/amcl/map/map.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.o
 .PHONY : src/amcl/map/map.c.o
 
 src/amcl/map/map.i: src/amcl/map/map.c.i
@@ -321,7 +962,7 @@ src/amcl/map/map.i: src/amcl/map/map.c.i
 
 # target to preprocess a source file
 src/amcl/map/map.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.i
 .PHONY : src/amcl/map/map.c.i
 
 src/amcl/map/map.s: src/amcl/map/map.c.s
@@ -330,7 +971,7 @@ src/amcl/map/map.s: src/amcl/map/map.c.s
 
 # target to generate assembly for a file
 src/amcl/map/map.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map.c.s
 .PHONY : src/amcl/map/map.c.s
 
 src/amcl/map/map_cspace.o: src/amcl/map/map_cspace.cpp.o
@@ -339,7 +980,7 @@ src/amcl/map/map_cspace.o: src/amcl/map/map_cspace.cpp.o
 
 # target to build an object file
 src/amcl/map/map_cspace.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.o
 .PHONY : src/amcl/map/map_cspace.cpp.o
 
 src/amcl/map/map_cspace.i: src/amcl/map/map_cspace.cpp.i
@@ -348,7 +989,7 @@ src/amcl/map/map_cspace.i: src/amcl/map/map_cspace.cpp.i
 
 # target to preprocess a source file
 src/amcl/map/map_cspace.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.i
 .PHONY : src/amcl/map/map_cspace.cpp.i
 
 src/amcl/map/map_cspace.s: src/amcl/map/map_cspace.cpp.s
@@ -357,7 +998,7 @@ src/amcl/map/map_cspace.s: src/amcl/map/map_cspace.cpp.s
 
 # target to generate assembly for a file
 src/amcl/map/map_cspace.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_cspace.cpp.s
 .PHONY : src/amcl/map/map_cspace.cpp.s
 
 src/amcl/map/map_draw.o: src/amcl/map/map_draw.c.o
@@ -366,7 +1007,7 @@ src/amcl/map/map_draw.o: src/amcl/map/map_draw.c.o
 
 # target to build an object file
 src/amcl/map/map_draw.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.o
 .PHONY : src/amcl/map/map_draw.c.o
 
 src/amcl/map/map_draw.i: src/amcl/map/map_draw.c.i
@@ -375,7 +1016,7 @@ src/amcl/map/map_draw.i: src/amcl/map/map_draw.c.i
 
 # target to preprocess a source file
 src/amcl/map/map_draw.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.i
 .PHONY : src/amcl/map/map_draw.c.i
 
 src/amcl/map/map_draw.s: src/amcl/map/map_draw.c.s
@@ -384,7 +1025,7 @@ src/amcl/map/map_draw.s: src/amcl/map/map_draw.c.s
 
 # target to generate assembly for a file
 src/amcl/map/map_draw.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_draw.c.s
 .PHONY : src/amcl/map/map_draw.c.s
 
 src/amcl/map/map_range.o: src/amcl/map/map_range.c.o
@@ -393,7 +1034,7 @@ src/amcl/map/map_range.o: src/amcl/map/map_range.c.o
 
 # target to build an object file
 src/amcl/map/map_range.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.o
 .PHONY : src/amcl/map/map_range.c.o
 
 src/amcl/map/map_range.i: src/amcl/map/map_range.c.i
@@ -402,7 +1043,7 @@ src/amcl/map/map_range.i: src/amcl/map/map_range.c.i
 
 # target to preprocess a source file
 src/amcl/map/map_range.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.i
 .PHONY : src/amcl/map/map_range.c.i
 
 src/amcl/map/map_range.s: src/amcl/map/map_range.c.s
@@ -411,7 +1052,7 @@ src/amcl/map/map_range.s: src/amcl/map/map_range.c.s
 
 # target to generate assembly for a file
 src/amcl/map/map_range.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_range.c.s
 .PHONY : src/amcl/map/map_range.c.s
 
 src/amcl/map/map_store.o: src/amcl/map/map_store.c.o
@@ -420,7 +1061,7 @@ src/amcl/map/map_store.o: src/amcl/map/map_store.c.o
 
 # target to build an object file
 src/amcl/map/map_store.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.o
 .PHONY : src/amcl/map/map_store.c.o
 
 src/amcl/map/map_store.i: src/amcl/map/map_store.c.i
@@ -429,7 +1070,7 @@ src/amcl/map/map_store.i: src/amcl/map/map_store.c.i
 
 # target to preprocess a source file
 src/amcl/map/map_store.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.i
 .PHONY : src/amcl/map/map_store.c.i
 
 src/amcl/map/map_store.s: src/amcl/map/map_store.c.s
@@ -438,7 +1079,7 @@ src/amcl/map/map_store.s: src/amcl/map/map_store.c.s
 
 # target to generate assembly for a file
 src/amcl/map/map_store.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_map.dir/build.make navigation/amcl/CMakeFiles/amcl_map.dir/src/amcl/map/map_store.c.s
 .PHONY : src/amcl/map/map_store.c.s
 
 src/amcl/pf/eig3.o: src/amcl/pf/eig3.c.o
@@ -447,7 +1088,7 @@ src/amcl/pf/eig3.o: src/amcl/pf/eig3.c.o
 
 # target to build an object file
 src/amcl/pf/eig3.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o
 .PHONY : src/amcl/pf/eig3.c.o
 
 src/amcl/pf/eig3.i: src/amcl/pf/eig3.c.i
@@ -456,7 +1097,7 @@ src/amcl/pf/eig3.i: src/amcl/pf/eig3.c.i
 
 # target to preprocess a source file
 src/amcl/pf/eig3.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.i
 .PHONY : src/amcl/pf/eig3.c.i
 
 src/amcl/pf/eig3.s: src/amcl/pf/eig3.c.s
@@ -465,7 +1106,7 @@ src/amcl/pf/eig3.s: src/amcl/pf/eig3.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/eig3.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.s
 .PHONY : src/amcl/pf/eig3.c.s
 
 src/amcl/pf/pf.o: src/amcl/pf/pf.c.o
@@ -474,7 +1115,7 @@ src/amcl/pf/pf.o: src/amcl/pf/pf.c.o
 
 # target to build an object file
 src/amcl/pf/pf.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.o
 .PHONY : src/amcl/pf/pf.c.o
 
 src/amcl/pf/pf.i: src/amcl/pf/pf.c.i
@@ -483,7 +1124,7 @@ src/amcl/pf/pf.i: src/amcl/pf/pf.c.i
 
 # target to preprocess a source file
 src/amcl/pf/pf.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.i
 .PHONY : src/amcl/pf/pf.c.i
 
 src/amcl/pf/pf.s: src/amcl/pf/pf.c.s
@@ -492,7 +1133,7 @@ src/amcl/pf/pf.s: src/amcl/pf/pf.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/pf.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf.c.s
 .PHONY : src/amcl/pf/pf.c.s
 
 src/amcl/pf/pf_draw.o: src/amcl/pf/pf_draw.c.o
@@ -501,7 +1142,7 @@ src/amcl/pf/pf_draw.o: src/amcl/pf/pf_draw.c.o
 
 # target to build an object file
 src/amcl/pf/pf_draw.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o
 .PHONY : src/amcl/pf/pf_draw.c.o
 
 src/amcl/pf/pf_draw.i: src/amcl/pf/pf_draw.c.i
@@ -510,7 +1151,7 @@ src/amcl/pf/pf_draw.i: src/amcl/pf/pf_draw.c.i
 
 # target to preprocess a source file
 src/amcl/pf/pf_draw.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.i
 .PHONY : src/amcl/pf/pf_draw.c.i
 
 src/amcl/pf/pf_draw.s: src/amcl/pf/pf_draw.c.s
@@ -519,7 +1160,7 @@ src/amcl/pf/pf_draw.s: src/amcl/pf/pf_draw.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/pf_draw.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.s
 .PHONY : src/amcl/pf/pf_draw.c.s
 
 src/amcl/pf/pf_kdtree.o: src/amcl/pf/pf_kdtree.c.o
@@ -528,7 +1169,7 @@ src/amcl/pf/pf_kdtree.o: src/amcl/pf/pf_kdtree.c.o
 
 # target to build an object file
 src/amcl/pf/pf_kdtree.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.o
 .PHONY : src/amcl/pf/pf_kdtree.c.o
 
 src/amcl/pf/pf_kdtree.i: src/amcl/pf/pf_kdtree.c.i
@@ -537,7 +1178,7 @@ src/amcl/pf/pf_kdtree.i: src/amcl/pf/pf_kdtree.c.i
 
 # target to preprocess a source file
 src/amcl/pf/pf_kdtree.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.i
 .PHONY : src/amcl/pf/pf_kdtree.c.i
 
 src/amcl/pf/pf_kdtree.s: src/amcl/pf/pf_kdtree.c.s
@@ -546,7 +1187,7 @@ src/amcl/pf/pf_kdtree.s: src/amcl/pf/pf_kdtree.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/pf_kdtree.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_kdtree.c.s
 .PHONY : src/amcl/pf/pf_kdtree.c.s
 
 src/amcl/pf/pf_pdf.o: src/amcl/pf/pf_pdf.c.o
@@ -555,7 +1196,7 @@ src/amcl/pf/pf_pdf.o: src/amcl/pf/pf_pdf.c.o
 
 # target to build an object file
 src/amcl/pf/pf_pdf.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.o
 .PHONY : src/amcl/pf/pf_pdf.c.o
 
 src/amcl/pf/pf_pdf.i: src/amcl/pf/pf_pdf.c.i
@@ -564,7 +1205,7 @@ src/amcl/pf/pf_pdf.i: src/amcl/pf/pf_pdf.c.i
 
 # target to preprocess a source file
 src/amcl/pf/pf_pdf.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.i
 .PHONY : src/amcl/pf/pf_pdf.c.i
 
 src/amcl/pf/pf_pdf.s: src/amcl/pf/pf_pdf.c.s
@@ -573,7 +1214,7 @@ src/amcl/pf/pf_pdf.s: src/amcl/pf/pf_pdf.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/pf_pdf.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_pdf.c.s
 .PHONY : src/amcl/pf/pf_pdf.c.s
 
 src/amcl/pf/pf_vector.o: src/amcl/pf/pf_vector.c.o
@@ -582,7 +1223,7 @@ src/amcl/pf/pf_vector.o: src/amcl/pf/pf_vector.c.o
 
 # target to build an object file
 src/amcl/pf/pf_vector.c.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.o
 .PHONY : src/amcl/pf/pf_vector.c.o
 
 src/amcl/pf/pf_vector.i: src/amcl/pf/pf_vector.c.i
@@ -591,7 +1232,7 @@ src/amcl/pf/pf_vector.i: src/amcl/pf/pf_vector.c.i
 
 # target to preprocess a source file
 src/amcl/pf/pf_vector.c.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.i
 .PHONY : src/amcl/pf/pf_vector.c.i
 
 src/amcl/pf/pf_vector.s: src/amcl/pf/pf_vector.c.s
@@ -600,7 +1241,7 @@ src/amcl/pf/pf_vector.s: src/amcl/pf/pf_vector.c.s
 
 # target to generate assembly for a file
 src/amcl/pf/pf_vector.c.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_pf.dir/build.make navigation/amcl/CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.s
 .PHONY : src/amcl/pf/pf_vector.c.s
 
 src/amcl/sensors/amcl_laser.o: src/amcl/sensors/amcl_laser.cpp.o
@@ -609,7 +1250,7 @@ src/amcl/sensors/amcl_laser.o: src/amcl/sensors/amcl_laser.cpp.o
 
 # target to build an object file
 src/amcl/sensors/amcl_laser.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.o
 .PHONY : src/amcl/sensors/amcl_laser.cpp.o
 
 src/amcl/sensors/amcl_laser.i: src/amcl/sensors/amcl_laser.cpp.i
@@ -618,7 +1259,7 @@ src/amcl/sensors/amcl_laser.i: src/amcl/sensors/amcl_laser.cpp.i
 
 # target to preprocess a source file
 src/amcl/sensors/amcl_laser.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.i
 .PHONY : src/amcl/sensors/amcl_laser.cpp.i
 
 src/amcl/sensors/amcl_laser.s: src/amcl/sensors/amcl_laser.cpp.s
@@ -627,7 +1268,7 @@ src/amcl/sensors/amcl_laser.s: src/amcl/sensors/amcl_laser.cpp.s
 
 # target to generate assembly for a file
 src/amcl/sensors/amcl_laser.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_laser.cpp.s
 .PHONY : src/amcl/sensors/amcl_laser.cpp.s
 
 src/amcl/sensors/amcl_odom.o: src/amcl/sensors/amcl_odom.cpp.o
@@ -636,7 +1277,7 @@ src/amcl/sensors/amcl_odom.o: src/amcl/sensors/amcl_odom.cpp.o
 
 # target to build an object file
 src/amcl/sensors/amcl_odom.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.o
 .PHONY : src/amcl/sensors/amcl_odom.cpp.o
 
 src/amcl/sensors/amcl_odom.i: src/amcl/sensors/amcl_odom.cpp.i
@@ -645,7 +1286,7 @@ src/amcl/sensors/amcl_odom.i: src/amcl/sensors/amcl_odom.cpp.i
 
 # target to preprocess a source file
 src/amcl/sensors/amcl_odom.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.i
 .PHONY : src/amcl/sensors/amcl_odom.cpp.i
 
 src/amcl/sensors/amcl_odom.s: src/amcl/sensors/amcl_odom.cpp.s
@@ -654,7 +1295,7 @@ src/amcl/sensors/amcl_odom.s: src/amcl/sensors/amcl_odom.cpp.s
 
 # target to generate assembly for a file
 src/amcl/sensors/amcl_odom.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_odom.cpp.s
 .PHONY : src/amcl/sensors/amcl_odom.cpp.s
 
 src/amcl/sensors/amcl_sensor.o: src/amcl/sensors/amcl_sensor.cpp.o
@@ -663,7 +1304,7 @@ src/amcl/sensors/amcl_sensor.o: src/amcl/sensors/amcl_sensor.cpp.o
 
 # target to build an object file
 src/amcl/sensors/amcl_sensor.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.o
 .PHONY : src/amcl/sensors/amcl_sensor.cpp.o
 
 src/amcl/sensors/amcl_sensor.i: src/amcl/sensors/amcl_sensor.cpp.i
@@ -672,7 +1313,7 @@ src/amcl/sensors/amcl_sensor.i: src/amcl/sensors/amcl_sensor.cpp.i
 
 # target to preprocess a source file
 src/amcl/sensors/amcl_sensor.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.i
 .PHONY : src/amcl/sensors/amcl_sensor.cpp.i
 
 src/amcl/sensors/amcl_sensor.s: src/amcl/sensors/amcl_sensor.cpp.s
@@ -681,7 +1322,7 @@ src/amcl/sensors/amcl_sensor.s: src/amcl/sensors/amcl_sensor.cpp.s
 
 # target to generate assembly for a file
 src/amcl/sensors/amcl_sensor.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl_sensors.dir/build.make navigation/amcl/CMakeFiles/amcl_sensors.dir/src/amcl/sensors/amcl_sensor.cpp.s
 .PHONY : src/amcl/sensors/amcl_sensor.cpp.s
 
 src/amcl_node.o: src/amcl_node.cpp.o
@@ -690,7 +1331,7 @@ src/amcl_node.o: src/amcl_node.cpp.o
 
 # target to build an object file
 src/amcl_node.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.o
 .PHONY : src/amcl_node.cpp.o
 
 src/amcl_node.i: src/amcl_node.cpp.i
@@ -699,7 +1340,7 @@ src/amcl_node.i: src/amcl_node.cpp.i
 
 # target to preprocess a source file
 src/amcl_node.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.i
 .PHONY : src/amcl_node.cpp.i
 
 src/amcl_node.s: src/amcl_node.cpp.s
@@ -708,7 +1349,7 @@ src/amcl_node.s: src/amcl_node.cpp.s
 
 # target to generate assembly for a file
 src/amcl_node.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/amcl/CMakeFiles/amcl.dir/build.make navigation/amcl/CMakeFiles/amcl.dir/src/amcl_node.cpp.s
 .PHONY : src/amcl_node.cpp.s
 
 # Help Target
@@ -718,21 +1359,64 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... list_install_components"
 	@echo "... edit_cache"
-	@echo "... amcl_map"
-	@echo "... amcl_pf"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... rebuild_cache"
-	@echo "... topic_tools_generate_messages_cpp"
-	@echo "... amcl_sensors"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... amcl"
-	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... test"
+	@echo "... _run_tests_amcl_rostest_test_rosie_multilaser.xml"
+	@echo "... run_tests_amcl_rostest_test_rosie_multilaser.xml"
+	@echo "... _run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml"
+	@echo "... run_tests_amcl_rostest_test_small_loop_crazy_driving_prg.xml"
+	@echo "... _run_tests_amcl_rostest_test_small_loop_prf.xml"
 	@echo "... install"
+	@echo "... _run_tests_amcl_rostest_test_global_localization_stage.xml"
+	@echo "... run_tests_amcl_rostest_test_global_localization_stage.xml"
+	@echo "... _run_tests_amcl_rostest_test_basic_localization_stage.xml"
+	@echo "... list_install_components"
+	@echo "... run_tests_amcl_rostest_test_basic_localization_stage.xml"
+	@echo "... rebuild_cache"
+	@echo "... _run_tests_amcl_rostest_test_set_initial_pose_delayed.xml"
+	@echo "... run_tests_amcl_rostest_test_small_loop_prf.xml"
 	@echo "... amcl_gencfg"
+	@echo "... amcl_small_loop_prf_indexed.bag"
+	@echo "... topic_tools_generate_messages_eus"
+	@echo "... _run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml"
+	@echo "... run_tests_amcl_rostest_test_texas_greenroom_loop.xml"
+	@echo "... std_srvs_generate_messages_py"
+	@echo "... diagnostic_msgs_generate_messages_eus"
+	@echo "... diagnostic_msgs_generate_messages_cpp"
+	@echo "... amcl_texas_greenroom_loop_indexed.bag"
+	@echo "... diagnostic_msgs_generate_messages_lisp"
+	@echo "... run_tests_amcl_rostest_test_texas_willow_hallway_loop.xml"
+	@echo "... topic_tools_generate_messages_lisp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... install/local"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... _run_tests_amcl_rostest_test_texas_greenroom_loop.xml"
+	@echo "... run_tests_amcl_rostest"
 	@echo "... topic_tools_generate_messages_py"
+	@echo "... amcl_sensors"
+	@echo "... amcl_basic_localization_stage_indexed.bag"
+	@echo "... std_srvs_generate_messages_nodejs"
+	@echo "... run_tests_amcl_rostest_test_set_initial_pose_delayed.xml"
+	@echo "... amcl_willow-full-0.05.pgm"
+	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... amcl_global_localization_stage_indexed.bag"
+	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... amcl_texas_willow_hallway_loop_indexed.bag"
+	@echo "... amcl_pf"
+	@echo "... std_srvs_generate_messages_cpp"
+	@echo "... amcl_small_loop_crazy_driving_prg_indexed.bag"
+	@echo "... amcl_map"
+	@echo "... amcl_rosie_localization_stage.bag"
+	@echo "... topic_tools_generate_messages_nodejs"
+	@echo "... amcl_willow-full.pgm"
+	@echo "... amcl"
+	@echo "... run_tests_amcl"
+	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... _run_tests_amcl_rostest"
+	@echo "... run_tests_amcl_rostest_test_set_initial_pose.xml"
+	@echo "... _run_tests_amcl_rostest_test_set_initial_pose.xml"
+	@echo "... _run_tests_amcl"
+	@echo "... clean_test_results_amcl"
 	@echo "... src/amcl/map/map.o"
 	@echo "... src/amcl/map/map.i"
 	@echo "... src/amcl/map/map.s"
@@ -789,6 +1473,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

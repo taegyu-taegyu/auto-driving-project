@@ -6,19 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/home/wego/wego_ws/src/laser_filters/src/generic_laser_filter_node.cpp
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/generic_laser_filter_node.cpp
 ros/ros.h
-/home/wego/wego_ws/src/laser_filters/src/ros/ros.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/ros/ros.h
 sensor_msgs/LaserScan.h
-/home/wego/wego_ws/src/laser_filters/src/sensor_msgs/LaserScan.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/sensor_msgs/LaserScan.h
 message_filters/subscriber.h
-/home/wego/wego_ws/src/laser_filters/src/message_filters/subscriber.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/message_filters/subscriber.h
 tf/message_filter.h
-/home/wego/wego_ws/src/laser_filters/src/tf/message_filter.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/tf/message_filter.h
 tf/transform_listener.h
-/home/wego/wego_ws/src/laser_filters/src/tf/transform_listener.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/tf/transform_listener.h
 filters/filter_chain.h
-/home/wego/wego_ws/src/laser_filters/src/filters/filter_chain.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/src/filters/filter_chain.h
 
 /opt/ros/melodic/include/class_loader/class_loader.hpp
 boost/bind.hpp

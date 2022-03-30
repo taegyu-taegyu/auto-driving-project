@@ -1,4 +1,4 @@
-prefix=/home/wego/wego_ws/install
+prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: scout_description
 Description: Description of scout_description

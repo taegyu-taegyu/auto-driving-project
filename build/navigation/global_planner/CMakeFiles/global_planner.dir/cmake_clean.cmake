@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/global_planner.dir/src/gradient_path.cpp.o"
   "CMakeFiles/global_planner.dir/src/orientation_filter.cpp.o"
   "CMakeFiles/global_planner.dir/src/planner_core.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libglobal_planner.pdb"
-  "/home/wego/wego_ws/devel/lib/libglobal_planner.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libglobal_planner.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libglobal_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

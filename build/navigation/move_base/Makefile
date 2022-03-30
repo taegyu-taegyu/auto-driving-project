@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -80,17 +92,16 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -126,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/move_base/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_node.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_node.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_node.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_node.dir/rule
 
 # Convenience name for target.
@@ -168,12 +179,12 @@ move_base_node: navigation/move_base/CMakeFiles/move_base_node.dir/rule
 
 # fast build rule for target.
 move_base_node/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/build
 .PHONY : move_base_node/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base.dir/rule
 
 # Convenience name for target.
@@ -183,12 +194,12 @@ move_base: navigation/move_base/CMakeFiles/move_base.dir/rule
 
 # fast build rule for target.
 move_base/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/build
 .PHONY : move_base/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -198,12 +209,12 @@ move_base_msgs_generate_messages_eus: navigation/move_base/CMakeFiles/move_base_
 
 # fast build rule for target.
 move_base_msgs_generate_messages_eus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -213,12 +224,12 @@ move_base_msgs_generate_messages_cpp: navigation/move_base/CMakeFiles/move_base_
 
 # fast build rule for target.
 move_base_msgs_generate_messages_cpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
 .PHONY : move_base_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_gencfg.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_gencfg.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_gencfg.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_gencfg.dir/rule
 
 # Convenience name for target.
@@ -228,12 +239,12 @@ move_base_gencfg: navigation/move_base/CMakeFiles/move_base_gencfg.dir/rule
 
 # fast build rule for target.
 move_base_gencfg/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_gencfg.dir/build.make navigation/move_base/CMakeFiles/move_base_gencfg.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_gencfg.dir/build.make navigation/move_base/CMakeFiles/move_base_gencfg.dir/build
 .PHONY : move_base_gencfg/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +254,12 @@ move_base_msgs_generate_messages_lisp: navigation/move_base/CMakeFiles/move_base
 
 # fast build rule for target.
 move_base_msgs_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -258,12 +269,12 @@ move_base_msgs_generate_messages_nodejs: navigation/move_base/CMakeFiles/move_ba
 
 # fast build rule for target.
 move_base_msgs_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -273,7 +284,7 @@ move_base_msgs_generate_messages_py: navigation/move_base/CMakeFiles/move_base_m
 
 # fast build rule for target.
 move_base_msgs_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 src/move_base.o: src/move_base.cpp.o
@@ -282,7 +293,7 @@ src/move_base.o: src/move_base.cpp.o
 
 # target to build an object file
 src/move_base.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.o
 .PHONY : src/move_base.cpp.o
 
 src/move_base.i: src/move_base.cpp.i
@@ -291,7 +302,7 @@ src/move_base.i: src/move_base.cpp.i
 
 # target to preprocess a source file
 src/move_base.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.i
 .PHONY : src/move_base.cpp.i
 
 src/move_base.s: src/move_base.cpp.s
@@ -300,7 +311,7 @@ src/move_base.s: src/move_base.cpp.s
 
 # target to generate assembly for a file
 src/move_base.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base.dir/build.make navigation/move_base/CMakeFiles/move_base.dir/src/move_base.cpp.s
 .PHONY : src/move_base.cpp.s
 
 src/move_base_node.o: src/move_base_node.cpp.o
@@ -309,7 +320,7 @@ src/move_base_node.o: src/move_base_node.cpp.o
 
 # target to build an object file
 src/move_base_node.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o
 .PHONY : src/move_base_node.cpp.o
 
 src/move_base_node.i: src/move_base_node.cpp.i
@@ -318,7 +329,7 @@ src/move_base_node.i: src/move_base_node.cpp.i
 
 # target to preprocess a source file
 src/move_base_node.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i
 .PHONY : src/move_base_node.cpp.i
 
 src/move_base_node.s: src/move_base_node.cpp.s
@@ -327,7 +338,7 @@ src/move_base_node.s: src/move_base_node.cpp.s
 
 # target to generate assembly for a file
 src/move_base_node.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_base/CMakeFiles/move_base_node.dir/build.make navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s
 .PHONY : src/move_base_node.cpp.s
 
 # Help Target
@@ -337,8 +348,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
-	@echo "... install/local"
 	@echo "... install"
+	@echo "... install/local"
+	@echo "... test"
 	@echo "... list_install_components"
 	@echo "... move_base_node"
 	@echo "... edit_cache"
@@ -367,6 +379,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

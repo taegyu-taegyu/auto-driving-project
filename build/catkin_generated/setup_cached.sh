@@ -7,4 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/wego/wego_ws/build'
+export PWD='/home/kw-cobot/wego_ws/auto-driving-project/build'

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/wego/wego_ws/src/hector_slam/hector_map_server/src/hector_map_server.cpp" "/home/wego/wego_ws/build/hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o"
+  "/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_map_server/src/hector_map_server.cpp" "/home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_map_server/CMakeFiles/hector_map_server.dir/src/hector_map_server.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -17,9 +17,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/wego/wego_ws/devel/include"
-  "/home/wego/wego_ws/src/hector_slam/hector_map_tools/include"
-  "/home/wego/wego_ws/src/hector_slam/hector_marker_drawing/include"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include"
+  "/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_map_tools/include"
+  "/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_marker_drawing/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/eigen3"

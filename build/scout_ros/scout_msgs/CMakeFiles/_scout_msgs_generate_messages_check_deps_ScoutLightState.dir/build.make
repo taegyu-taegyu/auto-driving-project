@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for _scout_msgs_generate_messages_check_deps_ScoutLightState.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/wego/wego_ws/build
 include scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/progress.make
 
 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState:
-	cd /home/wego/wego_ws/build/scout_ros/scout_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py scout_msgs /home/wego/wego_ws/src/scout_ros/scout_msgs/msg/ScoutLightState.msg 
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_msgs && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py scout_msgs /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_msgs/msg/ScoutLightState.msg 
 
 _scout_msgs_generate_messages_check_deps_ScoutLightState: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState
 _scout_msgs_generate_messages_check_deps_ScoutLightState: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/build.make
@@ -67,10 +67,10 @@ scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLi
 .PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/build
 
 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/clean:
-	cd /home/wego/wego_ws/build/scout_ros/scout_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_msgs && $(CMAKE_COMMAND) -P CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/cmake_clean.cmake
 .PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/clean
 
 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/scout_ros/scout_msgs /home/wego/wego_ws/build /home/wego/wego_ws/build/scout_ros/scout_msgs /home/wego/wego_ws/build/scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_msgs /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_msgs /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutLightState.dir/depend
 

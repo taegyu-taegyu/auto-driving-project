@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/timed_roslaunch
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/timed_roslaunch
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunch.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunch.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig.cmake"
-    "/home/wego/wego_ws/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/timed_roslaunch/catkin_generated/installspace/timed_roslaunchConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch" TYPE FILE FILES "/home/wego/wego_ws/src/timed_roslaunch/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/timed_roslaunch/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/timed_roslaunch" TYPE PROGRAM FILES "/home/wego/wego_ws/src/timed_roslaunch/scripts/timed_roslaunch.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/timed_roslaunch" TYPE PROGRAM FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/timed_roslaunch/scripts/timed_roslaunch.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/launch" TYPE DIRECTORY FILES "/home/wego/wego_ws/src/timed_roslaunch/launch/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/timed_roslaunch/launch" TYPE DIRECTORY FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/timed_roslaunch/launch/")
 endif()
 

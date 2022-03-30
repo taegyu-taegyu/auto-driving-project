@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scout_msgs_generate_messages_nodejs"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutStatus.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutBmsStatus.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutMotorState.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutLightState.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutLightCmd.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/scout_msgs/msg/ScoutDriverState.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutStatus.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutDriverState.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutLightState.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutLightCmd.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutMotorState.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/scout_msgs/msg/ScoutBmsStatus.js"
 )
 
 # Per-language clean rules from dependency scanning.

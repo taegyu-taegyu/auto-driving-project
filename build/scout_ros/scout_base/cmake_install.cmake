@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/scout_ros/scout_base
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,22 +38,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/scout_ros/scout_base/catkin_generated/installspace/scout_base.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base/catkin_generated/installspace/scout_base.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_base/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/scout_ros/scout_base/catkin_generated/installspace/scout_baseConfig.cmake"
-    "/home/wego/wego_ws/build/scout_ros/scout_base/catkin_generated/installspace/scout_baseConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base/catkin_generated/installspace/scout_baseConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base/catkin_generated/installspace/scout_baseConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_base" TYPE FILE FILES "/home/wego/wego_ws/src/scout_ros/scout_base/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_base" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/wego/wego_ws/devel/lib/libscout_messenger.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -63,12 +63,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/scout_base/scout_base_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scout_base" TYPE EXECUTABLE FILES "/home/wego/wego_ws/devel/lib/scout_base/scout_base_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/scout_base" TYPE EXECUTABLE FILES "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/scout_base/scout_base_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/scout_base/scout_base_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/scout_base/scout_base_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/scout_base/scout_base_node"
-         OLD_RPATH "/opt/ros/melodic/lib:/home/wego/wego_ws/devel/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:/home/kw-cobot/wego_ws/auto-driving-project/devel/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/scout_base/scout_base_node")
@@ -77,10 +77,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/scout_base" TYPE DIRECTORY FILES "/home/wego/wego_ws/src/scout_ros/scout_base/include/scout_base/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/scout_base" TYPE DIRECTORY FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/include/scout_base/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_base" TYPE DIRECTORY FILES "/home/wego/wego_ws/src/scout_ros/scout_base/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/scout_base" TYPE DIRECTORY FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/launch")
 endif()
 

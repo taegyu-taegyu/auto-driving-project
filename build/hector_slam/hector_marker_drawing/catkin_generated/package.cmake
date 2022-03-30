@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_marker_drawing")
-set(hector_marker_drawing_VERSION "0.5.1")
+set(hector_marker_drawing_VERSION "0.5.2")
 set(hector_marker_drawing_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_marker_drawing_PACKAGE_FORMAT "1")
 set(hector_marker_drawing_BUILD_DEPENDS "roscpp" "visualization_msgs" "eigen")

@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_mapping_generate_messages_nodejs"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_mapping/msg/HectorDebugInfo.js"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/hector_mapping/msg/HectorIterData.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_mapping/msg/HectorDebugInfo.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_mapping/msg/HectorIterData.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/hector_mapping/srv/ResetMapping.js"
 )
 
 # Per-language clean rules from dependency scanning.
