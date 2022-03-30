@@ -43,36 +43,48 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for hector_mapping_generate_messages_cpp.
 
 # Include the progress variables for this target.
 include hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/progress.make
 
-hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp: /home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h
-hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp: /home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h
+hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h
+hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h
+hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h
 
 
-/home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h: /home/wego/wego_ws/src/hector_slam/hector_mapping/msg/HectorDebugInfo.msg
-/home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h: /home/wego/wego_ws/src/hector_slam/hector_mapping/msg/HectorIterData.msg
-/home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from hector_mapping/HectorDebugInfo.msg"
-	cd /home/wego/wego_ws/src/hector_slam/hector_mapping && /home/wego/wego_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wego/wego_ws/src/hector_slam/hector_mapping/msg/HectorDebugInfo.msg -Ihector_mapping:/home/wego/wego_ws/src/hector_slam/hector_mapping/msg -p hector_mapping -o /home/wego/wego_ws/devel/include/hector_mapping -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h: /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg/HectorDebugInfo.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h: /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg/HectorIterData.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code from hector_mapping/HectorDebugInfo.msg"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping && /home/kw-cobot/wego_ws/auto-driving-project/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg/HectorDebugInfo.msg -Ihector_mapping:/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p hector_mapping -o /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping -e /opt/ros/melodic/share/gencpp/cmake/..
 
-/home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
-/home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h: /home/wego/wego_ws/src/hector_slam/hector_mapping/msg/HectorIterData.msg
-/home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h: /opt/ros/melodic/share/gencpp/msg.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from hector_mapping/HectorIterData.msg"
-	cd /home/wego/wego_ws/src/hector_slam/hector_mapping && /home/wego/wego_ws/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/wego/wego_ws/src/hector_slam/hector_mapping/msg/HectorIterData.msg -Ihector_mapping:/home/wego/wego_ws/src/hector_slam/hector_mapping/msg -p hector_mapping -o /home/wego/wego_ws/devel/include/hector_mapping -e /opt/ros/melodic/share/gencpp/cmake/..
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h: /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg/HectorIterData.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h: /opt/ros/melodic/share/gencpp/msg.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating C++ code from hector_mapping/HectorIterData.msg"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping && /home/kw-cobot/wego_ws/auto-driving-project/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg/HectorIterData.msg -Ihector_mapping:/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p hector_mapping -o /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping -e /opt/ros/melodic/share/gencpp/cmake/..
+
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/lib/gencpp/gen_cpp.py
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/srv/ResetMapping.srv
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/share/geometry_msgs/msg/Pose.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/share/geometry_msgs/msg/Quaternion.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/share/geometry_msgs/msg/Point.msg
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/share/gencpp/msg.h.template
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h: /opt/ros/melodic/share/gencpp/srv.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating C++ code from hector_mapping/ResetMapping.srv"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping && /home/kw-cobot/wego_ws/auto-driving-project/build/catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gencpp/cmake/../../../lib/gencpp/gen_cpp.py /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/srv/ResetMapping.srv -Ihector_mapping:/home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping/msg -Igeometry_msgs:/opt/ros/melodic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p hector_mapping -o /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping -e /opt/ros/melodic/share/gencpp/cmake/..
 
 hector_mapping_generate_messages_cpp: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp
-hector_mapping_generate_messages_cpp: /home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h
-hector_mapping_generate_messages_cpp: /home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h
+hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h
+hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h
+hector_mapping_generate_messages_cpp: /home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h
 hector_mapping_generate_messages_cpp: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build.make
 
 .PHONY : hector_mapping_generate_messages_cpp
@@ -83,10 +95,10 @@ hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/b
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/build
 
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/clean:
-	cd /home/wego/wego_ws/build/hector_slam/hector_mapping && $(CMAKE_COMMAND) -P CMakeFiles/hector_mapping_generate_messages_cpp.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_mapping && $(CMAKE_COMMAND) -P CMakeFiles/hector_mapping_generate_messages_cpp.dir/cmake_clean.cmake
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/clean
 
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/hector_slam/hector_mapping /home/wego/wego_ws/build /home/wego/wego_ws/build/hector_slam/hector_mapping /home/wego/wego_ws/build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_mapping /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_cpp.dir/depend
 

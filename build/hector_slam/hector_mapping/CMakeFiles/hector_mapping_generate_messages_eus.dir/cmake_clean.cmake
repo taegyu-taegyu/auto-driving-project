@@ -1,8 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_mapping_generate_messages_eus"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_mapping/manifest.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_mapping/msg/HectorDebugInfo.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_mapping/msg/HectorIterData.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_mapping/srv/ResetMapping.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_mapping/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

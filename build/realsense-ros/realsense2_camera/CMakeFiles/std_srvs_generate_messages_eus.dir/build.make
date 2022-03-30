@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for std_srvs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/bu
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/build
 
 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
-	cd /home/wego/wego_ws/build/realsense-ros/realsense2_camera && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/realsense-ros/realsense2_camera && $(CMAKE_COMMAND) -P CMakeFiles/std_srvs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
 
 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/realsense-ros/realsense2_camera /home/wego/wego_ws/build /home/wego/wego_ws/build/realsense-ros/realsense2_camera /home/wego/wego_ws/build/realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/realsense-ros/realsense2_camera /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/realsense-ros/realsense2_camera /home/kw-cobot/wego_ws/auto-driving-project/build/realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
 

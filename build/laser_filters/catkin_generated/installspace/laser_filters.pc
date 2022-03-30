@@ -1,4 +1,4 @@
-prefix=/home/wego/wego_ws/install
+prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: laser_filters
 Description: Description of laser_filters

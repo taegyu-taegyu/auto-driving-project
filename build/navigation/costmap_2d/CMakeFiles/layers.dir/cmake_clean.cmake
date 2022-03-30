@@ -4,8 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/layers.dir/plugins/static_layer.cpp.o"
   "CMakeFiles/layers.dir/plugins/voxel_layer.cpp.o"
   "CMakeFiles/layers.dir/src/observation_buffer.cpp.o"
-  "/home/wego/wego_ws/devel/lib/liblayers.pdb"
-  "/home/wego/wego_ws/devel/lib/liblayers.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/liblayers.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/liblayers.so"
 )
 
 # Per-language clean rules from dependency scanning.

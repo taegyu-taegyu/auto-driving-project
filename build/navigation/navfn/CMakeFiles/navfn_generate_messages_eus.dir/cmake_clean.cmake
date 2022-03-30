@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/navfn_generate_messages_eus"
-  "/home/wego/wego_ws/devel/share/roseus/ros/navfn/srv/MakeNavPlan.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/navfn/srv/SetCostmap.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/navfn/manifest.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/navfn/srv/SetCostmap.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/navfn/srv/MakeNavPlan.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/navfn/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

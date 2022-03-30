@@ -1,11 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_nav_msgs_generate_messages_eus"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l"
-  "/home/wego/wego_ws/devel/share/roseus/ros/hector_nav_msgs/manifest.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/srv/GetNormal.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/srv/GetDistanceToObstacle.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/srv/GetRecoveryInfo.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/srv/GetRobotTrajectory.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/srv/GetSearchPosition.l"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/roseus/ros/hector_nav_msgs/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

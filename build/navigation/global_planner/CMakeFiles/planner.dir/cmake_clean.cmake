@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/planner.dir/src/plan_node.cpp.o"
-  "/home/wego/wego_ws/devel/lib/global_planner/planner.pdb"
-  "/home/wego/wego_ws/devel/lib/global_planner/planner"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/global_planner/planner.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/global_planner/planner"
 )
 
 # Per-language clean rules from dependency scanning.

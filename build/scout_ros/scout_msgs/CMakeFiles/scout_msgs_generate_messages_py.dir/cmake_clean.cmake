@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/scout_msgs_generate_messages_py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutStatus.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutBmsStatus.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutMotorState.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutLightState.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutLightCmd.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutDriverState.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/scout_msgs/msg/__init__.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutStatus.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutDriverState.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutLightState.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutLightCmd.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutMotorState.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/_ScoutBmsStatus.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/scout_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

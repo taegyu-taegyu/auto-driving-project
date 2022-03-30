@@ -1,3 +1,3 @@
 file(REMOVE_RECURSE
-  "/home/wego/wego_ws/devel/lib/libscout_messenger.a"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a"
 )

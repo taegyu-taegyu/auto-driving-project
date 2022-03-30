@@ -9,8 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/costmap_2d.dir/src/costmap_math.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/footprint.cpp.o"
   "CMakeFiles/costmap_2d.dir/src/costmap_layer.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libcostmap_2d.pdb"
-  "/home/wego/wego_ws/devel/lib/libcostmap_2d.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcostmap_2d.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcostmap_2d.so"
 )
 
 # Per-language clean rules from dependency scanning.

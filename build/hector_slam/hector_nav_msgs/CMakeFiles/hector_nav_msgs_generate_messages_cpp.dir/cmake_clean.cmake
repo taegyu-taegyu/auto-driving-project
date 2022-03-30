@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_nav_msgs_generate_messages_cpp"
-  "/home/wego/wego_ws/devel/include/hector_nav_msgs/GetNormal.h"
-  "/home/wego/wego_ws/devel/include/hector_nav_msgs/GetDistanceToObstacle.h"
-  "/home/wego/wego_ws/devel/include/hector_nav_msgs/GetRecoveryInfo.h"
-  "/home/wego/wego_ws/devel/include/hector_nav_msgs/GetRobotTrajectory.h"
-  "/home/wego/wego_ws/devel/include/hector_nav_msgs/GetSearchPosition.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_nav_msgs/GetNormal.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_nav_msgs/GetDistanceToObstacle.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_nav_msgs/GetRecoveryInfo.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_nav_msgs/GetRobotTrajectory.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_nav_msgs/GetSearchPosition.h"
 )
 
 # Per-language clean rules from dependency scanning.

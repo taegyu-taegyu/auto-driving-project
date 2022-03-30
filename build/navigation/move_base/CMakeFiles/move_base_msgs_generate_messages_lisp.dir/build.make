@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for move_base_msgs_generate_messages_lisp.
 
@@ -63,10 +63,10 @@ navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build:
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/move_base && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_lisp.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && $(CMAKE_COMMAND) -P CMakeFiles/move_base_msgs_generate_messages_lisp.dir/cmake_clean.cmake
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/clean
 
 navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/move_base /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/move_base /home/wego/wego_ws/build/navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/move_base/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/depend
 

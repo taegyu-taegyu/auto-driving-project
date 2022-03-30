@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Include any dependencies generated for this target.
 include navigation/move_base/CMakeFiles/move_base_node.dir/depend.make
@@ -58,17 +58,17 @@ include navigation/move_base/CMakeFiles/move_base_node.dir/progress.make
 include navigation/move_base/CMakeFiles/move_base_node.dir/flags.make
 
 navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o: navigation/move_base/CMakeFiles/move_base_node.dir/flags.make
-navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o: /home/wego/wego_ws/src/navigation/move_base/src/move_base_node.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o"
-	cd /home/wego/wego_ws/build/navigation/move_base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o -c /home/wego/wego_ws/src/navigation/move_base/src/move_base_node.cpp
+navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o: /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base/src/move_base_node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o -c /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base/src/move_base_node.cpp
 
 navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i"
-	cd /home/wego/wego_ws/build/navigation/move_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wego/wego_ws/src/navigation/move_base/src/move_base_node.cpp > CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base/src/move_base_node.cpp > CMakeFiles/move_base_node.dir/src/move_base_node.cpp.i
 
 navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s"
-	cd /home/wego/wego_ws/build/navigation/move_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wego/wego_ws/src/navigation/move_base/src/move_base_node.cpp -o CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base/src/move_base_node.cpp -o CMakeFiles/move_base_node.dir/src/move_base_node.cpp.s
 
 navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o.requires:
 
@@ -88,58 +88,58 @@ move_base_node_OBJECTS = \
 # External object files for target move_base_node
 move_base_node_EXTERNAL_OBJECTS =
 
-/home/wego/wego_ws/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o
-/home/wego/wego_ws/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/build.make
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libmove_base.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libclear_costmap_recovery.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libnavfn.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/librotate_recovery.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libtrajectory_planner_ros.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libbase_local_planner.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/liblayers.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libcostmap_2d.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liblaser_geometry.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /home/wego/wego_ws/devel/lib/libvoxel_grid.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libclass_loader.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/libPocoFoundation.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libdl.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroslib.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librospack.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liborocos-kdl.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf2_ros.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libactionlib.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libmessage_filters.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroscpp.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf2.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librostime.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libcpp_common.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/wego/wego_ws/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/wego/wego_ws/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/wego/wego_ws/devel/lib/move_base/move_base"
-	cd /home/wego/wego_ws/build/navigation/move_base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/move_base_node.dir/link.txt --verbose=$(VERBOSE)
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/src/move_base_node.cpp.o
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/build.make
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmove_base.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libclear_costmap_recovery.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libnavfn.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/librotate_recovery.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libtrajectory_planner_ros.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libbase_local_planner.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/liblayers.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcostmap_2d.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liblaser_geometry.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libvoxel_grid.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libclass_loader.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/libPocoFoundation.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libdl.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroslib.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librospack.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liborocos-kdl.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/liborocos-kdl.so.1.4.0
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf2_ros.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libactionlib.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libmessage_filters.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroscpp.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libtf2.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/librostime.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /opt/ros/melodic/lib/libcpp_common.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base: navigation/move_base/CMakeFiles/move_base_node.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/move_base_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-navigation/move_base/CMakeFiles/move_base_node.dir/build: /home/wego/wego_ws/devel/lib/move_base/move_base
+navigation/move_base/CMakeFiles/move_base_node.dir/build: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/move_base/move_base
 
 .PHONY : navigation/move_base/CMakeFiles/move_base_node.dir/build
 
@@ -148,10 +148,10 @@ navigation/move_base/CMakeFiles/move_base_node.dir/requires: navigation/move_bas
 .PHONY : navigation/move_base/CMakeFiles/move_base_node.dir/requires
 
 navigation/move_base/CMakeFiles/move_base_node.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/move_base && $(CMAKE_COMMAND) -P CMakeFiles/move_base_node.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base && $(CMAKE_COMMAND) -P CMakeFiles/move_base_node.dir/cmake_clean.cmake
 .PHONY : navigation/move_base/CMakeFiles/move_base_node.dir/clean
 
 navigation/move_base/CMakeFiles/move_base_node.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/move_base /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/move_base /home/wego/wego_ws/build/navigation/move_base/CMakeFiles/move_base_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/move_base /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_base/CMakeFiles/move_base_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/move_base/CMakeFiles/move_base_node.dir/depend
 

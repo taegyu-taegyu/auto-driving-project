@@ -409,9 +409,9 @@ SpeckleFilterConfig::GroupDescription<SpeckleFilterConfig::DEFAULT, SpeckleFilte
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __default__.filter_type = 0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(SpeckleFilterConfig::AbstractParamDescriptionConstPtr(new SpeckleFilterConfig::ParamDescription<int>("filter_type", "int", 0, "Filtering method selection", "{'enum_description': 'Enum to select the filtering method', 'enum': [{'srcline': 45, 'description': 'Range based filtering (distance between consecutive points)', 'srcfile': '/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Distance'}, {'srcline': 46, 'description': 'Euclidean filtering based on radius outlier search', 'srcfile': '/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'RadiusOutlier'}]}", &SpeckleFilterConfig::filter_type)));
+      Default.abstract_parameters.push_back(SpeckleFilterConfig::AbstractParamDescriptionConstPtr(new SpeckleFilterConfig::ParamDescription<int>("filter_type", "int", 0, "Filtering method selection", "{'enum_description': 'Enum to select the filtering method', 'enum': [{'srcline': 45, 'description': 'Range based filtering (distance between consecutive points)', 'srcfile': '/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Distance'}, {'srcline': 46, 'description': 'Euclidean filtering based on radius outlier search', 'srcfile': '/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'RadiusOutlier'}]}", &SpeckleFilterConfig::filter_type)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(SpeckleFilterConfig::AbstractParamDescriptionConstPtr(new SpeckleFilterConfig::ParamDescription<int>("filter_type", "int", 0, "Filtering method selection", "{'enum_description': 'Enum to select the filtering method', 'enum': [{'srcline': 45, 'description': 'Range based filtering (distance between consecutive points)', 'srcfile': '/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Distance'}, {'srcline': 46, 'description': 'Euclidean filtering based on radius outlier search', 'srcfile': '/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'RadiusOutlier'}]}", &SpeckleFilterConfig::filter_type)));
+      __param_descriptions__.push_back(SpeckleFilterConfig::AbstractParamDescriptionConstPtr(new SpeckleFilterConfig::ParamDescription<int>("filter_type", "int", 0, "Filtering method selection", "{'enum_description': 'Enum to select the filtering method', 'enum': [{'srcline': 45, 'description': 'Range based filtering (distance between consecutive points)', 'srcfile': '/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 0, 'ctype': 'int', 'type': 'int', 'name': 'Distance'}, {'srcline': 46, 'description': 'Euclidean filtering based on radius outlier search', 'srcfile': '/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg', 'cconsttype': 'const int', 'value': 1, 'ctype': 'int', 'type': 'int', 'name': 'RadiusOutlier'}]}", &SpeckleFilterConfig::filter_type)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.max_range = 0.0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -521,9 +521,9 @@ SpeckleFilterConfig::GroupDescription<SpeckleFilterConfig::DEFAULT, SpeckleFilte
     return statics;
   }
 
-//#line 45 "/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg"
+//#line 45 "/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg"
       const int SpeckleFilter_Distance = 0;
-//#line 46 "/home/wego/wego_ws/src/laser_filters/cfg/SpeckleFilter.cfg"
+//#line 46 "/home/kw-cobot/wego_ws/auto-driving-project/src/laser_filters/cfg/SpeckleFilter.cfg"
       const int SpeckleFilter_RadiusOutlier = 1;
 }
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/base_local_planner/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/base_local_planner/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ base_local_planner_generate_messages_eus: navigation/base_local_planner/CMakeFil
 
 # fast build rule for target.
 base_local_planner_generate_messages_eus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/build
 .PHONY : base_local_planner_generate_messages_eus/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/rule
 
 # Convenience name for target.
@@ -183,12 +183,12 @@ base_local_planner_geneus: navigation/base_local_planner/CMakeFiles/base_local_p
 
 # fast build rule for target.
 base_local_planner_geneus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_geneus.dir/build
 .PHONY : base_local_planner_geneus/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -198,12 +198,12 @@ base_local_planner_generate_messages_cpp: navigation/base_local_planner/CMakeFil
 
 # fast build rule for target.
 base_local_planner_generate_messages_cpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/build
 .PHONY : base_local_planner_generate_messages_cpp/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule
 
 # Convenience name for target.
@@ -213,12 +213,12 @@ base_local_planner_gencpp: navigation/base_local_planner/CMakeFiles/base_local_p
 
 # fast build rule for target.
 base_local_planner_gencpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build
 .PHONY : base_local_planner_gencpp/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/rule
 
 # Convenience name for target.
@@ -228,12 +228,12 @@ base_local_planner_generate_messages: navigation/base_local_planner/CMakeFiles/b
 
 # fast build rule for target.
 base_local_planner_generate_messages/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/build
 .PHONY : base_local_planner_generate_messages/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -243,12 +243,12 @@ base_local_planner_generate_messages_lisp: navigation/base_local_planner/CMakeFi
 
 # fast build rule for target.
 base_local_planner_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_lisp.dir/build
 .PHONY : base_local_planner_generate_messages_lisp/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/rule
 
 # Convenience name for target.
@@ -258,12 +258,12 @@ _base_local_planner_generate_messages_check_deps_Position2DInt: navigation/base_
 
 # fast build rule for target.
 _base_local_planner_generate_messages_check_deps_Position2DInt/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/build.make navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/build.make navigation/base_local_planner/CMakeFiles/_base_local_planner_generate_messages_check_deps_Position2DInt.dir/build
 .PHONY : _base_local_planner_generate_messages_check_deps_Position2DInt/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -273,12 +273,12 @@ base_local_planner_generate_messages_nodejs: navigation/base_local_planner/CMake
 
 # fast build rule for target.
 base_local_planner_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_nodejs.dir/build
 .PHONY : base_local_planner_generate_messages_nodejs/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -288,12 +288,12 @@ base_local_planner_generate_messages_py: navigation/base_local_planner/CMakeFile
 
 # fast build rule for target.
 base_local_planner_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/build
 .PHONY : base_local_planner_generate_messages_py/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/rule
 
 # Convenience name for target.
@@ -303,12 +303,12 @@ base_local_planner_gennodejs: navigation/base_local_planner/CMakeFiles/base_loca
 
 # fast build rule for target.
 base_local_planner_gennodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build
 .PHONY : base_local_planner_gennodejs/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/rule
 
 # Convenience name for target.
@@ -318,12 +318,12 @@ base_local_planner_genpy: navigation/base_local_planner/CMakeFiles/base_local_pl
 
 # fast build rule for target.
 base_local_planner_genpy/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/build
 .PHONY : base_local_planner_genpy/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/point_grid.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/point_grid.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/point_grid.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/point_grid.dir/rule
 
 # Convenience name for target.
@@ -333,12 +333,12 @@ point_grid: navigation/base_local_planner/CMakeFiles/point_grid.dir/rule
 
 # fast build rule for target.
 point_grid/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/build
 .PHONY : point_grid/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/rule
 
 # Convenience name for target.
@@ -348,12 +348,12 @@ base_local_planner_gencfg: navigation/base_local_planner/CMakeFiles/base_local_p
 
 # fast build rule for target.
 base_local_planner_gencfg/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gencfg.dir/build
 .PHONY : base_local_planner_gencfg/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/rule
 
 # Convenience name for target.
@@ -363,12 +363,12 @@ base_local_planner_genlisp: navigation/base_local_planner/CMakeFiles/base_local_
 
 # fast build rule for target.
 base_local_planner_genlisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_genlisp.dir/build
 .PHONY : base_local_planner_genlisp/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner.dir/rule
 
 # Convenience name for target.
@@ -378,12 +378,12 @@ base_local_planner: navigation/base_local_planner/CMakeFiles/base_local_planner.
 
 # fast build rule for target.
 base_local_planner/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build
 .PHONY : base_local_planner/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/rule
 
 # Convenience name for target.
@@ -393,7 +393,7 @@ trajectory_planner_ros: navigation/base_local_planner/CMakeFiles/trajectory_plan
 
 # fast build rule for target.
 trajectory_planner_ros/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build
 .PHONY : trajectory_planner_ros/fast
 
 src/costmap_model.o: src/costmap_model.cpp.o
@@ -402,7 +402,7 @@ src/costmap_model.o: src/costmap_model.cpp.o
 
 # target to build an object file
 src/costmap_model.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.o
 .PHONY : src/costmap_model.cpp.o
 
 src/costmap_model.i: src/costmap_model.cpp.i
@@ -411,7 +411,7 @@ src/costmap_model.i: src/costmap_model.cpp.i
 
 # target to preprocess a source file
 src/costmap_model.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.i
 .PHONY : src/costmap_model.cpp.i
 
 src/costmap_model.s: src/costmap_model.cpp.s
@@ -420,7 +420,7 @@ src/costmap_model.s: src/costmap_model.cpp.s
 
 # target to generate assembly for a file
 src/costmap_model.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/costmap_model.cpp.s
 .PHONY : src/costmap_model.cpp.s
 
 src/footprint_helper.o: src/footprint_helper.cpp.o
@@ -429,7 +429,7 @@ src/footprint_helper.o: src/footprint_helper.cpp.o
 
 # target to build an object file
 src/footprint_helper.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.o
 .PHONY : src/footprint_helper.cpp.o
 
 src/footprint_helper.i: src/footprint_helper.cpp.i
@@ -438,7 +438,7 @@ src/footprint_helper.i: src/footprint_helper.cpp.i
 
 # target to preprocess a source file
 src/footprint_helper.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.i
 .PHONY : src/footprint_helper.cpp.i
 
 src/footprint_helper.s: src/footprint_helper.cpp.s
@@ -447,7 +447,7 @@ src/footprint_helper.s: src/footprint_helper.cpp.s
 
 # target to generate assembly for a file
 src/footprint_helper.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/footprint_helper.cpp.s
 .PHONY : src/footprint_helper.cpp.s
 
 src/goal_functions.o: src/goal_functions.cpp.o
@@ -456,7 +456,7 @@ src/goal_functions.o: src/goal_functions.cpp.o
 
 # target to build an object file
 src/goal_functions.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.o
 .PHONY : src/goal_functions.cpp.o
 
 src/goal_functions.i: src/goal_functions.cpp.i
@@ -465,7 +465,7 @@ src/goal_functions.i: src/goal_functions.cpp.i
 
 # target to preprocess a source file
 src/goal_functions.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.i
 .PHONY : src/goal_functions.cpp.i
 
 src/goal_functions.s: src/goal_functions.cpp.s
@@ -474,7 +474,7 @@ src/goal_functions.s: src/goal_functions.cpp.s
 
 # target to generate assembly for a file
 src/goal_functions.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/goal_functions.cpp.s
 .PHONY : src/goal_functions.cpp.s
 
 src/latched_stop_rotate_controller.o: src/latched_stop_rotate_controller.cpp.o
@@ -483,7 +483,7 @@ src/latched_stop_rotate_controller.o: src/latched_stop_rotate_controller.cpp.o
 
 # target to build an object file
 src/latched_stop_rotate_controller.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.o
 .PHONY : src/latched_stop_rotate_controller.cpp.o
 
 src/latched_stop_rotate_controller.i: src/latched_stop_rotate_controller.cpp.i
@@ -492,7 +492,7 @@ src/latched_stop_rotate_controller.i: src/latched_stop_rotate_controller.cpp.i
 
 # target to preprocess a source file
 src/latched_stop_rotate_controller.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.i
 .PHONY : src/latched_stop_rotate_controller.cpp.i
 
 src/latched_stop_rotate_controller.s: src/latched_stop_rotate_controller.cpp.s
@@ -501,7 +501,7 @@ src/latched_stop_rotate_controller.s: src/latched_stop_rotate_controller.cpp.s
 
 # target to generate assembly for a file
 src/latched_stop_rotate_controller.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/latched_stop_rotate_controller.cpp.s
 .PHONY : src/latched_stop_rotate_controller.cpp.s
 
 src/local_planner_util.o: src/local_planner_util.cpp.o
@@ -510,7 +510,7 @@ src/local_planner_util.o: src/local_planner_util.cpp.o
 
 # target to build an object file
 src/local_planner_util.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.o
 .PHONY : src/local_planner_util.cpp.o
 
 src/local_planner_util.i: src/local_planner_util.cpp.i
@@ -519,7 +519,7 @@ src/local_planner_util.i: src/local_planner_util.cpp.i
 
 # target to preprocess a source file
 src/local_planner_util.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.i
 .PHONY : src/local_planner_util.cpp.i
 
 src/local_planner_util.s: src/local_planner_util.cpp.s
@@ -528,7 +528,7 @@ src/local_planner_util.s: src/local_planner_util.cpp.s
 
 # target to generate assembly for a file
 src/local_planner_util.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/local_planner_util.cpp.s
 .PHONY : src/local_planner_util.cpp.s
 
 src/map_cell.o: src/map_cell.cpp.o
@@ -537,7 +537,7 @@ src/map_cell.o: src/map_cell.cpp.o
 
 # target to build an object file
 src/map_cell.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.o
 .PHONY : src/map_cell.cpp.o
 
 src/map_cell.i: src/map_cell.cpp.i
@@ -546,7 +546,7 @@ src/map_cell.i: src/map_cell.cpp.i
 
 # target to preprocess a source file
 src/map_cell.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.i
 .PHONY : src/map_cell.cpp.i
 
 src/map_cell.s: src/map_cell.cpp.s
@@ -555,7 +555,7 @@ src/map_cell.s: src/map_cell.cpp.s
 
 # target to generate assembly for a file
 src/map_cell.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_cell.cpp.s
 .PHONY : src/map_cell.cpp.s
 
 src/map_grid.o: src/map_grid.cpp.o
@@ -564,7 +564,7 @@ src/map_grid.o: src/map_grid.cpp.o
 
 # target to build an object file
 src/map_grid.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.o
 .PHONY : src/map_grid.cpp.o
 
 src/map_grid.i: src/map_grid.cpp.i
@@ -573,7 +573,7 @@ src/map_grid.i: src/map_grid.cpp.i
 
 # target to preprocess a source file
 src/map_grid.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.i
 .PHONY : src/map_grid.cpp.i
 
 src/map_grid.s: src/map_grid.cpp.s
@@ -582,7 +582,7 @@ src/map_grid.s: src/map_grid.cpp.s
 
 # target to generate assembly for a file
 src/map_grid.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid.cpp.s
 .PHONY : src/map_grid.cpp.s
 
 src/map_grid_cost_function.o: src/map_grid_cost_function.cpp.o
@@ -591,7 +591,7 @@ src/map_grid_cost_function.o: src/map_grid_cost_function.cpp.o
 
 # target to build an object file
 src/map_grid_cost_function.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.o
 .PHONY : src/map_grid_cost_function.cpp.o
 
 src/map_grid_cost_function.i: src/map_grid_cost_function.cpp.i
@@ -600,7 +600,7 @@ src/map_grid_cost_function.i: src/map_grid_cost_function.cpp.i
 
 # target to preprocess a source file
 src/map_grid_cost_function.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.i
 .PHONY : src/map_grid_cost_function.cpp.i
 
 src/map_grid_cost_function.s: src/map_grid_cost_function.cpp.s
@@ -609,7 +609,7 @@ src/map_grid_cost_function.s: src/map_grid_cost_function.cpp.s
 
 # target to generate assembly for a file
 src/map_grid_cost_function.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_cost_function.cpp.s
 .PHONY : src/map_grid_cost_function.cpp.s
 
 src/map_grid_visualizer.o: src/map_grid_visualizer.cpp.o
@@ -618,7 +618,7 @@ src/map_grid_visualizer.o: src/map_grid_visualizer.cpp.o
 
 # target to build an object file
 src/map_grid_visualizer.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.o
 .PHONY : src/map_grid_visualizer.cpp.o
 
 src/map_grid_visualizer.i: src/map_grid_visualizer.cpp.i
@@ -627,7 +627,7 @@ src/map_grid_visualizer.i: src/map_grid_visualizer.cpp.i
 
 # target to preprocess a source file
 src/map_grid_visualizer.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.i
 .PHONY : src/map_grid_visualizer.cpp.i
 
 src/map_grid_visualizer.s: src/map_grid_visualizer.cpp.s
@@ -636,7 +636,7 @@ src/map_grid_visualizer.s: src/map_grid_visualizer.cpp.s
 
 # target to generate assembly for a file
 src/map_grid_visualizer.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/map_grid_visualizer.cpp.s
 .PHONY : src/map_grid_visualizer.cpp.s
 
 src/obstacle_cost_function.o: src/obstacle_cost_function.cpp.o
@@ -645,7 +645,7 @@ src/obstacle_cost_function.o: src/obstacle_cost_function.cpp.o
 
 # target to build an object file
 src/obstacle_cost_function.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.o
 .PHONY : src/obstacle_cost_function.cpp.o
 
 src/obstacle_cost_function.i: src/obstacle_cost_function.cpp.i
@@ -654,7 +654,7 @@ src/obstacle_cost_function.i: src/obstacle_cost_function.cpp.i
 
 # target to preprocess a source file
 src/obstacle_cost_function.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.i
 .PHONY : src/obstacle_cost_function.cpp.i
 
 src/obstacle_cost_function.s: src/obstacle_cost_function.cpp.s
@@ -663,7 +663,7 @@ src/obstacle_cost_function.s: src/obstacle_cost_function.cpp.s
 
 # target to generate assembly for a file
 src/obstacle_cost_function.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/obstacle_cost_function.cpp.s
 .PHONY : src/obstacle_cost_function.cpp.s
 
 src/odometry_helper_ros.o: src/odometry_helper_ros.cpp.o
@@ -672,7 +672,7 @@ src/odometry_helper_ros.o: src/odometry_helper_ros.cpp.o
 
 # target to build an object file
 src/odometry_helper_ros.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.o
 .PHONY : src/odometry_helper_ros.cpp.o
 
 src/odometry_helper_ros.i: src/odometry_helper_ros.cpp.i
@@ -681,7 +681,7 @@ src/odometry_helper_ros.i: src/odometry_helper_ros.cpp.i
 
 # target to preprocess a source file
 src/odometry_helper_ros.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.i
 .PHONY : src/odometry_helper_ros.cpp.i
 
 src/odometry_helper_ros.s: src/odometry_helper_ros.cpp.s
@@ -690,7 +690,7 @@ src/odometry_helper_ros.s: src/odometry_helper_ros.cpp.s
 
 # target to generate assembly for a file
 src/odometry_helper_ros.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/odometry_helper_ros.cpp.s
 .PHONY : src/odometry_helper_ros.cpp.s
 
 src/oscillation_cost_function.o: src/oscillation_cost_function.cpp.o
@@ -699,7 +699,7 @@ src/oscillation_cost_function.o: src/oscillation_cost_function.cpp.o
 
 # target to build an object file
 src/oscillation_cost_function.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.o
 .PHONY : src/oscillation_cost_function.cpp.o
 
 src/oscillation_cost_function.i: src/oscillation_cost_function.cpp.i
@@ -708,7 +708,7 @@ src/oscillation_cost_function.i: src/oscillation_cost_function.cpp.i
 
 # target to preprocess a source file
 src/oscillation_cost_function.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.i
 .PHONY : src/oscillation_cost_function.cpp.i
 
 src/oscillation_cost_function.s: src/oscillation_cost_function.cpp.s
@@ -717,7 +717,7 @@ src/oscillation_cost_function.s: src/oscillation_cost_function.cpp.s
 
 # target to generate assembly for a file
 src/oscillation_cost_function.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/oscillation_cost_function.cpp.s
 .PHONY : src/oscillation_cost_function.cpp.s
 
 src/point_grid.o: src/point_grid.cpp.o
@@ -726,7 +726,7 @@ src/point_grid.o: src/point_grid.cpp.o
 
 # target to build an object file
 src/point_grid.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.o
 .PHONY : src/point_grid.cpp.o
 
 src/point_grid.i: src/point_grid.cpp.i
@@ -735,7 +735,7 @@ src/point_grid.i: src/point_grid.cpp.i
 
 # target to preprocess a source file
 src/point_grid.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.i
 .PHONY : src/point_grid.cpp.i
 
 src/point_grid.s: src/point_grid.cpp.s
@@ -744,7 +744,7 @@ src/point_grid.s: src/point_grid.cpp.s
 
 # target to generate assembly for a file
 src/point_grid.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/point_grid.cpp.s
 .PHONY : src/point_grid.cpp.s
 
 src/point_grid_node.o: src/point_grid_node.cpp.o
@@ -753,7 +753,7 @@ src/point_grid_node.o: src/point_grid_node.cpp.o
 
 # target to build an object file
 src/point_grid_node.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.o
 .PHONY : src/point_grid_node.cpp.o
 
 src/point_grid_node.i: src/point_grid_node.cpp.i
@@ -762,7 +762,7 @@ src/point_grid_node.i: src/point_grid_node.cpp.i
 
 # target to preprocess a source file
 src/point_grid_node.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.i
 .PHONY : src/point_grid_node.cpp.i
 
 src/point_grid_node.s: src/point_grid_node.cpp.s
@@ -771,7 +771,7 @@ src/point_grid_node.s: src/point_grid_node.cpp.s
 
 # target to generate assembly for a file
 src/point_grid_node.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/point_grid.dir/build.make navigation/base_local_planner/CMakeFiles/point_grid.dir/src/point_grid_node.cpp.s
 .PHONY : src/point_grid_node.cpp.s
 
 src/prefer_forward_cost_function.o: src/prefer_forward_cost_function.cpp.o
@@ -780,7 +780,7 @@ src/prefer_forward_cost_function.o: src/prefer_forward_cost_function.cpp.o
 
 # target to build an object file
 src/prefer_forward_cost_function.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.o
 .PHONY : src/prefer_forward_cost_function.cpp.o
 
 src/prefer_forward_cost_function.i: src/prefer_forward_cost_function.cpp.i
@@ -789,7 +789,7 @@ src/prefer_forward_cost_function.i: src/prefer_forward_cost_function.cpp.i
 
 # target to preprocess a source file
 src/prefer_forward_cost_function.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.i
 .PHONY : src/prefer_forward_cost_function.cpp.i
 
 src/prefer_forward_cost_function.s: src/prefer_forward_cost_function.cpp.s
@@ -798,7 +798,7 @@ src/prefer_forward_cost_function.s: src/prefer_forward_cost_function.cpp.s
 
 # target to generate assembly for a file
 src/prefer_forward_cost_function.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/prefer_forward_cost_function.cpp.s
 .PHONY : src/prefer_forward_cost_function.cpp.s
 
 src/simple_scored_sampling_planner.o: src/simple_scored_sampling_planner.cpp.o
@@ -807,7 +807,7 @@ src/simple_scored_sampling_planner.o: src/simple_scored_sampling_planner.cpp.o
 
 # target to build an object file
 src/simple_scored_sampling_planner.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.o
 .PHONY : src/simple_scored_sampling_planner.cpp.o
 
 src/simple_scored_sampling_planner.i: src/simple_scored_sampling_planner.cpp.i
@@ -816,7 +816,7 @@ src/simple_scored_sampling_planner.i: src/simple_scored_sampling_planner.cpp.i
 
 # target to preprocess a source file
 src/simple_scored_sampling_planner.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.i
 .PHONY : src/simple_scored_sampling_planner.cpp.i
 
 src/simple_scored_sampling_planner.s: src/simple_scored_sampling_planner.cpp.s
@@ -825,7 +825,7 @@ src/simple_scored_sampling_planner.s: src/simple_scored_sampling_planner.cpp.s
 
 # target to generate assembly for a file
 src/simple_scored_sampling_planner.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_scored_sampling_planner.cpp.s
 .PHONY : src/simple_scored_sampling_planner.cpp.s
 
 src/simple_trajectory_generator.o: src/simple_trajectory_generator.cpp.o
@@ -834,7 +834,7 @@ src/simple_trajectory_generator.o: src/simple_trajectory_generator.cpp.o
 
 # target to build an object file
 src/simple_trajectory_generator.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.o
 .PHONY : src/simple_trajectory_generator.cpp.o
 
 src/simple_trajectory_generator.i: src/simple_trajectory_generator.cpp.i
@@ -843,7 +843,7 @@ src/simple_trajectory_generator.i: src/simple_trajectory_generator.cpp.i
 
 # target to preprocess a source file
 src/simple_trajectory_generator.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.i
 .PHONY : src/simple_trajectory_generator.cpp.i
 
 src/simple_trajectory_generator.s: src/simple_trajectory_generator.cpp.s
@@ -852,7 +852,7 @@ src/simple_trajectory_generator.s: src/simple_trajectory_generator.cpp.s
 
 # target to generate assembly for a file
 src/simple_trajectory_generator.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/simple_trajectory_generator.cpp.s
 .PHONY : src/simple_trajectory_generator.cpp.s
 
 src/trajectory.o: src/trajectory.cpp.o
@@ -861,7 +861,7 @@ src/trajectory.o: src/trajectory.cpp.o
 
 # target to build an object file
 src/trajectory.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.o
 .PHONY : src/trajectory.cpp.o
 
 src/trajectory.i: src/trajectory.cpp.i
@@ -870,7 +870,7 @@ src/trajectory.i: src/trajectory.cpp.i
 
 # target to preprocess a source file
 src/trajectory.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.i
 .PHONY : src/trajectory.cpp.i
 
 src/trajectory.s: src/trajectory.cpp.s
@@ -879,7 +879,7 @@ src/trajectory.s: src/trajectory.cpp.s
 
 # target to generate assembly for a file
 src/trajectory.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/trajectory.cpp.s
 .PHONY : src/trajectory.cpp.s
 
 src/trajectory_planner.o: src/trajectory_planner.cpp.o
@@ -888,7 +888,7 @@ src/trajectory_planner.o: src/trajectory_planner.cpp.o
 
 # target to build an object file
 src/trajectory_planner.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.o
 .PHONY : src/trajectory_planner.cpp.o
 
 src/trajectory_planner.i: src/trajectory_planner.cpp.i
@@ -897,7 +897,7 @@ src/trajectory_planner.i: src/trajectory_planner.cpp.i
 
 # target to preprocess a source file
 src/trajectory_planner.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.i
 .PHONY : src/trajectory_planner.cpp.i
 
 src/trajectory_planner.s: src/trajectory_planner.cpp.s
@@ -906,7 +906,7 @@ src/trajectory_planner.s: src/trajectory_planner.cpp.s
 
 # target to generate assembly for a file
 src/trajectory_planner.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner.cpp.s
 .PHONY : src/trajectory_planner.cpp.s
 
 src/trajectory_planner_ros.o: src/trajectory_planner_ros.cpp.o
@@ -915,7 +915,7 @@ src/trajectory_planner_ros.o: src/trajectory_planner_ros.cpp.o
 
 # target to build an object file
 src/trajectory_planner_ros.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.o
 .PHONY : src/trajectory_planner_ros.cpp.o
 
 src/trajectory_planner_ros.i: src/trajectory_planner_ros.cpp.i
@@ -924,7 +924,7 @@ src/trajectory_planner_ros.i: src/trajectory_planner_ros.cpp.i
 
 # target to preprocess a source file
 src/trajectory_planner_ros.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.i
 .PHONY : src/trajectory_planner_ros.cpp.i
 
 src/trajectory_planner_ros.s: src/trajectory_planner_ros.cpp.s
@@ -933,7 +933,7 @@ src/trajectory_planner_ros.s: src/trajectory_planner_ros.cpp.s
 
 # target to generate assembly for a file
 src/trajectory_planner_ros.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/build.make navigation/base_local_planner/CMakeFiles/trajectory_planner_ros.dir/src/trajectory_planner_ros.cpp.s
 .PHONY : src/trajectory_planner_ros.cpp.s
 
 src/twirling_cost_function.o: src/twirling_cost_function.cpp.o
@@ -942,7 +942,7 @@ src/twirling_cost_function.o: src/twirling_cost_function.cpp.o
 
 # target to build an object file
 src/twirling_cost_function.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.o
 .PHONY : src/twirling_cost_function.cpp.o
 
 src/twirling_cost_function.i: src/twirling_cost_function.cpp.i
@@ -951,7 +951,7 @@ src/twirling_cost_function.i: src/twirling_cost_function.cpp.i
 
 # target to preprocess a source file
 src/twirling_cost_function.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.i
 .PHONY : src/twirling_cost_function.cpp.i
 
 src/twirling_cost_function.s: src/twirling_cost_function.cpp.s
@@ -960,7 +960,7 @@ src/twirling_cost_function.s: src/twirling_cost_function.cpp.s
 
 # target to generate assembly for a file
 src/twirling_cost_function.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.s
 .PHONY : src/twirling_cost_function.cpp.s
 
 src/voxel_grid_model.o: src/voxel_grid_model.cpp.o
@@ -969,7 +969,7 @@ src/voxel_grid_model.o: src/voxel_grid_model.cpp.o
 
 # target to build an object file
 src/voxel_grid_model.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.o
 .PHONY : src/voxel_grid_model.cpp.o
 
 src/voxel_grid_model.i: src/voxel_grid_model.cpp.i
@@ -978,7 +978,7 @@ src/voxel_grid_model.i: src/voxel_grid_model.cpp.i
 
 # target to preprocess a source file
 src/voxel_grid_model.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.i
 .PHONY : src/voxel_grid_model.cpp.i
 
 src/voxel_grid_model.s: src/voxel_grid_model.cpp.s
@@ -987,7 +987,7 @@ src/voxel_grid_model.s: src/voxel_grid_model.cpp.s
 
 # target to generate assembly for a file
 src/voxel_grid_model.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.s
 .PHONY : src/voxel_grid_model.cpp.s
 
 # Help Target
@@ -1095,6 +1095,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

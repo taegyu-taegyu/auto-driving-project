@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/hector_mapping_generate_messages_cpp"
-  "/home/wego/wego_ws/devel/include/hector_mapping/HectorDebugInfo.h"
-  "/home/wego/wego_ws/devel/include/hector_mapping/HectorIterData.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorDebugInfo.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/HectorIterData.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/hector_mapping/ResetMapping.h"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -18,8 +18,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner.dir/src/trajectory.cpp.o"
   "CMakeFiles/base_local_planner.dir/src/twirling_cost_function.cpp.o"
   "CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libbase_local_planner.pdb"
-  "/home/wego/wego_ws/devel/lib/libbase_local_planner.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libbase_local_planner.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libbase_local_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

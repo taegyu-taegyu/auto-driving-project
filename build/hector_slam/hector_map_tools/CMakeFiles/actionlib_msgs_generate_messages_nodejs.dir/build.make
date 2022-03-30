@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for actionlib_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.
 .PHONY : hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/build
 
 hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/wego/wego_ws/build/hector_slam/hector_map_tools && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_map_tools && $(CMAKE_COMMAND) -P CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/clean
 
 hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/hector_slam/hector_map_tools /home/wego/wego_ws/build /home/wego/wego_ws/build/hector_slam/hector_map_tools /home/wego/wego_ws/build/hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_map_tools /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_map_tools /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : hector_slam/hector_map_tools/CMakeFiles/actionlib_msgs_generate_messages_nodejs.dir/depend
 

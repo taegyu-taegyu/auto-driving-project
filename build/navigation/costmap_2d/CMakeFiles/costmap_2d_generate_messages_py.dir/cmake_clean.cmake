@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_2d_generate_messages_py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/costmap_2d/msg/_VoxelGrid.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/costmap_2d/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

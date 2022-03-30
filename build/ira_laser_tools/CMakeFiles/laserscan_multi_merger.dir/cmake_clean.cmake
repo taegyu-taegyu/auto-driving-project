@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/laserscan_multi_merger.dir/src/laserscan_multi_merger.cpp.o"
-  "/home/wego/wego_ws/devel/lib/ira_laser_tools/laserscan_multi_merger.pdb"
-  "/home/wego/wego_ws/devel/lib/ira_laser_tools/laserscan_multi_merger"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/ira_laser_tools/laserscan_multi_merger.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/ira_laser_tools/laserscan_multi_merger"
 )
 
 # Per-language clean rules from dependency scanning.

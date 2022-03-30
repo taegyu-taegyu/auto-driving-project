@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/carrot_planner.dir/src/carrot_planner.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libcarrot_planner.pdb"
-  "/home/wego/wego_ws/devel/lib/libcarrot_planner.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcarrot_planner.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcarrot_planner.so"
 )
 
 # Per-language clean rules from dependency scanning.

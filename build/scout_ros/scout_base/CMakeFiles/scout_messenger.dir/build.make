@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Include any dependencies generated for this target.
 include scout_ros/scout_base/CMakeFiles/scout_messenger.dir/depend.make
@@ -58,17 +58,17 @@ include scout_ros/scout_base/CMakeFiles/scout_messenger.dir/progress.make
 include scout_ros/scout_base/CMakeFiles/scout_messenger.dir/flags.make
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/flags.make
-scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o: /home/wego/wego_ws/src/scout_ros/scout_base/src/scout_messenger.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o"
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o -c /home/wego/wego_ws/src/scout_ros/scout_base/src/scout_messenger.cpp
+scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o: /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/src/scout_messenger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o -c /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/src/scout_messenger.cpp
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i"
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wego/wego_ws/src/scout_ros/scout_base/src/scout_messenger.cpp > CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/src/scout_messenger.cpp > CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.i
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s"
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wego/wego_ws/src/scout_ros/scout_base/src/scout_messenger.cpp -o CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base/src/scout_messenger.cpp -o CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.s
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o.requires:
 
@@ -88,15 +88,15 @@ scout_messenger_OBJECTS = \
 # External object files for target scout_messenger
 scout_messenger_EXTERNAL_OBJECTS =
 
-/home/wego/wego_ws/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
-/home/wego/wego_ws/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make
-/home/wego/wego_ws/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library /home/wego/wego_ws/devel/lib/libscout_messenger.a"
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && $(CMAKE_COMMAND) -P CMakeFiles/scout_messenger.dir/cmake_clean_target.cmake
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scout_messenger.dir/link.txt --verbose=$(VERBOSE)
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/src/scout_messenger.cpp.o
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build.make
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a: scout_ros/scout_base/CMakeFiles/scout_messenger.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && $(CMAKE_COMMAND) -P CMakeFiles/scout_messenger.dir/cmake_clean_target.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scout_messenger.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build: /home/wego/wego_ws/devel/lib/libscout_messenger.a
+scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libscout_messenger.a
 
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_messenger.dir/build
 
@@ -105,10 +105,10 @@ scout_ros/scout_base/CMakeFiles/scout_messenger.dir/requires: scout_ros/scout_ba
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_messenger.dir/requires
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/clean:
-	cd /home/wego/wego_ws/build/scout_ros/scout_base && $(CMAKE_COMMAND) -P CMakeFiles/scout_messenger.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base && $(CMAKE_COMMAND) -P CMakeFiles/scout_messenger.dir/cmake_clean.cmake
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_messenger.dir/clean
 
 scout_ros/scout_base/CMakeFiles/scout_messenger.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/scout_ros/scout_base /home/wego/wego_ws/build /home/wego/wego_ws/build/scout_ros/scout_base /home/wego/wego_ws/build/scout_ros/scout_base/CMakeFiles/scout_messenger.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/scout_ros/scout_base /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base /home/kw-cobot/wego_ws/auto-driving-project/build/scout_ros/scout_base/CMakeFiles/scout_messenger.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scout_ros/scout_base/CMakeFiles/scout_messenger.dir/depend
 

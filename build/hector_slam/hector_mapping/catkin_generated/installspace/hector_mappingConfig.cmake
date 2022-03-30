@@ -67,14 +67,14 @@ set(hector_mapping_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(hector_mapping_SOURCE_PREFIX /home/wego/wego_ws/src/hector_slam/hector_mapping)
-  set(hector_mapping_DEVEL_PREFIX /home/wego/wego_ws/devel)
+  set(hector_mapping_SOURCE_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/src/hector_slam/hector_mapping)
+  set(hector_mapping_DEVEL_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/devel)
   set(hector_mapping_INSTALL_PREFIX "")
   set(hector_mapping_PREFIX ${hector_mapping_DEVEL_PREFIX})
 else()
   set(hector_mapping_SOURCE_PREFIX "")
   set(hector_mapping_DEVEL_PREFIX "")
-  set(hector_mapping_INSTALL_PREFIX /home/wego/wego_ws/install)
+  set(hector_mapping_INSTALL_PREFIX /home/kw-cobot/wego_ws/auto-driving-project/install)
   set(hector_mapping_PREFIX ${hector_mapping_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/wego/wego_ws/install/lib;/home/wego/wego_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/kw-cobot/wego_ws/auto-driving-project/install/lib;/home/kw-cobot/wego_ws/auto-driving-project/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -185,7 +185,7 @@ foreach(t ${hector_mapping_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "roscpp;nav_msgs;visualization_msgs;tf;message_filters;laser_geometry;tf_conversions;message_runtime")
+set(depends "roscpp;nav_msgs;visualization_msgs;tf;message_filters;laser_geometry;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

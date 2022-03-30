@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/hector_slam/hector_geotiff_launch/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_geotiff_launch/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/rule
 .PHONY : hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ _catkin_empty_exported_target: hector_slam/hector_geotiff_launch/CMakeFiles/_cat
 
 # fast build rule for target.
 _catkin_empty_exported_target/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/build.make hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/build.make hector_slam/hector_geotiff_launch/CMakeFiles/_catkin_empty_exported_target.dir/build
 .PHONY : _catkin_empty_exported_target/fast
 
 # Help Target
@@ -195,6 +195,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
