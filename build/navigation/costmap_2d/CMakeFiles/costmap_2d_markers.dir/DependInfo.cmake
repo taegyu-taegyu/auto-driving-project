@@ -24,7 +24,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
   "/usr/include/eigen3"
-  "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/costmap_2d/test"
   )
 
 # Targets to which this target links.

@@ -56,28 +56,17 @@ CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -90,17 +79,16 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -124,16 +112,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,81 +157,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/rule
-
-# Convenience name for target.
-clean_test_results_clear_costmap_recovery: navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/rule
-
-.PHONY : clean_test_results_clear_costmap_recovery
-
-# fast build rule for target.
-clean_test_results_clear_costmap_recovery/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clean_test_results_clear_costmap_recovery.dir/build
-.PHONY : clean_test_results_clear_costmap_recovery/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch: navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-
-.PHONY : _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch
-
-# fast build rule for target.
-_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
-.PHONY : _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-
-# Convenience name for target.
-run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch: navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/rule
-
-.PHONY : run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch
-
-# fast build rule for target.
-run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch.dir/build
-.PHONY : run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule
-
-# Convenience name for target.
-clear_tester: navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/rule
-
-.PHONY : clear_tester
-
-# fast build rule for target.
-clear_tester/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build
-.PHONY : clear_tester/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_clear_costmap_recovery_rostest: navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/rule
-
-.PHONY : _run_tests_clear_costmap_recovery_rostest
-
-# fast build rule for target.
-_run_tests_clear_costmap_recovery_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery_rostest.dir/build
-.PHONY : _run_tests_clear_costmap_recovery_rostest/fast
-
-# Convenience name for target.
 navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/rule
 .PHONY : navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/rule
@@ -256,51 +170,6 @@ clear_costmap_recovery: navigation/clear_costmap_recovery/CMakeFiles/clear_costm
 clear_costmap_recovery/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build
 .PHONY : clear_costmap_recovery/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule
-
-# Convenience name for target.
-run_tests_clear_costmap_recovery: navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/rule
-
-.PHONY : run_tests_clear_costmap_recovery
-
-# fast build rule for target.
-run_tests_clear_costmap_recovery/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery.dir/build
-.PHONY : run_tests_clear_costmap_recovery/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule
-
-# Convenience name for target.
-_run_tests_clear_costmap_recovery: navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/rule
-
-.PHONY : _run_tests_clear_costmap_recovery
-
-# fast build rule for target.
-_run_tests_clear_costmap_recovery/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/_run_tests_clear_costmap_recovery.dir/build
-.PHONY : _run_tests_clear_costmap_recovery/fast
-
-# Convenience name for target.
-navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule
-.PHONY : navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule
-
-# Convenience name for target.
-run_tests_clear_costmap_recovery_rostest: navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/rule
-
-.PHONY : run_tests_clear_costmap_recovery_rostest
-
-# fast build rule for target.
-run_tests_clear_costmap_recovery_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/run_tests_clear_costmap_recovery_rostest.dir/build
-.PHONY : run_tests_clear_costmap_recovery_rostest/fast
 
 src/clear_costmap_recovery.o: src/clear_costmap_recovery.cpp.o
 
@@ -329,61 +198,22 @@ src/clear_costmap_recovery.cpp.s:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_costmap_recovery.dir/src/clear_costmap_recovery.cpp.s
 .PHONY : src/clear_costmap_recovery.cpp.s
 
-test/clear_tester.o: test/clear_tester.cpp.o
-
-.PHONY : test/clear_tester.o
-
-# target to build an object file
-test/clear_tester.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/test/clear_tester.cpp.o
-.PHONY : test/clear_tester.cpp.o
-
-test/clear_tester.i: test/clear_tester.cpp.i
-
-.PHONY : test/clear_tester.i
-
-# target to preprocess a source file
-test/clear_tester.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/test/clear_tester.cpp.i
-.PHONY : test/clear_tester.cpp.i
-
-test/clear_tester.s: test/clear_tester.cpp.s
-
-.PHONY : test/clear_tester.s
-
-# target to generate assembly for a file
-test/clear_tester.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/build.make navigation/clear_costmap_recovery/CMakeFiles/clear_tester.dir/test/clear_tester.cpp.s
-.PHONY : test/clear_tester.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... clean_test_results_clear_costmap_recovery"
-	@echo "... _run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch"
-	@echo "... run_tests_clear_costmap_recovery_rostest_test_clear_tests.launch"
 	@echo "... install/strip"
-	@echo "... clear_tester"
-	@echo "... _run_tests_clear_costmap_recovery_rostest"
+	@echo "... edit_cache"
 	@echo "... clear_costmap_recovery"
-	@echo "... run_tests_clear_costmap_recovery"
+	@echo "... rebuild_cache"
 	@echo "... list_install_components"
-	@echo "... _run_tests_clear_costmap_recovery"
 	@echo "... install/local"
-	@echo "... test"
-	@echo "... run_tests_clear_costmap_recovery_rostest"
+	@echo "... install"
 	@echo "... src/clear_costmap_recovery.o"
 	@echo "... src/clear_costmap_recovery.i"
 	@echo "... src/clear_costmap_recovery.s"
-	@echo "... test/clear_tester.o"
-	@echo "... test/clear_tester.i"
-	@echo "... test/clear_tester.s"
 .PHONY : help
 
 

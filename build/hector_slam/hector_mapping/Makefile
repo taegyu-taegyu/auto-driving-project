@@ -90,17 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -124,16 +113,16 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
 
-# Special rule for the target test
-test/fast: test
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
 
-.PHONY : test/fast
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -333,6 +322,21 @@ hector_mapping_gennodejs/fast:
 .PHONY : hector_mapping_gennodejs/fast
 
 # Convenience name for target.
+hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
+.PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
+
+# Convenience name for target.
+hector_mapping_generate_messages_py: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
+
+.PHONY : hector_mapping_generate_messages_py
+
+# fast build rule for target.
+hector_mapping_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build
+.PHONY : hector_mapping_generate_messages_py/fast
+
+# Convenience name for target.
 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/rule
 .PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_gencpp.dir/rule
@@ -376,21 +380,6 @@ hector_mapping_genpy: hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy
 hector_mapping_genpy/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_genpy.dir/build
 .PHONY : hector_mapping_genpy/fast
-
-# Convenience name for target.
-hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
-.PHONY : hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
-
-# Convenience name for target.
-hector_mapping_generate_messages_py: hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/rule
-
-.PHONY : hector_mapping_generate_messages_py
-
-# fast build rule for target.
-hector_mapping_generate_messages_py/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build.make hector_slam/hector_mapping/CMakeFiles/hector_mapping_generate_messages_py.dir/build
-.PHONY : hector_mapping_generate_messages_py/fast
 
 src/HectorMappingRos.o: src/HectorMappingRos.cpp.o
 
@@ -482,7 +471,6 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
 	@echo "... hector_mapping_geneus"
 	@echo "... _hector_mapping_generate_messages_check_deps_HectorIterData"
 	@echo "... hector_mapping_generate_messages"
@@ -496,11 +484,11 @@ help:
 	@echo "... hector_mapping_generate_messages_nodejs"
 	@echo "... rebuild_cache"
 	@echo "... hector_mapping_gennodejs"
+	@echo "... hector_mapping_generate_messages_py"
 	@echo "... hector_mapping_gencpp"
 	@echo "... _hector_mapping_generate_messages_check_deps_HectorDebugInfo"
 	@echo "... hector_mapping_genpy"
-	@echo "... hector_mapping_generate_messages_py"
-	@echo "... test"
+	@echo "... edit_cache"
 	@echo "... src/HectorMappingRos.o"
 	@echo "... src/HectorMappingRos.i"
 	@echo "... src/HectorMappingRos.s"

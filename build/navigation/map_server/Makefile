@@ -56,39 +56,17 @@ CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
@@ -102,6 +80,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -113,17 +102,17 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -168,154 +157,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
+navigation/map_server/CMakeFiles/map_server.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/map_server.dir/rule
 
 # Convenience name for target.
-_run_tests_map_server_rostest_test_rtest.xml: navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/rule
+map_server: navigation/map_server/CMakeFiles/map_server.dir/rule
 
-.PHONY : _run_tests_map_server_rostest_test_rtest.xml
+.PHONY : map_server
 
 # fast build rule for target.
-_run_tests_map_server_rostest_test_rtest.xml/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build.make navigation/map_server/CMakeFiles/_run_tests_map_server_rostest_test_rtest.xml.dir/build
-.PHONY : _run_tests_map_server_rostest_test_rtest.xml/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_rostest_test_rtest.xml: navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/rule
-
-.PHONY : run_tests_map_server_rostest_test_rtest.xml
-
-# fast build rule for target.
-run_tests_map_server_rostest_test_rtest.xml/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build.make navigation/map_server/CMakeFiles/run_tests_map_server_rostest_test_rtest.xml.dir/build
-.PHONY : run_tests_map_server_rostest_test_rtest.xml/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server_rostest: navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/rule
-
-.PHONY : _run_tests_map_server_rostest
-
-# fast build rule for target.
-_run_tests_map_server_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build.make navigation/map_server/CMakeFiles/_run_tests_map_server_rostest.dir/build
-.PHONY : _run_tests_map_server_rostest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_rostest: navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/rule
-
-.PHONY : run_tests_map_server_rostest
-
-# fast build rule for target.
-run_tests_map_server_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/build.make navigation/map_server/CMakeFiles/run_tests_map_server_rostest.dir/build
-.PHONY : run_tests_map_server_rostest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
-
-# Convenience name for target.
-map_server-map_saver: navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
-
-.PHONY : map_server-map_saver
-
-# fast build rule for target.
-map_server-map_saver/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server-map_saver.dir/build.make navigation/map_server/CMakeFiles/map_server-map_saver.dir/build
-.PHONY : map_server-map_saver/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
-
-# Convenience name for target.
-map_server_image_loader: navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
-
-.PHONY : map_server_image_loader
-
-# fast build rule for target.
-map_server_image_loader/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_image_loader.dir/build.make navigation/map_server/CMakeFiles/map_server_image_loader.dir/build
-.PHONY : map_server_image_loader/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_gtest_map_server_utest: navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/rule
-
-.PHONY : run_tests_map_server_gtest_map_server_utest
-
-# fast build rule for target.
-run_tests_map_server_gtest_map_server_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build.make navigation/map_server/CMakeFiles/run_tests_map_server_gtest_map_server_utest.dir/build
-.PHONY : run_tests_map_server_gtest_map_server_utest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-
-# Convenience name for target.
-clean_test_results_map_server: navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/rule
-
-.PHONY : clean_test_results_map_server
-
-# fast build rule for target.
-clean_test_results_map_server/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/build.make navigation/map_server/CMakeFiles/clean_test_results_map_server.dir/build
-.PHONY : clean_test_results_map_server/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_nodejs: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_eus: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
+map_server/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server.dir/build.make navigation/map_server/CMakeFiles/map_server.dir/build
+.PHONY : map_server/fast
 
 # Convenience name for target.
 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
@@ -333,126 +187,6 @@ tf2_msgs_generate_messages_cpp/fast:
 .PHONY : tf2_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-navigation/map_server/CMakeFiles/rtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/rtest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/rtest.dir/rule
-
-# Convenience name for target.
-rtest: navigation/map_server/CMakeFiles/rtest.dir/rule
-
-.PHONY : rtest
-
-# fast build rule for target.
-rtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/build
-.PHONY : rtest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/map_server.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/map_server.dir/rule
-
-# Convenience name for target.
-map_server: navigation/map_server/CMakeFiles/map_server.dir/rule
-
-.PHONY : map_server
-
-# fast build rule for target.
-map_server/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server.dir/build.make navigation/map_server/CMakeFiles/map_server.dir/build
-.PHONY : map_server/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/_run_tests_map_server.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/_run_tests_map_server.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/_run_tests_map_server.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server: navigation/map_server/CMakeFiles/_run_tests_map_server.dir/rule
-
-.PHONY : _run_tests_map_server
-
-# fast build rule for target.
-_run_tests_map_server/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/_run_tests_map_server.dir/build.make navigation/map_server/CMakeFiles/_run_tests_map_server.dir/build
-.PHONY : _run_tests_map_server/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/map_server_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server_utest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/map_server_utest.dir/rule
-
-# Convenience name for target.
-map_server_utest: navigation/map_server/CMakeFiles/map_server_utest.dir/rule
-
-.PHONY : map_server_utest
-
-# fast build rule for target.
-map_server_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/build
-.PHONY : map_server_utest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/run_tests_map_server.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/run_tests_map_server.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/run_tests_map_server.dir/rule
-
-# Convenience name for target.
-run_tests_map_server: navigation/map_server/CMakeFiles/run_tests_map_server.dir/rule
-
-.PHONY : run_tests_map_server
-
-# fast build rule for target.
-run_tests_map_server/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/run_tests_map_server.dir/build.make navigation/map_server/CMakeFiles/run_tests_map_server.dir/build
-.PHONY : run_tests_map_server/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-
-# Convenience name for target.
-run_tests_map_server_gtest: navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/rule
-
-.PHONY : run_tests_map_server_gtest
-
-# fast build rule for target.
-run_tests_map_server_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/build.make navigation/map_server/CMakeFiles/run_tests_map_server_gtest.dir/build
-.PHONY : run_tests_map_server_gtest/fast
-
-# Convenience name for target.
-navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-
-# Convenience name for target.
-_run_tests_map_server_gtest: navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/rule
-
-.PHONY : _run_tests_map_server_gtest
-
-# fast build rule for target.
-_run_tests_map_server_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build.make navigation/map_server/CMakeFiles/_run_tests_map_server_gtest.dir/build
-.PHONY : _run_tests_map_server_gtest/fast
-
-# Convenience name for target.
 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
 .PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
@@ -468,19 +202,79 @@ tf2_msgs_generate_messages_lisp/fast:
 .PHONY : tf2_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
-.PHONY : navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
+navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-_run_tests_map_server_gtest_map_server_utest: navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/rule
+tf2_msgs_generate_messages_eus: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
 
-.PHONY : _run_tests_map_server_gtest_map_server_utest
+.PHONY : tf2_msgs_generate_messages_eus
 
 # fast build rule for target.
-_run_tests_map_server_gtest_map_server_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build.make navigation/map_server/CMakeFiles/_run_tests_map_server_gtest_map_server_utest.dir/build
-.PHONY : _run_tests_map_server_gtest_map_server_utest/fast
+tf2_msgs_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
+.PHONY : tf2_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_nodejs: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+tf2_msgs_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
+.PHONY : tf2_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
+
+# Convenience name for target.
+map_server_image_loader: navigation/map_server/CMakeFiles/map_server_image_loader.dir/rule
+
+.PHONY : map_server_image_loader
+
+# fast build rule for target.
+map_server_image_loader/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_image_loader.dir/build.make navigation/map_server/CMakeFiles/map_server_image_loader.dir/build
+.PHONY : map_server_image_loader/fast
+
+# Convenience name for target.
+navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
+
+# Convenience name for target.
+map_server-map_saver: navigation/map_server/CMakeFiles/map_server-map_saver.dir/rule
+
+.PHONY : map_server-map_saver
+
+# fast build rule for target.
+map_server-map_saver/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server-map_saver.dir/build.make navigation/map_server/CMakeFiles/map_server-map_saver.dir/build
+.PHONY : map_server-map_saver/fast
+
+# Convenience name for target.
+navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+.PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+tf2_msgs_generate_messages_py: navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
+
+.PHONY : tf2_msgs_generate_messages_py
+
+# fast build rule for target.
+tf2_msgs_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
+.PHONY : tf2_msgs_generate_messages_py/fast
 
 src/image_loader.o: src/image_loader.cpp.o
 
@@ -563,124 +357,26 @@ src/map_saver.cpp.s:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server-map_saver.dir/build.make navigation/map_server/CMakeFiles/map_server-map_saver.dir/src/map_saver.cpp.s
 .PHONY : src/map_saver.cpp.s
 
-test/rtest.o: test/rtest.cpp.o
-
-.PHONY : test/rtest.o
-
-# target to build an object file
-test/rtest.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/rtest.cpp.o
-.PHONY : test/rtest.cpp.o
-
-test/rtest.i: test/rtest.cpp.i
-
-.PHONY : test/rtest.i
-
-# target to preprocess a source file
-test/rtest.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/rtest.cpp.i
-.PHONY : test/rtest.cpp.i
-
-test/rtest.s: test/rtest.cpp.s
-
-.PHONY : test/rtest.s
-
-# target to generate assembly for a file
-test/rtest.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/rtest.cpp.s
-.PHONY : test/rtest.cpp.s
-
-test/test_constants.o: test/test_constants.cpp.o
-
-.PHONY : test/test_constants.o
-
-# target to build an object file
-test/test_constants.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.o
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.o
-.PHONY : test/test_constants.cpp.o
-
-test/test_constants.i: test/test_constants.cpp.i
-
-.PHONY : test/test_constants.i
-
-# target to preprocess a source file
-test/test_constants.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.i
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.i
-.PHONY : test/test_constants.cpp.i
-
-test/test_constants.s: test/test_constants.cpp.s
-
-.PHONY : test/test_constants.s
-
-# target to generate assembly for a file
-test/test_constants.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/rtest.dir/build.make navigation/map_server/CMakeFiles/rtest.dir/test/test_constants.cpp.s
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/test_constants.cpp.s
-.PHONY : test/test_constants.cpp.s
-
-test/utest.o: test/utest.cpp.o
-
-.PHONY : test/utest.o
-
-# target to build an object file
-test/utest.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/utest.cpp.o
-.PHONY : test/utest.cpp.o
-
-test/utest.i: test/utest.cpp.i
-
-.PHONY : test/utest.i
-
-# target to preprocess a source file
-test/utest.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/utest.cpp.i
-.PHONY : test/utest.cpp.i
-
-test/utest.s: test/utest.cpp.s
-
-.PHONY : test/utest.s
-
-# target to generate assembly for a file
-test/utest.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/map_server/CMakeFiles/map_server_utest.dir/build.make navigation/map_server/CMakeFiles/map_server_utest.dir/test/utest.cpp.s
-.PHONY : test/utest.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install"
-	@echo "... rebuild_cache"
-	@echo "... test"
-	@echo "... _run_tests_map_server_rostest_test_rtest.xml"
-	@echo "... run_tests_map_server_rostest_test_rtest.xml"
-	@echo "... _run_tests_map_server_rostest"
-	@echo "... run_tests_map_server_rostest"
-	@echo "... map_server-map_saver"
-	@echo "... map_server_image_loader"
-	@echo "... run_tests_map_server_gtest_map_server_utest"
-	@echo "... clean_test_results_map_server"
-	@echo "... install/local"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... edit_cache"
-	@echo "... tf2_msgs_generate_messages_eus"
 	@echo "... install/strip"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... rtest"
+	@echo "... install/local"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... map_server"
-	@echo "... _run_tests_map_server"
-	@echo "... map_server_utest"
-	@echo "... list_install_components"
-	@echo "... run_tests_map_server"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... run_tests_map_server_gtest"
-	@echo "... _run_tests_map_server_gtest"
+	@echo "... tf2_msgs_generate_messages_cpp"
+	@echo "... install"
 	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... _run_tests_map_server_gtest_map_server_utest"
+	@echo "... list_install_components"
+	@echo "... tf2_msgs_generate_messages_eus"
+	@echo "... tf2_msgs_generate_messages_nodejs"
+	@echo "... map_server_image_loader"
+	@echo "... map_server-map_saver"
+	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... src/image_loader.o"
 	@echo "... src/image_loader.i"
 	@echo "... src/image_loader.s"
@@ -690,15 +386,6 @@ help:
 	@echo "... src/map_saver.o"
 	@echo "... src/map_saver.i"
 	@echo "... src/map_saver.s"
-	@echo "... test/rtest.o"
-	@echo "... test/rtest.i"
-	@echo "... test/rtest.s"
-	@echo "... test/test_constants.o"
-	@echo "... test/test_constants.i"
-	@echo "... test/test_constants.s"
-	@echo "... test/utest.o"
-	@echo "... test/utest.i"
-	@echo "... test/utest.s"
 .PHONY : help
 
 

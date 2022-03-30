@@ -56,17 +56,17 @@ CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
 
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # Special rule for the target install
 install: preinstall
@@ -80,16 +80,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -101,6 +91,28 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -111,29 +123,6 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,649 +157,19 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/rule
+navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
 
 # Convenience name for target.
-run_tests_costmap_2d_gtest_coordinates_test: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/rule
+costmap_2d_markers: navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
 
-.PHONY : run_tests_costmap_2d_gtest_coordinates_test
-
-# fast build rule for target.
-run_tests_costmap_2d_gtest_coordinates_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_coordinates_test.dir/build
-.PHONY : run_tests_costmap_2d_gtest_coordinates_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_gtest_array_parser_test: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-
-.PHONY : run_tests_costmap_2d_gtest_array_parser_test
+.PHONY : costmap_2d_markers
 
 # fast build rule for target.
-run_tests_costmap_2d_gtest_array_parser_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest_array_parser_test.dir/build
-.PHONY : run_tests_costmap_2d_gtest_array_parser_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest_test_static_tests.launch: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest_test_static_tests.launch
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest_test_static_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_static_tests.launch.dir/build
-.PHONY : _run_tests_costmap_2d_rostest_test_static_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest_test_static_tests.launch: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest_test_static_tests.launch
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest_test_static_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_static_tests.launch.dir/build
-.PHONY : run_tests_costmap_2d_rostest_test_static_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest_test_obstacle_tests.launch: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest_test_obstacle_tests.launch
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest_test_obstacle_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/build
-.PHONY : _run_tests_costmap_2d_rostest_test_obstacle_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest_test_obstacle_tests.launch: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest_test_obstacle_tests.launch
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest_test_obstacle_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_obstacle_tests.launch.dir/build
-.PHONY : run_tests_costmap_2d_rostest_test_obstacle_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest_test_inflation_tests.launch: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest_test_inflation_tests.launch
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest_test_inflation_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/build
-.PHONY : _run_tests_costmap_2d_rostest_test_inflation_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest_test_inflation_tests.launch: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest_test_inflation_tests.launch
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest_test_inflation_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_inflation_tests.launch.dir/build
-.PHONY : run_tests_costmap_2d_rostest_test_inflation_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
-
-# Convenience name for target.
-costmap_2d_gennodejs: navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
-
-.PHONY : costmap_2d_gennodejs
-
-# fast build rule for target.
-costmap_2d_gennodejs/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/build
-.PHONY : costmap_2d_gennodejs/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/rule
-
-# Convenience name for target.
-clean_test_results_costmap_2d: navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/rule
-
-.PHONY : clean_test_results_costmap_2d
-
-# fast build rule for target.
-clean_test_results_costmap_2d/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/clean_test_results_costmap_2d.dir/build
-.PHONY : clean_test_results_costmap_2d/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
-
-# Convenience name for target.
-costmap_2d_gencfg: navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
-
-.PHONY : costmap_2d_gencfg
-
-# fast build rule for target.
-costmap_2d_gencfg/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/build
-.PHONY : costmap_2d_gencfg/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_tester.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_tester.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_tester.dir/rule
-
-# Convenience name for target.
-costmap_tester: navigation/costmap_2d/CMakeFiles/costmap_tester.dir/rule
-
-.PHONY : costmap_tester
-
-# fast build rule for target.
-costmap_tester/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_tester.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_tester.dir/build
-.PHONY : costmap_tester/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest.dir/build
-.PHONY : run_tests_costmap_2d_rostest/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest_test_simple_driving_test.xml: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest_test_simple_driving_test.xml
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest_test_simple_driving_test.xml/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/build
-.PHONY : run_tests_costmap_2d_rostest_test_simple_driving_test.xml/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_lisp: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
-
-.PHONY : costmap_2d_generate_messages_lisp
-
-# fast build rule for target.
-costmap_2d_generate_messages_lisp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
-.PHONY : costmap_2d_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_eus: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
-
-.PHONY : map_msgs_generate_messages_eus
-
-# fast build rule for target.
-map_msgs_generate_messages_eus/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/build
-.PHONY : map_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest_test_footprint_tests.launch: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest_test_footprint_tests.launch
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest_test_footprint_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/build
-.PHONY : _run_tests_costmap_2d_rostest_test_footprint_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
-
-# Convenience name for target.
-costmap_2d_gencpp: navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
-
-.PHONY : costmap_2d_gencpp
-
-# fast build rule for target.
-costmap_2d_gencpp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/build
-.PHONY : costmap_2d_gencpp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
-
-# Convenience name for target.
-costmap_2d: navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
-
-.PHONY : costmap_2d
-
-# fast build rule for target.
-costmap_2d/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build
-.PHONY : costmap_2d/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
-
-# Convenience name for target.
-_costmap_2d_generate_messages_check_deps_VoxelGrid: navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
-
-.PHONY : _costmap_2d_generate_messages_check_deps_VoxelGrid
-
-# fast build rule for target.
-_costmap_2d_generate_messages_check_deps_VoxelGrid/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/build.make navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/build
-.PHONY : _costmap_2d_generate_messages_check_deps_VoxelGrid/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_cpp: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : map_msgs_generate_messages_cpp
-
-# fast build rule for target.
-map_msgs_generate_messages_cpp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
-.PHONY : map_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_py: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
-
-.PHONY : costmap_2d_generate_messages_py
-
-# fast build rule for target.
-costmap_2d_generate_messages_py/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/build
-.PHONY : costmap_2d_generate_messages_py/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/rule
-
-# Convenience name for target.
-costmap_2d_simple_driving_test_indexed.bag: navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/rule
-
-.PHONY : costmap_2d_simple_driving_test_indexed.bag
-
-# fast build rule for target.
-costmap_2d_simple_driving_test_indexed.bag/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_simple_driving_test_indexed.bag.dir/build
-.PHONY : costmap_2d_simple_driving_test_indexed.bag/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/array_parser_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/array_parser_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/array_parser_test.dir/rule
-
-# Convenience name for target.
-array_parser_test: navigation/costmap_2d/CMakeFiles/array_parser_test.dir/rule
-
-.PHONY : array_parser_test
-
-# fast build rule for target.
-array_parser_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/array_parser_test.dir/build
-.PHONY : array_parser_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_cpp: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
-
-.PHONY : costmap_2d_generate_messages_cpp
-
-# fast build rule for target.
-costmap_2d_generate_messages_cpp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build
-.PHONY : costmap_2d_generate_messages_cpp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_gtest: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/rule
-
-.PHONY : run_tests_costmap_2d_gtest
-
-# fast build rule for target.
-run_tests_costmap_2d_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_gtest.dir/build
-.PHONY : run_tests_costmap_2d_gtest/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
-
-# Convenience name for target.
-costmap_2d_node: navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
-
-.PHONY : costmap_2d_node
-
-# fast build rule for target.
-costmap_2d_node/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/build
-.PHONY : costmap_2d_node/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/static_tests.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/static_tests.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/static_tests.dir/rule
-
-# Convenience name for target.
-static_tests: navigation/costmap_2d/CMakeFiles/static_tests.dir/rule
-
-.PHONY : static_tests
-
-# fast build rule for target.
-static_tests/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/static_tests.dir/build.make navigation/costmap_2d/CMakeFiles/static_tests.dir/build
-.PHONY : static_tests/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/inflation_tests.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/inflation_tests.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/inflation_tests.dir/rule
-
-# Convenience name for target.
-inflation_tests: navigation/costmap_2d/CMakeFiles/inflation_tests.dir/rule
-
-.PHONY : inflation_tests
-
-# fast build rule for target.
-inflation_tests/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/inflation_tests.dir/build.make navigation/costmap_2d/CMakeFiles/inflation_tests.dir/build
-.PHONY : inflation_tests/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_eus: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
-
-.PHONY : costmap_2d_generate_messages_eus
-
-# fast build rule for target.
-costmap_2d_generate_messages_eus/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/build
-.PHONY : costmap_2d_generate_messages_eus/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_lisp: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : map_msgs_generate_messages_lisp
-
-# fast build rule for target.
-map_msgs_generate_messages_lisp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
-.PHONY : map_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_gtest: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/rule
-
-.PHONY : _run_tests_costmap_2d_gtest
-
-# fast build rule for target.
-_run_tests_costmap_2d_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest.dir/build
-.PHONY : _run_tests_costmap_2d_gtest/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_nodejs: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : map_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-map_msgs_generate_messages_nodejs/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
-.PHONY : map_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/rule
-
-# Convenience name for target.
-obstacle_tests: navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/rule
-
-.PHONY : obstacle_tests
-
-# fast build rule for target.
-obstacle_tests/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/build.make navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/build
-.PHONY : obstacle_tests/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-map_msgs_generate_messages_py: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
-
-.PHONY : map_msgs_generate_messages_py
-
-# fast build rule for target.
-map_msgs_generate_messages_py/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/build
-.PHONY : map_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
-
-.PHONY : costmap_2d_generate_messages
-
-# fast build rule for target.
-costmap_2d_generate_messages/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/build
-.PHONY : costmap_2d_generate_messages/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-
-# Convenience name for target.
-run_tests_costmap_2d_rostest_test_footprint_tests.launch: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/rule
-
-.PHONY : run_tests_costmap_2d_rostest_test_footprint_tests.launch
-
-# fast build rule for target.
-run_tests_costmap_2d_rostest_test_footprint_tests.launch/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d_rostest_test_footprint_tests.launch.dir/build
-.PHONY : run_tests_costmap_2d_rostest_test_footprint_tests.launch/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/coordinates_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/coordinates_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/coordinates_test.dir/rule
-
-# Convenience name for target.
-coordinates_test: navigation/costmap_2d/CMakeFiles/coordinates_test.dir/rule
-
-.PHONY : coordinates_test
-
-# fast build rule for target.
-coordinates_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/coordinates_test.dir/build
-.PHONY : coordinates_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
-
-# Convenience name for target.
-costmap_2d_genpy: navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
-
-.PHONY : costmap_2d_genpy
-
-# fast build rule for target.
-costmap_2d_genpy/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/build
-.PHONY : costmap_2d_genpy/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_gtest_array_parser_test: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/rule
-
-.PHONY : _run_tests_costmap_2d_gtest_array_parser_test
-
-# fast build rule for target.
-_run_tests_costmap_2d_gtest_array_parser_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_array_parser_test.dir/build
-.PHONY : _run_tests_costmap_2d_gtest_array_parser_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
-
-# Convenience name for target.
-costmap_2d_genlisp: navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
-
-.PHONY : costmap_2d_genlisp
-
-# fast build rule for target.
-costmap_2d_genlisp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/build
-.PHONY : costmap_2d_genlisp/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/layers.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/layers.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/layers.dir/rule
-
-# Convenience name for target.
-layers: navigation/costmap_2d/CMakeFiles/layers.dir/rule
-
-.PHONY : layers
-
-# fast build rule for target.
-layers/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/layers.dir/build.make navigation/costmap_2d/CMakeFiles/layers.dir/build
-.PHONY : layers/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-costmap_2d_generate_messages_nodejs: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
-
-.PHONY : costmap_2d_generate_messages_nodejs
-
-# fast build rule for target.
-costmap_2d_generate_messages_nodejs/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build
-.PHONY : costmap_2d_generate_messages_nodejs/fast
+costmap_2d_markers/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/build
+.PHONY : costmap_2d_markers/fast
 
 # Convenience name for target.
 navigation/costmap_2d/CMakeFiles/costmap_2d_cloud.dir/rule:
@@ -828,6 +187,261 @@ costmap_2d_cloud/fast:
 .PHONY : costmap_2d_cloud/fast
 
 # Convenience name for target.
+navigation/costmap_2d/CMakeFiles/layers.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/layers.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/layers.dir/rule
+
+# Convenience name for target.
+layers: navigation/costmap_2d/CMakeFiles/layers.dir/rule
+
+.PHONY : layers
+
+# fast build rule for target.
+layers/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/layers.dir/build.make navigation/costmap_2d/CMakeFiles/layers.dir/build
+.PHONY : layers/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
+
+# Convenience name for target.
+costmap_2d_genpy: navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/rule
+
+.PHONY : costmap_2d_genpy
+
+# fast build rule for target.
+costmap_2d_genpy/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_genpy.dir/build
+.PHONY : costmap_2d_genpy/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
+
+# Convenience name for target.
+costmap_2d_generate_messages: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/rule
+
+.PHONY : costmap_2d_generate_messages
+
+# fast build rule for target.
+costmap_2d_generate_messages/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages.dir/build
+.PHONY : costmap_2d_generate_messages/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_py: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/rule
+
+.PHONY : map_msgs_generate_messages_py
+
+# fast build rule for target.
+map_msgs_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_py.dir/build
+.PHONY : map_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_nodejs: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : map_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+map_msgs_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
+.PHONY : map_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_lisp: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : map_msgs_generate_messages_lisp
+
+# fast build rule for target.
+map_msgs_generate_messages_lisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
+.PHONY : map_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
+
+# Convenience name for target.
+costmap_2d_node: navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/rule
+
+.PHONY : costmap_2d_node
+
+# fast build rule for target.
+costmap_2d_node/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_node.dir/build
+.PHONY : costmap_2d_node/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+costmap_2d_generate_messages_cpp: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/rule
+
+.PHONY : costmap_2d_generate_messages_cpp
+
+# fast build rule for target.
+costmap_2d_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_cpp.dir/build
+.PHONY : costmap_2d_generate_messages_cpp/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
+
+# Convenience name for target.
+costmap_2d_generate_messages_py: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/rule
+
+.PHONY : costmap_2d_generate_messages_py
+
+# fast build rule for target.
+costmap_2d_generate_messages_py/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_py.dir/build
+.PHONY : costmap_2d_generate_messages_py/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_cpp: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : map_msgs_generate_messages_cpp
+
+# fast build rule for target.
+map_msgs_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
+.PHONY : map_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+costmap_2d_generate_messages_nodejs: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/rule
+
+.PHONY : costmap_2d_generate_messages_nodejs
+
+# fast build rule for target.
+costmap_2d_generate_messages_nodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_nodejs.dir/build
+.PHONY : costmap_2d_generate_messages_nodejs/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
+
+# Convenience name for target.
+_costmap_2d_generate_messages_check_deps_VoxelGrid: navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/rule
+
+.PHONY : _costmap_2d_generate_messages_check_deps_VoxelGrid
+
+# fast build rule for target.
+_costmap_2d_generate_messages_check_deps_VoxelGrid/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/build.make navigation/costmap_2d/CMakeFiles/_costmap_2d_generate_messages_check_deps_VoxelGrid.dir/build
+.PHONY : _costmap_2d_generate_messages_check_deps_VoxelGrid/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
+
+# Convenience name for target.
+costmap_2d: navigation/costmap_2d/CMakeFiles/costmap_2d.dir/rule
+
+.PHONY : costmap_2d
+
+# fast build rule for target.
+costmap_2d/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build
+.PHONY : costmap_2d/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
+
+# Convenience name for target.
+costmap_2d_genlisp: navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/rule
+
+.PHONY : costmap_2d_genlisp
+
+# fast build rule for target.
+costmap_2d_genlisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_genlisp.dir/build
+.PHONY : costmap_2d_genlisp/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
+
+# Convenience name for target.
+costmap_2d_gencpp: navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/rule
+
+.PHONY : costmap_2d_gencpp
+
+# fast build rule for target.
+costmap_2d_gencpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gencpp.dir/build
+.PHONY : costmap_2d_gencpp/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+costmap_2d_generate_messages_eus: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/rule
+
+.PHONY : costmap_2d_generate_messages_eus
+
+# fast build rule for target.
+costmap_2d_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_eus.dir/build
+.PHONY : costmap_2d_generate_messages_eus/fast
+
+# Convenience name for target.
+navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+map_msgs_generate_messages_eus: navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/rule
+
+.PHONY : map_msgs_generate_messages_eus
+
+# fast build rule for target.
+map_msgs_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make navigation/costmap_2d/CMakeFiles/map_msgs_generate_messages_eus.dir/build
+.PHONY : map_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
 navigation/costmap_2d/CMakeFiles/costmap_2d_geneus.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_geneus.dir/rule
 .PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_geneus.dir/rule
@@ -843,124 +457,49 @@ costmap_2d_geneus/fast:
 .PHONY : costmap_2d_geneus/fast
 
 # Convenience name for target.
-navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/rule
+navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-run_tests_costmap_2d: navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/rule
+costmap_2d_generate_messages_lisp: navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/rule
 
-.PHONY : run_tests_costmap_2d
+.PHONY : costmap_2d_generate_messages_lisp
 
 # fast build rule for target.
-run_tests_costmap_2d/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/run_tests_costmap_2d.dir/build
-.PHONY : run_tests_costmap_2d/fast
+costmap_2d_generate_messages_lisp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_generate_messages_lisp.dir/build
+.PHONY : costmap_2d_generate_messages_lisp/fast
 
 # Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/rule
+navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
 
 # Convenience name for target.
-costmap_2d_willow-full-0.025.pgm: navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/rule
+costmap_2d_gencfg: navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/rule
 
-.PHONY : costmap_2d_willow-full-0.025.pgm
+.PHONY : costmap_2d_gencfg
 
 # fast build rule for target.
-costmap_2d_willow-full-0.025.pgm/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_willow-full-0.025.pgm.dir/build
-.PHONY : costmap_2d_willow-full-0.025.pgm/fast
+costmap_2d_gencfg/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gencfg.dir/build
+.PHONY : costmap_2d_gencfg/fast
 
 # Convenience name for target.
-navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
+navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
+.PHONY : navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
 
 # Convenience name for target.
-costmap_2d_markers: navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/rule
+costmap_2d_gennodejs: navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/rule
 
-.PHONY : costmap_2d_markers
+.PHONY : costmap_2d_gennodejs
 
 # fast build rule for target.
-costmap_2d_markers/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_markers.dir/build
-.PHONY : costmap_2d_markers/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_gtest_coordinates_test: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/rule
-
-.PHONY : _run_tests_costmap_2d_gtest_coordinates_test
-
-# fast build rule for target.
-_run_tests_costmap_2d_gtest_coordinates_test/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_gtest_coordinates_test.dir/build
-.PHONY : _run_tests_costmap_2d_gtest_coordinates_test/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest.dir/build
-.PHONY : _run_tests_costmap_2d_rostest/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d_rostest_test_simple_driving_test.xml: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/rule
-
-.PHONY : _run_tests_costmap_2d_rostest_test_simple_driving_test.xml
-
-# fast build rule for target.
-_run_tests_costmap_2d_rostest_test_simple_driving_test.xml/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d_rostest_test_simple_driving_test.xml.dir/build
-.PHONY : _run_tests_costmap_2d_rostest_test_simple_driving_test.xml/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/footprint_tests.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/footprint_tests.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/footprint_tests.dir/rule
-
-# Convenience name for target.
-footprint_tests: navigation/costmap_2d/CMakeFiles/footprint_tests.dir/rule
-
-.PHONY : footprint_tests
-
-# fast build rule for target.
-footprint_tests/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/footprint_tests.dir/build.make navigation/costmap_2d/CMakeFiles/footprint_tests.dir/build
-.PHONY : footprint_tests/fast
-
-# Convenience name for target.
-navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/rule
-.PHONY : navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/rule
-
-# Convenience name for target.
-_run_tests_costmap_2d: navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/rule
-
-.PHONY : _run_tests_costmap_2d
-
-# fast build rule for target.
-_run_tests_costmap_2d/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/_run_tests_costmap_2d.dir/build
-.PHONY : _run_tests_costmap_2d/fast
+costmap_2d_gennodejs/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d_gennodejs.dir/build
+.PHONY : costmap_2d_gennodejs/fast
 
 plugins/inflation_layer.o: plugins/inflation_layer.cpp.o
 
@@ -1400,8 +939,8 @@ src/observation_buffer.o: src/observation_buffer.cpp.o
 
 # target to build an object file
 src/observation_buffer.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.o
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/layers.dir/build.make navigation/costmap_2d/CMakeFiles/layers.dir/src/observation_buffer.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.o
 .PHONY : src/observation_buffer.cpp.o
 
 src/observation_buffer.i: src/observation_buffer.cpp.i
@@ -1410,8 +949,8 @@ src/observation_buffer.i: src/observation_buffer.cpp.i
 
 # target to preprocess a source file
 src/observation_buffer.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.i
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/layers.dir/build.make navigation/costmap_2d/CMakeFiles/layers.dir/src/observation_buffer.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.i
 .PHONY : src/observation_buffer.cpp.i
 
 src/observation_buffer.s: src/observation_buffer.cpp.s
@@ -1420,198 +959,9 @@ src/observation_buffer.s: src/observation_buffer.cpp.s
 
 # target to generate assembly for a file
 src/observation_buffer.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.s
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/layers.dir/build.make navigation/costmap_2d/CMakeFiles/layers.dir/src/observation_buffer.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_2d.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_2d.dir/src/observation_buffer.cpp.s
 .PHONY : src/observation_buffer.cpp.s
-
-test/array_parser_test.o: test/array_parser_test.cpp.o
-
-.PHONY : test/array_parser_test.o
-
-# target to build an object file
-test/array_parser_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/array_parser_test.dir/test/array_parser_test.cpp.o
-.PHONY : test/array_parser_test.cpp.o
-
-test/array_parser_test.i: test/array_parser_test.cpp.i
-
-.PHONY : test/array_parser_test.i
-
-# target to preprocess a source file
-test/array_parser_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/array_parser_test.dir/test/array_parser_test.cpp.i
-.PHONY : test/array_parser_test.cpp.i
-
-test/array_parser_test.s: test/array_parser_test.cpp.s
-
-.PHONY : test/array_parser_test.s
-
-# target to generate assembly for a file
-test/array_parser_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/array_parser_test.dir/build.make navigation/costmap_2d/CMakeFiles/array_parser_test.dir/test/array_parser_test.cpp.s
-.PHONY : test/array_parser_test.cpp.s
-
-test/coordinates_test.o: test/coordinates_test.cpp.o
-
-.PHONY : test/coordinates_test.o
-
-# target to build an object file
-test/coordinates_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/coordinates_test.dir/test/coordinates_test.cpp.o
-.PHONY : test/coordinates_test.cpp.o
-
-test/coordinates_test.i: test/coordinates_test.cpp.i
-
-.PHONY : test/coordinates_test.i
-
-# target to preprocess a source file
-test/coordinates_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/coordinates_test.dir/test/coordinates_test.cpp.i
-.PHONY : test/coordinates_test.cpp.i
-
-test/coordinates_test.s: test/coordinates_test.cpp.s
-
-.PHONY : test/coordinates_test.s
-
-# target to generate assembly for a file
-test/coordinates_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/coordinates_test.dir/build.make navigation/costmap_2d/CMakeFiles/coordinates_test.dir/test/coordinates_test.cpp.s
-.PHONY : test/coordinates_test.cpp.s
-
-test/costmap_tester.o: test/costmap_tester.cpp.o
-
-.PHONY : test/costmap_tester.o
-
-# target to build an object file
-test/costmap_tester.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_tester.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_tester.dir/test/costmap_tester.cpp.o
-.PHONY : test/costmap_tester.cpp.o
-
-test/costmap_tester.i: test/costmap_tester.cpp.i
-
-.PHONY : test/costmap_tester.i
-
-# target to preprocess a source file
-test/costmap_tester.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_tester.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_tester.dir/test/costmap_tester.cpp.i
-.PHONY : test/costmap_tester.cpp.i
-
-test/costmap_tester.s: test/costmap_tester.cpp.s
-
-.PHONY : test/costmap_tester.s
-
-# target to generate assembly for a file
-test/costmap_tester.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/costmap_tester.dir/build.make navigation/costmap_2d/CMakeFiles/costmap_tester.dir/test/costmap_tester.cpp.s
-.PHONY : test/costmap_tester.cpp.s
-
-test/footprint_tests.o: test/footprint_tests.cpp.o
-
-.PHONY : test/footprint_tests.o
-
-# target to build an object file
-test/footprint_tests.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/footprint_tests.dir/build.make navigation/costmap_2d/CMakeFiles/footprint_tests.dir/test/footprint_tests.cpp.o
-.PHONY : test/footprint_tests.cpp.o
-
-test/footprint_tests.i: test/footprint_tests.cpp.i
-
-.PHONY : test/footprint_tests.i
-
-# target to preprocess a source file
-test/footprint_tests.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/footprint_tests.dir/build.make navigation/costmap_2d/CMakeFiles/footprint_tests.dir/test/footprint_tests.cpp.i
-.PHONY : test/footprint_tests.cpp.i
-
-test/footprint_tests.s: test/footprint_tests.cpp.s
-
-.PHONY : test/footprint_tests.s
-
-# target to generate assembly for a file
-test/footprint_tests.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/footprint_tests.dir/build.make navigation/costmap_2d/CMakeFiles/footprint_tests.dir/test/footprint_tests.cpp.s
-.PHONY : test/footprint_tests.cpp.s
-
-test/inflation_tests.o: test/inflation_tests.cpp.o
-
-.PHONY : test/inflation_tests.o
-
-# target to build an object file
-test/inflation_tests.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/inflation_tests.dir/build.make navigation/costmap_2d/CMakeFiles/inflation_tests.dir/test/inflation_tests.cpp.o
-.PHONY : test/inflation_tests.cpp.o
-
-test/inflation_tests.i: test/inflation_tests.cpp.i
-
-.PHONY : test/inflation_tests.i
-
-# target to preprocess a source file
-test/inflation_tests.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/inflation_tests.dir/build.make navigation/costmap_2d/CMakeFiles/inflation_tests.dir/test/inflation_tests.cpp.i
-.PHONY : test/inflation_tests.cpp.i
-
-test/inflation_tests.s: test/inflation_tests.cpp.s
-
-.PHONY : test/inflation_tests.s
-
-# target to generate assembly for a file
-test/inflation_tests.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/inflation_tests.dir/build.make navigation/costmap_2d/CMakeFiles/inflation_tests.dir/test/inflation_tests.cpp.s
-.PHONY : test/inflation_tests.cpp.s
-
-test/obstacle_tests.o: test/obstacle_tests.cpp.o
-
-.PHONY : test/obstacle_tests.o
-
-# target to build an object file
-test/obstacle_tests.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/build.make navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/test/obstacle_tests.cpp.o
-.PHONY : test/obstacle_tests.cpp.o
-
-test/obstacle_tests.i: test/obstacle_tests.cpp.i
-
-.PHONY : test/obstacle_tests.i
-
-# target to preprocess a source file
-test/obstacle_tests.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/build.make navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/test/obstacle_tests.cpp.i
-.PHONY : test/obstacle_tests.cpp.i
-
-test/obstacle_tests.s: test/obstacle_tests.cpp.s
-
-.PHONY : test/obstacle_tests.s
-
-# target to generate assembly for a file
-test/obstacle_tests.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/build.make navigation/costmap_2d/CMakeFiles/obstacle_tests.dir/test/obstacle_tests.cpp.s
-.PHONY : test/obstacle_tests.cpp.s
-
-test/static_tests.o: test/static_tests.cpp.o
-
-.PHONY : test/static_tests.o
-
-# target to build an object file
-test/static_tests.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/static_tests.dir/build.make navigation/costmap_2d/CMakeFiles/static_tests.dir/test/static_tests.cpp.o
-.PHONY : test/static_tests.cpp.o
-
-test/static_tests.i: test/static_tests.cpp.i
-
-.PHONY : test/static_tests.i
-
-# target to preprocess a source file
-test/static_tests.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/static_tests.dir/build.make navigation/costmap_2d/CMakeFiles/static_tests.dir/test/static_tests.cpp.i
-.PHONY : test/static_tests.cpp.i
-
-test/static_tests.s: test/static_tests.cpp.s
-
-.PHONY : test/static_tests.s
-
-# target to generate assembly for a file
-test/static_tests.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/costmap_2d/CMakeFiles/static_tests.dir/build.make navigation/costmap_2d/CMakeFiles/static_tests.dir/test/static_tests.cpp.s
-.PHONY : test/static_tests.cpp.s
 
 # Help Target
 help:
@@ -1619,66 +969,35 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... run_tests_costmap_2d_gtest_coordinates_test"
-	@echo "... run_tests_costmap_2d_gtest_array_parser_test"
-	@echo "... _run_tests_costmap_2d_rostest_test_static_tests.launch"
-	@echo "... run_tests_costmap_2d_rostest_test_static_tests.launch"
-	@echo "... _run_tests_costmap_2d_rostest_test_obstacle_tests.launch"
-	@echo "... run_tests_costmap_2d_rostest_test_obstacle_tests.launch"
-	@echo "... edit_cache"
-	@echo "... _run_tests_costmap_2d_rostest_test_inflation_tests.launch"
-	@echo "... run_tests_costmap_2d_rostest_test_inflation_tests.launch"
-	@echo "... costmap_2d_gennodejs"
-	@echo "... clean_test_results_costmap_2d"
-	@echo "... costmap_2d_gencfg"
-	@echo "... costmap_tester"
-	@echo "... run_tests_costmap_2d_rostest"
-	@echo "... run_tests_costmap_2d_rostest_test_simple_driving_test.xml"
-	@echo "... costmap_2d_generate_messages_lisp"
-	@echo "... map_msgs_generate_messages_eus"
-	@echo "... _run_tests_costmap_2d_rostest_test_footprint_tests.launch"
-	@echo "... costmap_2d_gencpp"
-	@echo "... costmap_2d"
-	@echo "... test"
-	@echo "... _costmap_2d_generate_messages_check_deps_VoxelGrid"
-	@echo "... map_msgs_generate_messages_cpp"
-	@echo "... costmap_2d_generate_messages_py"
-	@echo "... costmap_2d_simple_driving_test_indexed.bag"
-	@echo "... array_parser_test"
-	@echo "... costmap_2d_generate_messages_cpp"
-	@echo "... run_tests_costmap_2d_gtest"
-	@echo "... costmap_2d_node"
-	@echo "... static_tests"
-	@echo "... inflation_tests"
-	@echo "... costmap_2d_generate_messages_eus"
-	@echo "... map_msgs_generate_messages_lisp"
-	@echo "... _run_tests_costmap_2d_gtest"
-	@echo "... map_msgs_generate_messages_nodejs"
-	@echo "... obstacle_tests"
-	@echo "... map_msgs_generate_messages_py"
 	@echo "... install/strip"
-	@echo "... costmap_2d_generate_messages"
-	@echo "... run_tests_costmap_2d_rostest_test_footprint_tests.launch"
-	@echo "... coordinates_test"
-	@echo "... costmap_2d_genpy"
-	@echo "... _run_tests_costmap_2d_gtest_array_parser_test"
-	@echo "... costmap_2d_genlisp"
-	@echo "... layers"
-	@echo "... costmap_2d_generate_messages_nodejs"
-	@echo "... costmap_2d_cloud"
-	@echo "... costmap_2d_geneus"
-	@echo "... run_tests_costmap_2d"
-	@echo "... costmap_2d_willow-full-0.025.pgm"
 	@echo "... costmap_2d_markers"
-	@echo "... _run_tests_costmap_2d_gtest_coordinates_test"
-	@echo "... _run_tests_costmap_2d_rostest"
-	@echo "... _run_tests_costmap_2d_rostest_test_simple_driving_test.xml"
-	@echo "... footprint_tests"
-	@echo "... _run_tests_costmap_2d"
+	@echo "... install"
+	@echo "... costmap_2d_cloud"
+	@echo "... layers"
+	@echo "... rebuild_cache"
+	@echo "... costmap_2d_genpy"
+	@echo "... costmap_2d_generate_messages"
+	@echo "... map_msgs_generate_messages_py"
+	@echo "... map_msgs_generate_messages_nodejs"
+	@echo "... map_msgs_generate_messages_lisp"
+	@echo "... list_install_components"
+	@echo "... costmap_2d_node"
+	@echo "... costmap_2d_generate_messages_cpp"
+	@echo "... costmap_2d_generate_messages_py"
+	@echo "... map_msgs_generate_messages_cpp"
+	@echo "... install/local"
+	@echo "... costmap_2d_generate_messages_nodejs"
+	@echo "... _costmap_2d_generate_messages_check_deps_VoxelGrid"
+	@echo "... costmap_2d"
+	@echo "... costmap_2d_genlisp"
+	@echo "... edit_cache"
+	@echo "... costmap_2d_gencpp"
+	@echo "... costmap_2d_generate_messages_eus"
+	@echo "... map_msgs_generate_messages_eus"
+	@echo "... costmap_2d_geneus"
+	@echo "... costmap_2d_generate_messages_lisp"
+	@echo "... costmap_2d_gencfg"
+	@echo "... costmap_2d_gennodejs"
 	@echo "... plugins/inflation_layer.o"
 	@echo "... plugins/inflation_layer.i"
 	@echo "... plugins/inflation_layer.s"
@@ -1730,27 +1049,6 @@ help:
 	@echo "... src/observation_buffer.o"
 	@echo "... src/observation_buffer.i"
 	@echo "... src/observation_buffer.s"
-	@echo "... test/array_parser_test.o"
-	@echo "... test/array_parser_test.i"
-	@echo "... test/array_parser_test.s"
-	@echo "... test/coordinates_test.o"
-	@echo "... test/coordinates_test.i"
-	@echo "... test/coordinates_test.s"
-	@echo "... test/costmap_tester.o"
-	@echo "... test/costmap_tester.i"
-	@echo "... test/costmap_tester.s"
-	@echo "... test/footprint_tests.o"
-	@echo "... test/footprint_tests.i"
-	@echo "... test/footprint_tests.s"
-	@echo "... test/inflation_tests.o"
-	@echo "... test/inflation_tests.i"
-	@echo "... test/inflation_tests.s"
-	@echo "... test/obstacle_tests.o"
-	@echo "... test/obstacle_tests.i"
-	@echo "... test/obstacle_tests.s"
-	@echo "... test/static_tests.o"
-	@echo "... test/static_tests.i"
-	@echo "... test/static_tests.s"
 .PHONY : help
 
 

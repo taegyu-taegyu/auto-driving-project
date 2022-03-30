@@ -124,17 +124,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_nav_msgs/CMakeFiles/progress.marks
@@ -427,7 +416,6 @@ help:
 	@echo "... _hector_nav_msgs_generate_messages_check_deps_GetDistanceToObstacle"
 	@echo "... hector_nav_msgs_gennodejs"
 	@echo "... hector_nav_msgs_generate_messages_cpp"
-	@echo "... test"
 	@echo "... hector_nav_msgs_generate_messages_eus"
 	@echo "... _hector_nav_msgs_generate_messages_check_deps_GetRobotTrajectory"
 	@echo "... hector_nav_msgs_geneus"

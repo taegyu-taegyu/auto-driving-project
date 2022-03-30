@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -100,29 +112,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -183,21 +172,6 @@ visualization_msgs_generate_messages_eus/fast:
 .PHONY : visualization_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-.PHONY : hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-visualization_msgs_generate_messages_cpp: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : visualization_msgs_generate_messages_cpp
-
-# fast build rule for target.
-visualization_msgs_generate_messages_cpp/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
-.PHONY : visualization_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
 hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
 .PHONY : hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/rule
@@ -242,6 +216,21 @@ visualization_msgs_generate_messages_nodejs/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build.make hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/build
 .PHONY : visualization_msgs_generate_messages_nodejs/fast
 
+# Convenience name for target.
+hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+.PHONY : hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+visualization_msgs_generate_messages_cpp: hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : visualization_msgs_generate_messages_cpp
+
+# fast build rule for target.
+visualization_msgs_generate_messages_cpp/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build.make hector_slam/hector_marker_drawing/CMakeFiles/visualization_msgs_generate_messages_cpp.dir/build
+.PHONY : visualization_msgs_generate_messages_cpp/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -249,17 +238,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... visualization_msgs_generate_messages_eus"
-	@echo "... install/local"
-	@echo "... test"
-	@echo "... edit_cache"
-	@echo "... visualization_msgs_generate_messages_cpp"
 	@echo "... visualization_msgs_generate_messages_lisp"
 	@echo "... visualization_msgs_generate_messages_py"
 	@echo "... visualization_msgs_generate_messages_nodejs"
+	@echo "... visualization_msgs_generate_messages_cpp"
+	@echo "... edit_cache"
 .PHONY : help
 
 

@@ -80,17 +80,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -101,6 +90,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -123,17 +123,6 @@ install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -168,66 +157,6 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/rule
-
-# Convenience name for target.
-run_tests_base_local_planner_gtest_line_iterator: navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/rule
-
-.PHONY : run_tests_base_local_planner_gtest_line_iterator
-
-# fast build rule for target.
-run_tests_base_local_planner_gtest_line_iterator/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_line_iterator.dir/build
-.PHONY : run_tests_base_local_planner_gtest_line_iterator/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/line_iterator.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/line_iterator.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/line_iterator.dir/rule
-
-# Convenience name for target.
-line_iterator: navigation/base_local_planner/CMakeFiles/line_iterator.dir/rule
-
-.PHONY : line_iterator
-
-# fast build rule for target.
-line_iterator/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/line_iterator.dir/build
-.PHONY : line_iterator/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/rule
-
-# Convenience name for target.
-_run_tests_base_local_planner: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/rule
-
-.PHONY : _run_tests_base_local_planner
-
-# fast build rule for target.
-_run_tests_base_local_planner/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner.dir/build
-.PHONY : _run_tests_base_local_planner/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/rule
-
-# Convenience name for target.
-run_tests_base_local_planner: navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/rule
-
-.PHONY : run_tests_base_local_planner
-
-# fast build rule for target.
-run_tests_base_local_planner/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner.dir/build
-.PHONY : run_tests_base_local_planner/fast
-
-# Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_eus.dir/rule
@@ -258,36 +187,6 @@ base_local_planner_geneus/fast:
 .PHONY : base_local_planner_geneus/fast
 
 # Convenience name for target.
-navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/rule
-
-# Convenience name for target.
-_run_tests_base_local_planner_gtest_line_iterator: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/rule
-
-.PHONY : _run_tests_base_local_planner_gtest_line_iterator
-
-# fast build rule for target.
-_run_tests_base_local_planner_gtest_line_iterator/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_line_iterator.dir/build
-.PHONY : _run_tests_base_local_planner_gtest_line_iterator/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/rule
-
-# Convenience name for target.
-run_tests_base_local_planner_gtest: navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/rule
-
-.PHONY : run_tests_base_local_planner_gtest
-
-# fast build rule for target.
-run_tests_base_local_planner_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/build.make navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest.dir/build
-.PHONY : run_tests_base_local_planner_gtest/fast
-
-# Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_cpp.dir/rule
@@ -303,21 +202,6 @@ base_local_planner_generate_messages_cpp/fast:
 .PHONY : base_local_planner_generate_messages_cpp/fast
 
 # Convenience name for target.
-navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-
-# Convenience name for target.
-run_tests_base_local_planner_gtest_base_local_planner_utest: navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-
-.PHONY : run_tests_base_local_planner_gtest_base_local_planner_utest
-
-# fast build rule for target.
-run_tests_base_local_planner_gtest_base_local_planner_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/run_tests_base_local_planner_gtest_base_local_planner_utest.dir/build
-.PHONY : run_tests_base_local_planner_gtest_base_local_planner_utest/fast
-
-# Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/rule
@@ -331,21 +215,6 @@ base_local_planner_gencpp: navigation/base_local_planner/CMakeFiles/base_local_p
 base_local_planner_gencpp/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gencpp.dir/build
 .PHONY : base_local_planner_gencpp/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-
-# Convenience name for target.
-_run_tests_base_local_planner_gtest_base_local_planner_utest: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/rule
-
-.PHONY : _run_tests_base_local_planner_gtest_base_local_planner_utest
-
-# fast build rule for target.
-_run_tests_base_local_planner_gtest_base_local_planner_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest_base_local_planner_utest.dir/build
-.PHONY : _run_tests_base_local_planner_gtest_base_local_planner_utest/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages.dir/rule:
@@ -408,21 +277,6 @@ base_local_planner_generate_messages_nodejs/fast:
 .PHONY : base_local_planner_generate_messages_nodejs/fast
 
 # Convenience name for target.
-navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/rule
-
-# Convenience name for target.
-clean_test_results_base_local_planner: navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/rule
-
-.PHONY : clean_test_results_base_local_planner
-
-# fast build rule for target.
-clean_test_results_base_local_planner/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/clean_test_results_base_local_planner.dir/build
-.PHONY : clean_test_results_base_local_planner/fast
-
-# Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule
 .PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_generate_messages_py.dir/rule
@@ -451,36 +305,6 @@ base_local_planner_gennodejs: navigation/base_local_planner/CMakeFiles/base_loca
 base_local_planner_gennodejs/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_gennodejs.dir/build
 .PHONY : base_local_planner_gennodejs/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/rule
-
-# Convenience name for target.
-_run_tests_base_local_planner_gtest: navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/rule
-
-.PHONY : _run_tests_base_local_planner_gtest
-
-# fast build rule for target.
-_run_tests_base_local_planner_gtest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/build.make navigation/base_local_planner/CMakeFiles/_run_tests_base_local_planner_gtest.dir/build
-.PHONY : _run_tests_base_local_planner_gtest/fast
-
-# Convenience name for target.
-navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/rule
-.PHONY : navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/rule
-
-# Convenience name for target.
-base_local_planner_utest: navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/rule
-
-.PHONY : base_local_planner_utest
-
-# fast build rule for target.
-base_local_planner_utest/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build
-.PHONY : base_local_planner_utest/fast
 
 # Convenience name for target.
 navigation/base_local_planner/CMakeFiles/base_local_planner_genpy.dir/rule:
@@ -1166,195 +990,6 @@ src/voxel_grid_model.cpp.s:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner.dir/src/voxel_grid_model.cpp.s
 .PHONY : src/voxel_grid_model.cpp.s
 
-test/footprint_helper_test.o: test/footprint_helper_test.cpp.o
-
-.PHONY : test/footprint_helper_test.o
-
-# target to build an object file
-test/footprint_helper_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/footprint_helper_test.cpp.o
-.PHONY : test/footprint_helper_test.cpp.o
-
-test/footprint_helper_test.i: test/footprint_helper_test.cpp.i
-
-.PHONY : test/footprint_helper_test.i
-
-# target to preprocess a source file
-test/footprint_helper_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/footprint_helper_test.cpp.i
-.PHONY : test/footprint_helper_test.cpp.i
-
-test/footprint_helper_test.s: test/footprint_helper_test.cpp.s
-
-.PHONY : test/footprint_helper_test.s
-
-# target to generate assembly for a file
-test/footprint_helper_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/footprint_helper_test.cpp.s
-.PHONY : test/footprint_helper_test.cpp.s
-
-test/gtest_main.o: test/gtest_main.cpp.o
-
-.PHONY : test/gtest_main.o
-
-# target to build an object file
-test/gtest_main.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/gtest_main.cpp.o
-.PHONY : test/gtest_main.cpp.o
-
-test/gtest_main.i: test/gtest_main.cpp.i
-
-.PHONY : test/gtest_main.i
-
-# target to preprocess a source file
-test/gtest_main.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/gtest_main.cpp.i
-.PHONY : test/gtest_main.cpp.i
-
-test/gtest_main.s: test/gtest_main.cpp.s
-
-.PHONY : test/gtest_main.s
-
-# target to generate assembly for a file
-test/gtest_main.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/gtest_main.cpp.s
-.PHONY : test/gtest_main.cpp.s
-
-test/line_iterator_test.o: test/line_iterator_test.cpp.o
-
-.PHONY : test/line_iterator_test.o
-
-# target to build an object file
-test/line_iterator_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.o
-.PHONY : test/line_iterator_test.cpp.o
-
-test/line_iterator_test.i: test/line_iterator_test.cpp.i
-
-.PHONY : test/line_iterator_test.i
-
-# target to preprocess a source file
-test/line_iterator_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.i
-.PHONY : test/line_iterator_test.cpp.i
-
-test/line_iterator_test.s: test/line_iterator_test.cpp.s
-
-.PHONY : test/line_iterator_test.s
-
-# target to generate assembly for a file
-test/line_iterator_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/line_iterator.dir/build.make navigation/base_local_planner/CMakeFiles/line_iterator.dir/test/line_iterator_test.cpp.s
-.PHONY : test/line_iterator_test.cpp.s
-
-test/map_grid_test.o: test/map_grid_test.cpp.o
-
-.PHONY : test/map_grid_test.o
-
-# target to build an object file
-test/map_grid_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/map_grid_test.cpp.o
-.PHONY : test/map_grid_test.cpp.o
-
-test/map_grid_test.i: test/map_grid_test.cpp.i
-
-.PHONY : test/map_grid_test.i
-
-# target to preprocess a source file
-test/map_grid_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/map_grid_test.cpp.i
-.PHONY : test/map_grid_test.cpp.i
-
-test/map_grid_test.s: test/map_grid_test.cpp.s
-
-.PHONY : test/map_grid_test.s
-
-# target to generate assembly for a file
-test/map_grid_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/map_grid_test.cpp.s
-.PHONY : test/map_grid_test.cpp.s
-
-test/trajectory_generator_test.o: test/trajectory_generator_test.cpp.o
-
-.PHONY : test/trajectory_generator_test.o
-
-# target to build an object file
-test/trajectory_generator_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/trajectory_generator_test.cpp.o
-.PHONY : test/trajectory_generator_test.cpp.o
-
-test/trajectory_generator_test.i: test/trajectory_generator_test.cpp.i
-
-.PHONY : test/trajectory_generator_test.i
-
-# target to preprocess a source file
-test/trajectory_generator_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/trajectory_generator_test.cpp.i
-.PHONY : test/trajectory_generator_test.cpp.i
-
-test/trajectory_generator_test.s: test/trajectory_generator_test.cpp.s
-
-.PHONY : test/trajectory_generator_test.s
-
-# target to generate assembly for a file
-test/trajectory_generator_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/trajectory_generator_test.cpp.s
-.PHONY : test/trajectory_generator_test.cpp.s
-
-test/utest.o: test/utest.cpp.o
-
-.PHONY : test/utest.o
-
-# target to build an object file
-test/utest.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/utest.cpp.o
-.PHONY : test/utest.cpp.o
-
-test/utest.i: test/utest.cpp.i
-
-.PHONY : test/utest.i
-
-# target to preprocess a source file
-test/utest.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/utest.cpp.i
-.PHONY : test/utest.cpp.i
-
-test/utest.s: test/utest.cpp.s
-
-.PHONY : test/utest.s
-
-# target to generate assembly for a file
-test/utest.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/utest.cpp.s
-.PHONY : test/utest.cpp.s
-
-test/velocity_iterator_test.o: test/velocity_iterator_test.cpp.o
-
-.PHONY : test/velocity_iterator_test.o
-
-# target to build an object file
-test/velocity_iterator_test.cpp.o:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/velocity_iterator_test.cpp.o
-.PHONY : test/velocity_iterator_test.cpp.o
-
-test/velocity_iterator_test.i: test/velocity_iterator_test.cpp.i
-
-.PHONY : test/velocity_iterator_test.i
-
-# target to preprocess a source file
-test/velocity_iterator_test.cpp.i:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/velocity_iterator_test.cpp.i
-.PHONY : test/velocity_iterator_test.cpp.i
-
-test/velocity_iterator_test.s: test/velocity_iterator_test.cpp.s
-
-.PHONY : test/velocity_iterator_test.s
-
-# target to generate assembly for a file
-test/velocity_iterator_test.cpp.s:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/build.make navigation/base_local_planner/CMakeFiles/base_local_planner_utest.dir/test/velocity_iterator_test.cpp.s
-.PHONY : test/velocity_iterator_test.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1363,32 +998,20 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... run_tests_base_local_planner_gtest_line_iterator"
-	@echo "... line_iterator"
-	@echo "... _run_tests_base_local_planner"
-	@echo "... run_tests_base_local_planner"
+	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... base_local_planner_generate_messages_eus"
 	@echo "... base_local_planner_geneus"
-	@echo "... _run_tests_base_local_planner_gtest_line_iterator"
-	@echo "... run_tests_base_local_planner_gtest"
 	@echo "... base_local_planner_generate_messages_cpp"
 	@echo "... install"
-	@echo "... run_tests_base_local_planner_gtest_base_local_planner_utest"
 	@echo "... base_local_planner_gencpp"
-	@echo "... _run_tests_base_local_planner_gtest_base_local_planner_utest"
 	@echo "... base_local_planner_generate_messages"
 	@echo "... base_local_planner_generate_messages_lisp"
-	@echo "... test"
 	@echo "... _base_local_planner_generate_messages_check_deps_Position2DInt"
 	@echo "... base_local_planner_generate_messages_nodejs"
-	@echo "... clean_test_results_base_local_planner"
 	@echo "... base_local_planner_generate_messages_py"
 	@echo "... base_local_planner_gennodejs"
-	@echo "... _run_tests_base_local_planner_gtest"
-	@echo "... base_local_planner_utest"
 	@echo "... base_local_planner_genpy"
 	@echo "... point_grid"
 	@echo "... base_local_planner_gencfg"
@@ -1461,27 +1084,6 @@ help:
 	@echo "... src/voxel_grid_model.o"
 	@echo "... src/voxel_grid_model.i"
 	@echo "... src/voxel_grid_model.s"
-	@echo "... test/footprint_helper_test.o"
-	@echo "... test/footprint_helper_test.i"
-	@echo "... test/footprint_helper_test.s"
-	@echo "... test/gtest_main.o"
-	@echo "... test/gtest_main.i"
-	@echo "... test/gtest_main.s"
-	@echo "... test/line_iterator_test.o"
-	@echo "... test/line_iterator_test.i"
-	@echo "... test/line_iterator_test.s"
-	@echo "... test/map_grid_test.o"
-	@echo "... test/map_grid_test.i"
-	@echo "... test/map_grid_test.s"
-	@echo "... test/trajectory_generator_test.o"
-	@echo "... test/trajectory_generator_test.i"
-	@echo "... test/trajectory_generator_test.s"
-	@echo "... test/utest.o"
-	@echo "... test/utest.i"
-	@echo "... test/utest.s"
-	@echo "... test/velocity_iterator_test.o"
-	@echo "... test/velocity_iterator_test.i"
-	@echo "... test/velocity_iterator_test.s"
 .PHONY : help
 
 

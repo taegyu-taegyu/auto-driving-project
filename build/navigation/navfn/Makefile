@@ -90,17 +90,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -113,6 +102,17 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -123,17 +123,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
-
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -166,6 +155,21 @@ preinstall/fast:
 depend:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
+.PHONY : navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+navfn_generate_messages_eus: navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
+
+.PHONY : navfn_generate_messages_eus
+
+# fast build rule for target.
+navfn_generate_messages_eus/fast:
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build.make navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build
+.PHONY : navfn_generate_messages_eus/fast
 
 # Convenience name for target.
 navigation/navfn/CMakeFiles/navfn_generate_messages_lisp.dir/rule:
@@ -377,21 +381,6 @@ navfn_node/fast:
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/navfn/CMakeFiles/navfn_node.dir/build.make navigation/navfn/CMakeFiles/navfn_node.dir/build
 .PHONY : navfn_node/fast
 
-# Convenience name for target.
-navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
-.PHONY : navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-navfn_generate_messages_eus: navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/rule
-
-.PHONY : navfn_generate_messages_eus
-
-# fast build rule for target.
-navfn_generate_messages_eus/fast:
-	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build.make navigation/navfn/CMakeFiles/navfn_generate_messages_eus.dir/build
-.PHONY : navfn_generate_messages_eus/fast
-
 src/navfn.o: src/navfn.cpp.o
 
 .PHONY : src/navfn.o
@@ -482,13 +471,14 @@ help:
 	@echo "... install/strip"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... edit_cache"
+	@echo "... navfn_generate_messages_eus"
 	@echo "... install/local"
 	@echo "... navfn_generate_messages_lisp"
 	@echo "... navfn_generate_messages_cpp"
 	@echo "... _navfn_generate_messages_check_deps_SetCostmap"
 	@echo "... navfn_gennodejs"
 	@echo "... navfn_gencpp"
+	@echo "... edit_cache"
 	@echo "... _navfn_generate_messages_check_deps_MakeNavPlan"
 	@echo "... navfn_geneus"
 	@echo "... navfn_genlisp"
@@ -499,8 +489,6 @@ help:
 	@echo "... navfn"
 	@echo "... navfn_generate_messages"
 	@echo "... navfn_node"
-	@echo "... navfn_generate_messages_eus"
-	@echo "... test"
 	@echo "... src/navfn.o"
 	@echo "... src/navfn.i"
 	@echo "... src/navfn.s"

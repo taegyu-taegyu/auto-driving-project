@@ -132,7 +132,7 @@ CATKIN_BLACKLIST_PACKAGES:STRING=
 CATKIN_DEVEL_PREFIX:PATH=/home/kw-cobot/wego_ws/auto-driving-project/devel
 
 //Catkin enable testing
-CATKIN_ENABLE_TESTING:BOOL=ON
+CATKIN_ENABLE_TESTING:BOOL=False
 
 //Catkin skip testing
 CATKIN_SKIP_TESTING:BOOL=OFF
@@ -150,8 +150,9 @@ CCACHE_PROGRAM:FILEPATH=CCACHE_PROGRAM-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build.
-CMAKE_BUILD_TYPE:STRING=Release
+//Choose the type of build, options are: None(CMAKE_CXX_FLAGS or
+// CMAKE_C_FLAGS used) Debug Release RelWithDebInfo MinSizeRel.
+CMAKE_BUILD_TYPE:STRING=Releas
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -698,7 +699,7 @@ UBUNTU_BIONIC:BOOL=TRUE
 VTK_DIR:PATH=/usr/lib/cmake/vtk-6.3
 
 //Path to a file.
-_file_name:FILEPATH=/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/clear_costmap_recovery/test/clear_tests.launch
+_file_name:FILEPATH=/home/kw-cobot/wego_ws/auto-driving-project/src/ddynamic_reconfigure/test/ddynamic_reconfigure.test
 
 //Path to a file.
 _gmock_INCLUDES:FILEPATH=/usr/include/gmock/gmock.h
@@ -808,7 +809,8 @@ cv_bridge_DIR:PATH=/opt/ros/melodic/share/cv_bridge/cmake
 //Value Computed by CMake
 ddynamic_reconfigure_BINARY_DIR:STATIC=/home/kw-cobot/wego_ws/auto-driving-project/build/ddynamic_reconfigure
 
-ddynamic_reconfigure_DIR:PATH=
+//The directory containing a CMake configuration file for ddynamic_reconfigure.
+ddynamic_reconfigure_DIR:PATH=/home/kw-cobot/wego_ws/auto-driving-project/devel/share/ddynamic_reconfigure/cmake
 
 //Dependencies for the target
 ddynamic_reconfigure_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
@@ -1145,10 +1147,13 @@ pluginlib_DIR:PATH=/opt/ros/melodic/share/pluginlib/cmake
 pointcloud_filters_LIB_DEPENDS:STATIC=general;/opt/ros/melodic/lib/libmean.so;general;/opt/ros/melodic/lib/libparams.so;general;/opt/ros/melodic/lib/libincrement.so;general;/opt/ros/melodic/lib/libmedian.so;general;/opt/ros/melodic/lib/libtransfer_function.so;general;/opt/ros/melodic/lib/liblaser_geometry.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libtf2.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //The directory containing a CMake configuration file for realsense2.
-realsense2_DIR:PATH=realsense2_DIR-NOTFOUND
+realsense2_DIR:PATH=/opt/ros/melodic/lib/cmake/realsense2
 
 //Value Computed by CMake
 realsense2_camera_BINARY_DIR:STATIC=/home/kw-cobot/wego_ws/auto-driving-project/build/realsense-ros/realsense2_camera
+
+//Dependencies for the target
+realsense2_camera_LIB_DEPENDS:STATIC=general;realsense2::realsense2;general;/opt/ros/melodic/lib/libnodeletlib.so;general;/opt/ros/melodic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/melodic/lib/libcv_bridge.so;general;/usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.3.2.0;general;/usr/lib/x86_64-linux-gnu/libopencv_imgcodecs.so.3.2.0;general;/opt/ros/melodic/lib/libimage_transport.so;general;/opt/ros/melodic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/melodic/lib/libroslib.so;general;/opt/ros/melodic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/melodic/lib/libtf.so;general;/opt/ros/melodic/lib/libtf2_ros.so;general;/opt/ros/melodic/lib/libactionlib.so;general;/opt/ros/melodic/lib/libmessage_filters.so;general;/opt/ros/melodic/lib/libtf2.so;general;ddynamic_reconfigure;general;/opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/melodic/lib/libdiagnostic_updater.so;general;/opt/ros/melodic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/melodic/lib/librosconsole.so;general;/opt/ros/melodic/lib/librosconsole_log4cxx.so;general;/opt/ros/melodic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/melodic/lib/libxmlrpcpp.so;general;/opt/ros/melodic/lib/libroscpp_serialization.so;general;/opt/ros/melodic/lib/librostime.so;general;/opt/ros/melodic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4;
 
 //Value Computed by CMake
 realsense2_camera_SOURCE_DIR:STATIC=/home/kw-cobot/wego_ws/auto-driving-project/src/realsense-ros/realsense2_camera
@@ -1508,7 +1513,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=46
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

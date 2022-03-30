@@ -124,17 +124,6 @@ install/local/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/hector_slam/hector_imu_attitude_to_tf/CMakeFiles/progress.marks
@@ -301,7 +290,6 @@ help:
 	@echo "... tf_generate_messages_lisp"
 	@echo "... tf_generate_messages_nodejs"
 	@echo "... install/local"
-	@echo "... test"
 	@echo "... imu_attitude_to_tf_node"
 	@echo "... src/imu_attitude_to_tf_node.o"
 	@echo "... src/imu_attitude_to_tf_node.i"
