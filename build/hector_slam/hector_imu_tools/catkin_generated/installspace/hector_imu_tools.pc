@@ -2,7 +2,7 @@ prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: hector_imu_tools
 Description: Description of hector_imu_tools
-Version: 0.5.2
+Version: 0.4.1
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: geometry_msgs nav_msgs roscpp sensor_msgs tf
+Requires: 

@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_trajectory_server")
-set(hector_trajectory_server_VERSION "0.5.2")
+set(hector_trajectory_server_VERSION "0.4.1")
 set(hector_trajectory_server_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_trajectory_server_PACKAGE_FORMAT "1")
 set(hector_trajectory_server_BUILD_DEPENDS "roscpp" "hector_nav_msgs" "nav_msgs" "hector_map_tools" "tf")

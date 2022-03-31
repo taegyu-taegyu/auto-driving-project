@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_imu_tools")
-set(hector_imu_tools_VERSION "0.5.2")
+set(hector_imu_tools_VERSION "0.4.1")
 set(hector_imu_tools_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_imu_tools_PACKAGE_FORMAT "1")
 set(hector_imu_tools_BUILD_DEPENDS "roscpp" "tf" "geometry_msgs" "sensor_msgs" "nav_msgs")
