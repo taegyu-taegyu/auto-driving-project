@@ -10,3 +10,20 @@
 	path = src/ddynamic_reconfigure
 	url = https://github.com/pal-robotics/ddynamic_reconfigure.git
 	branch = kinetic-devel
+[submodule "src/turtlebot3"]
+	path = src/turtlebot3
+	url = https://github.com/ROBOTIS-GIT/turtlebot3.git
+	branch = melodic-devel
+[submodule "turtlebot3_simulations"]
+	path = turtlebot3_simulations
+	url = https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+	branch = melodic-devel
+[submodule "src/YOLOv3-ROS"]
+	path = src/YOLOv3-ROS
+	url = https://github.com/Pinkwink/YOLOv3-ROS
+[submodule "src/depthimage_to_laserscan"]
+	path = src/depthimage_to_laserscan
+	url = https://github.com/ros-perception/depthimage_to_laserscan.git
+[submodule "src/ROS-Object-Detection-2Dto3D-RealsenseD435"]
+	path = src/ROS-Object-Detection-2Dto3D-RealsenseD435
+	url = https://github.com/Mazhichaoruya/ROS-Object-Detection-2Dto3D-RealsenseD435.git
