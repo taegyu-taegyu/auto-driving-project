@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_geotiff_launch")
-set(hector_geotiff_launch_VERSION "0.5.1")
+set(hector_geotiff_launch_VERSION "0.5.2")
 set(hector_geotiff_launch_MAINTAINER "Stefan Fabian <fabian@sim.tu-darmstadt.de>")
 set(hector_geotiff_launch_PACKAGE_FORMAT "2")
 set(hector_geotiff_launch_BUILD_DEPENDS )

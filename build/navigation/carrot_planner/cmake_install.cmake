@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/navigation/carrot_planner
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/carrot_planner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Releas")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/navigation/carrot_planner/catkin_generated/installspace/carrot_planner.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/navigation/carrot_planner/catkin_generated/installspace/carrot_planner.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carrot_planner/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/navigation/carrot_planner/catkin_generated/installspace/carrot_plannerConfig.cmake"
-    "/home/wego/wego_ws/build/navigation/carrot_planner/catkin_generated/installspace/carrot_plannerConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/navigation/carrot_planner/catkin_generated/installspace/carrot_plannerConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/navigation/carrot_planner/catkin_generated/installspace/carrot_plannerConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carrot_planner" TYPE FILE FILES "/home/wego/wego_ws/src/navigation/carrot_planner/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carrot_planner" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/carrot_planner/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcarrot_planner.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/wego/wego_ws/devel/lib/libcarrot_planner.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libcarrot_planner.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcarrot_planner.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcarrot_planner.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcarrot_planner.so"
-         OLD_RPATH "/home/wego/wego_ws/devel/lib:/opt/ros/melodic/lib:"
+         OLD_RPATH "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib:/opt/ros/melodic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libcarrot_planner.so")
@@ -73,10 +73,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/carrot_planner" TYPE DIRECTORY FILES "/home/wego/wego_ws/src/navigation/carrot_planner/include/carrot_planner/" REGEX "/\\.svn$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/carrot_planner" TYPE DIRECTORY FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/carrot_planner/include/carrot_planner/" REGEX "/\\.svn$" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carrot_planner" TYPE FILE FILES "/home/wego/wego_ws/src/navigation/carrot_planner/bgp_plugin.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/carrot_planner" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/carrot_planner/bgp_plugin.xml")
 endif()
 

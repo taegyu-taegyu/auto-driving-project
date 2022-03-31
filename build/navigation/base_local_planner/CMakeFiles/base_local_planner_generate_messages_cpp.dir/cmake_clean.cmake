@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_generate_messages_cpp"
-  "/home/wego/wego_ws/devel/include/base_local_planner/Position2DInt.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/base_local_planner/Position2DInt.h"
 )
 
 # Per-language clean rules from dependency scanning.

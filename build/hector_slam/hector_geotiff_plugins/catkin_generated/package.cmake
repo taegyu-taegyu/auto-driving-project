@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_geotiff_plugins")
-set(hector_geotiff_plugins_VERSION "0.5.1")
+set(hector_geotiff_plugins_VERSION "0.5.2")
 set(hector_geotiff_plugins_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_geotiff_plugins_PACKAGE_FORMAT "1")
 set(hector_geotiff_plugins_BUILD_DEPENDS "hector_geotiff" "hector_nav_msgs")

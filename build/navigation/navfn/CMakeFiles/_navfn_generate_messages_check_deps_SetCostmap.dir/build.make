@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for _navfn_generate_messages_check_deps_SetCostmap.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/wego/wego_ws/build
 include navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/progress.make
 
 navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap:
-	cd /home/wego/wego_ws/build/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navfn /home/wego/wego_ws/src/navigation/navfn/srv/SetCostmap.srv 
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn && ../../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py navfn /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/navfn/srv/SetCostmap.srv 
 
 _navfn_generate_messages_check_deps_SetCostmap: navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap
 _navfn_generate_messages_check_deps_SetCostmap: navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build.make
@@ -67,10 +67,10 @@ navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/b
 .PHONY : navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/build
 
 navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/navfn && $(CMAKE_COMMAND) -P CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn && $(CMAKE_COMMAND) -P CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/cmake_clean.cmake
 .PHONY : navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/clean
 
 navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/navfn /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/navfn /home/wego/wego_ws/build/navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/navfn /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/navfn/CMakeFiles/_navfn_generate_messages_check_deps_SetCostmap.dir/depend
 

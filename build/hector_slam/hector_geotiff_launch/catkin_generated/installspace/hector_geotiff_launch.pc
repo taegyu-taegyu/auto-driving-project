@@ -1,8 +1,8 @@
-prefix=/home/wego/wego_ws/install
+prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: hector_geotiff_launch
 Description: Description of hector_geotiff_launch
-Version: 0.5.1
+Version: 0.5.2
 Cflags: 
 Libs: -L${prefix}/lib 
 Requires: 

@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_2d_generate_messages_cpp"
-  "/home/wego/wego_ws/devel/include/costmap_2d/VoxelGrid.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/costmap_2d/VoxelGrid.h"
 )
 
 # Per-language clean rules from dependency scanning.

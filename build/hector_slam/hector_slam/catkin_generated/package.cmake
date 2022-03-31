@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "hector_slam")
-set(hector_slam_VERSION "0.5.1")
+set(hector_slam_VERSION "0.5.2")
 set(hector_slam_MAINTAINER "Johannes Meyer <meyer@fsr.tu-darmstadt.de>")
 set(hector_slam_PACKAGE_FORMAT "1")
 set(hector_slam_BUILD_DEPENDS )

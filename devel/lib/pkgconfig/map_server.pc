@@ -1,8 +1,8 @@
-prefix=/home/wego/wego_ws/devel
+prefix=/home/kw-cobot/wego_ws/auto-driving-project/devel
 
 Name: map_server
 Description: Description of map_server
 Version: 1.16.7
-Cflags: -I/home/wego/wego_ws/src/navigation/map_server/include
+Cflags: -I/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server/include
 Libs: -L${prefix}/lib -lmap_server_image_loader
 Requires: roscpp nav_msgs tf2

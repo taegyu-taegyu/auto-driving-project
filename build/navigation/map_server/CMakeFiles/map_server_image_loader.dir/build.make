@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Include any dependencies generated for this target.
 include navigation/map_server/CMakeFiles/map_server_image_loader.dir/depend.make
@@ -58,17 +58,17 @@ include navigation/map_server/CMakeFiles/map_server_image_loader.dir/progress.ma
 include navigation/map_server/CMakeFiles/map_server_image_loader.dir/flags.make
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o: navigation/map_server/CMakeFiles/map_server_image_loader.dir/flags.make
-navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o: /home/wego/wego_ws/src/navigation/map_server/src/image_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o"
-	cd /home/wego/wego_ws/build/navigation/map_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o -c /home/wego/wego_ws/src/navigation/map_server/src/image_loader.cpp
+navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o: /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server/src/image_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o -c /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server/src/image_loader.cpp
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.i"
-	cd /home/wego/wego_ws/build/navigation/map_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/wego/wego_ws/src/navigation/map_server/src/image_loader.cpp > CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server/src/image_loader.cpp > CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.i
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.s"
-	cd /home/wego/wego_ws/build/navigation/map_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/wego/wego_ws/src/navigation/map_server/src/image_loader.cpp -o CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server/src/image_loader.cpp -o CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.s
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o.requires:
 
@@ -88,40 +88,40 @@ map_server_image_loader_OBJECTS = \
 # External object files for target map_server_image_loader
 map_server_image_loader_EXTERNAL_OBJECTS =
 
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/build.make
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libLinearMath.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libroscpp.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libtf2.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librostime.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDLmain.a
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDL.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDL_image.so
-/home/wego/wego_ws/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/wego/wego_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/wego/wego_ws/devel/lib/libmap_server_image_loader.so"
-	cd /home/wego/wego_ws/build/navigation/map_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/map_server_image_loader.dir/link.txt --verbose=$(VERBOSE)
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/src/image_loader.cpp.o
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/build.make
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletDynamics.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletCollision.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libLinearMath.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libBulletSoftBody.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libroscpp.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libtf2.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/librostime.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDLmain.a
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDL.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: /usr/lib/x86_64-linux-gnu/libSDL_image.so
+/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so: navigation/map_server/CMakeFiles/map_server_image_loader.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so"
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/map_server_image_loader.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-navigation/map_server/CMakeFiles/map_server_image_loader.dir/build: /home/wego/wego_ws/devel/lib/libmap_server_image_loader.so
+navigation/map_server/CMakeFiles/map_server_image_loader.dir/build: /home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmap_server_image_loader.so
 
 .PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/build
 
@@ -130,10 +130,10 @@ navigation/map_server/CMakeFiles/map_server_image_loader.dir/requires: navigatio
 .PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/requires
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/map_server && $(CMAKE_COMMAND) -P CMakeFiles/map_server_image_loader.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && $(CMAKE_COMMAND) -P CMakeFiles/map_server_image_loader.dir/cmake_clean.cmake
 .PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/clean
 
 navigation/map_server/CMakeFiles/map_server_image_loader.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/map_server /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/map_server /home/wego/wego_ws/build/navigation/map_server/CMakeFiles/map_server_image_loader.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server/CMakeFiles/map_server_image_loader.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/map_server/CMakeFiles/map_server_image_loader.dir/depend
 

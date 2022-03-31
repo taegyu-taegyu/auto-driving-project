@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/laser_scan_filters.dir/src/polygon_filter.cpp.o"
   "CMakeFiles/laser_scan_filters.dir/src/speckle_filter.cpp.o"
   "CMakeFiles/laser_scan_filters.dir/src/intensity_filter.cpp.o"
-  "/home/wego/wego_ws/devel/lib/liblaser_scan_filters.pdb"
-  "/home/wego/wego_ws/devel/lib/liblaser_scan_filters.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/liblaser_scan_filters.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/liblaser_scan_filters.so"
 )
 
 # Per-language clean rules from dependency scanning.

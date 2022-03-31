@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_generate_messages_nodejs"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/base_local_planner/msg/Position2DInt.js"
 )
 
 # Per-language clean rules from dependency scanning.

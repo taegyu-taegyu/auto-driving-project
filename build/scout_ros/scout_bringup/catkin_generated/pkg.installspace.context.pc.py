@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "".split(';') if "" != "" else []
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "scout_bringup"
-PROJECT_SPACE_DIR = "/home/wego/wego_ws/install"
+PROJECT_SPACE_DIR = "/home/kw-cobot/wego_ws/auto-driving-project/install"
 PROJECT_VERSION = "0.0.0"

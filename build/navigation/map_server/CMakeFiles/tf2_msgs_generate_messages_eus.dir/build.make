@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 # Utility rule file for tf2_msgs_generate_messages_eus.
 
@@ -63,10 +63,10 @@ navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build: tf2_m
 .PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
 
 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean:
-	cd /home/wego/wego_ws/build/navigation/map_server && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server && $(CMAKE_COMMAND) -P CMakeFiles/tf2_msgs_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/clean
 
 navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/wego/wego_ws/src /home/wego/wego_ws/src/navigation/map_server /home/wego/wego_ws/build /home/wego/wego_ws/build/navigation/map_server /home/wego/wego_ws/build/navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kw-cobot/wego_ws/auto-driving-project/src /home/kw-cobot/wego_ws/auto-driving-project/src/navigation/map_server /home/kw-cobot/wego_ws/auto-driving-project/build /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : navigation/map_server/CMakeFiles/tf2_msgs_generate_messages_eus.dir/depend
 

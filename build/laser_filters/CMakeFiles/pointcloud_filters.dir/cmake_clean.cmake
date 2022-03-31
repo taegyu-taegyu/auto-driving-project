@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pointcloud_filters.dir/src/pointcloud_filters.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libpointcloud_filters.pdb"
-  "/home/wego/wego_ws/devel/lib/libpointcloud_filters.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libpointcloud_filters.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libpointcloud_filters.so"
 )
 
 # Per-language clean rules from dependency scanning.
