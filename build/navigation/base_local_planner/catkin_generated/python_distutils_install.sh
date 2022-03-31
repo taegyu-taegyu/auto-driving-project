@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/wego/wego_ws/src/navigation/base_local_planner"
+echo_and_run cd "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/base_local_planner"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/wego/wego_ws/install/lib/python2.7/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/home/kw-cobot/wego_ws/auto-driving-project/install/lib/python2.7/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/wego/wego_ws/install/lib/python2.7/dist-packages:/home/wego/wego_ws/build/lib/python2.7/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/wego/wego_ws/build" \
+    PYTHONPATH="/home/kw-cobot/wego_ws/auto-driving-project/install/lib/python2.7/dist-packages:/home/kw-cobot/wego_ws/auto-driving-project/build/lib/python2.7/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/home/kw-cobot/wego_ws/auto-driving-project/build" \
     "/usr/bin/python2" \
-    "/home/wego/wego_ws/src/navigation/base_local_planner/setup.py" \
+    "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/base_local_planner/setup.py" \
      \
-    build --build-base "/home/wego/wego_ws/build/navigation/base_local_planner" \
+    build --build-base "/home/kw-cobot/wego_ws/auto-driving-project/build/navigation/base_local_planner" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/wego/wego_ws/install" --install-scripts="/home/wego/wego_ws/install/bin"
+    --install-layout=deb --prefix="/home/kw-cobot/wego_ws/auto-driving-project/install" --install-scripts="/home/kw-cobot/wego_ws/auto-driving-project/install/bin"

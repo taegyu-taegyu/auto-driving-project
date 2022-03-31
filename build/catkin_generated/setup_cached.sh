@@ -7,4 +7,5 @@
 # new environment variables
 
 # modified environment variables
-export PWD='/home/wego/wego_ws/build'
+export PATH='/opt/ros/melodic/bin:/home/kw-cobot/.local/bin:/home/kw-cobot/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+export PWD='/home/kw-cobot/wego_ws/auto-driving-project/build'

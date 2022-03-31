@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = ""
-services_str = "/home/wego/wego_ws/src/navigation/navfn/srv/MakeNavPlan.srv;/home/wego/wego_ws/src/navigation/navfn/srv/SetCostmap.srv"
+services_str = "/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/navfn/srv/MakeNavPlan.srv;/home/kw-cobot/wego_ws/auto-driving-project/src/navigation/navfn/srv/SetCostmap.srv"
 pkg_name = "navfn"
 dependencies_str = "geometry_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

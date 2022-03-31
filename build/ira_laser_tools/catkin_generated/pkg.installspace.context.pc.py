@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "ira_laser_tools"
-PROJECT_SPACE_DIR = "/home/wego/wego_ws/install"
+PROJECT_SPACE_DIR = "/home/kw-cobot/wego_ws/auto-driving-project/install"
 PROJECT_VERSION = "1.0.4"

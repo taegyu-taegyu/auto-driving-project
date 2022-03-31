@@ -1,10 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_local_planner_gencfg"
-  "/home/wego/wego_ws/devel/include/base_local_planner/BaseLocalPlannerConfig.h"
-  "/home/wego/wego_ws/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.dox"
-  "/home/wego/wego_ws/devel/share/base_local_planner/docs/BaseLocalPlannerConfig-usage.dox"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/base_local_planner/cfg/BaseLocalPlannerConfig.py"
-  "/home/wego/wego_ws/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.wikidoc"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/include/base_local_planner/BaseLocalPlannerConfig.h"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.dox"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/base_local_planner/docs/BaseLocalPlannerConfig-usage.dox"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/base_local_planner/cfg/BaseLocalPlannerConfig.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/base_local_planner/docs/BaseLocalPlannerConfig.wikidoc"
 )
 
 # Per-language clean rules from dependency scanning.

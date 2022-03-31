@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/fake_localization/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/fake_localization/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 navigation/fake_localization/CMakeFiles/fake_localization.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/CMakeFiles/fake_localization.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/fake_localization/CMakeFiles/fake_localization.dir/rule
 .PHONY : navigation/fake_localization/CMakeFiles/fake_localization.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ fake_localization: navigation/fake_localization/CMakeFiles/fake_localization.dir
 
 # fast build rule for target.
 fake_localization/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/build
 .PHONY : fake_localization/fast
 
 fake_localization.o: fake_localization.cpp.o
@@ -177,7 +177,7 @@ fake_localization.o: fake_localization.cpp.o
 
 # target to build an object file
 fake_localization.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.o
 .PHONY : fake_localization.cpp.o
 
 fake_localization.i: fake_localization.cpp.i
@@ -186,7 +186,7 @@ fake_localization.i: fake_localization.cpp.i
 
 # target to preprocess a source file
 fake_localization.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.i
 .PHONY : fake_localization.cpp.i
 
 fake_localization.s: fake_localization.cpp.s
@@ -195,7 +195,7 @@ fake_localization.s: fake_localization.cpp.s
 
 # target to generate assembly for a file
 fake_localization.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/fake_localization/CMakeFiles/fake_localization.dir/build.make navigation/fake_localization/CMakeFiles/fake_localization.dir/fake_localization.cpp.s
 .PHONY : fake_localization.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

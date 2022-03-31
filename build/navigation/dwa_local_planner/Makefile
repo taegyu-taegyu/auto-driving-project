@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/dwa_local_planner/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/dwa_local_planner/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/rule
 .PHONY : navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/rule
 
 # Convenience name for target.
@@ -168,12 +168,12 @@ dwa_local_planner: navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir
 
 # fast build rule for target.
 dwa_local_planner/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build
 .PHONY : dwa_local_planner/fast
 
 # Convenience name for target.
 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/rule
 .PHONY : navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/rule
 
 # Convenience name for target.
@@ -183,7 +183,7 @@ dwa_local_planner_gencfg: navigation/dwa_local_planner/CMakeFiles/dwa_local_plan
 
 # fast build rule for target.
 dwa_local_planner_gencfg/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner_gencfg.dir/build
 .PHONY : dwa_local_planner_gencfg/fast
 
 src/dwa_planner.o: src/dwa_planner.cpp.o
@@ -192,7 +192,7 @@ src/dwa_planner.o: src/dwa_planner.cpp.o
 
 # target to build an object file
 src/dwa_planner.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.o
 .PHONY : src/dwa_planner.cpp.o
 
 src/dwa_planner.i: src/dwa_planner.cpp.i
@@ -201,7 +201,7 @@ src/dwa_planner.i: src/dwa_planner.cpp.i
 
 # target to preprocess a source file
 src/dwa_planner.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.i
 .PHONY : src/dwa_planner.cpp.i
 
 src/dwa_planner.s: src/dwa_planner.cpp.s
@@ -210,7 +210,7 @@ src/dwa_planner.s: src/dwa_planner.cpp.s
 
 # target to generate assembly for a file
 src/dwa_planner.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner.cpp.s
 .PHONY : src/dwa_planner.cpp.s
 
 src/dwa_planner_ros.o: src/dwa_planner_ros.cpp.o
@@ -219,7 +219,7 @@ src/dwa_planner_ros.o: src/dwa_planner_ros.cpp.o
 
 # target to build an object file
 src/dwa_planner_ros.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.o
 .PHONY : src/dwa_planner_ros.cpp.o
 
 src/dwa_planner_ros.i: src/dwa_planner_ros.cpp.i
@@ -228,7 +228,7 @@ src/dwa_planner_ros.i: src/dwa_planner_ros.cpp.i
 
 # target to preprocess a source file
 src/dwa_planner_ros.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.i
 .PHONY : src/dwa_planner_ros.cpp.i
 
 src/dwa_planner_ros.s: src/dwa_planner_ros.cpp.s
@@ -237,7 +237,7 @@ src/dwa_planner_ros.s: src/dwa_planner_ros.cpp.s
 
 # target to generate assembly for a file
 src/dwa_planner_ros.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/build.make navigation/dwa_local_planner/CMakeFiles/dwa_local_planner.dir/src/dwa_planner_ros.cpp.s
 .PHONY : src/dwa_planner_ros.cpp.s
 
 # Help Target
@@ -271,6 +271,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

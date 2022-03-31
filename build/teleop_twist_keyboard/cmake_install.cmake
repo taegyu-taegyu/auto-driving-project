@@ -1,8 +1,8 @@
-# Install script for directory: /home/wego/wego_ws/src/teleop_twist_keyboard
+# Install script for directory: /home/kw-cobot/wego_ws/auto-driving-project/src/teleop_twist_keyboard
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/wego/wego_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/kw-cobot/wego_ws/auto-driving-project/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Release")
+    set(CMAKE_INSTALL_CONFIG_NAME "Releas")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/wego/wego_ws/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard/cmake" TYPE FILE FILES
-    "/home/wego/wego_ws/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig.cmake"
-    "/home/wego/wego_ws/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig-version.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig.cmake"
+    "/home/kw-cobot/wego_ws/auto-driving-project/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboardConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard" TYPE FILE FILES "/home/wego/wego_ws/src/teleop_twist_keyboard/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/teleop_twist_keyboard" TYPE FILE FILES "/home/kw-cobot/wego_ws/auto-driving-project/src/teleop_twist_keyboard/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/teleop_twist_keyboard" TYPE PROGRAM FILES "/home/wego/wego_ws/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/teleop_twist_keyboard" TYPE PROGRAM FILES "/home/kw-cobot/wego_ws/auto-driving-project/build/teleop_twist_keyboard/catkin_generated/installspace/teleop_twist_keyboard.py")
 endif()
 

@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_vector.c.o"
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/eig3.c.o"
   "CMakeFiles/amcl_pf.dir/src/amcl/pf/pf_draw.c.o"
-  "/home/wego/wego_ws/devel/lib/libamcl_pf.pdb"
-  "/home/wego/wego_ws/devel/lib/libamcl_pf.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libamcl_pf.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libamcl_pf.so"
 )
 
 # Per-language clean rules from dependency scanning.

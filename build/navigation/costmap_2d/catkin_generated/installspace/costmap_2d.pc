@@ -1,4 +1,4 @@
-prefix=/home/wego/wego_ws/install
+prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: costmap_2d
 Description: Description of costmap_2d

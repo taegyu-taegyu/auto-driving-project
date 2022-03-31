@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/costmap_2d_generate_messages_nodejs"
-  "/home/wego/wego_ws/devel/share/gennodejs/ros/costmap_2d/msg/VoxelGrid.js"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/gennodejs/ros/costmap_2d/msg/VoxelGrid.js"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/realsense2_camera_generate_messages_lisp"
-  "/home/wego/wego_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
-  "/home/wego/wego_ws/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
-  "/home/wego/wego_ws/devel/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
-  "/home/wego/wego_ws/devel/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
 )
 
 # Per-language clean rules from dependency scanning.

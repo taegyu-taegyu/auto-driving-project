@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/move_base.dir/src/move_base.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libmove_base.pdb"
-  "/home/wego/wego_ws/devel/lib/libmove_base.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmove_base.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libmove_base.so"
 )
 
 # Per-language clean rules from dependency scanning.

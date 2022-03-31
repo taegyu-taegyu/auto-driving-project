@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/navfn_generate_messages_py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py"
-  "/home/wego/wego_ws/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/navfn/srv/_SetCostmap.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/navfn/srv/_MakeNavPlan.py"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/python2.7/dist-packages/navfn/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

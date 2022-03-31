@@ -8,8 +8,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ugv_sdk.dir/src/protocol_v2/agilex_msg_parser_v2.c.o"
   "CMakeFiles/ugv_sdk.dir/src/protocol_v2/protocol_v2_parser.cpp.o"
   "CMakeFiles/ugv_sdk.dir/src/protocol_v1/agilex_msg_parser_v1.c.o"
-  "/home/wego/wego_ws/devel/lib/libugv_sdk.pdb"
-  "/home/wego/wego_ws/devel/lib/libugv_sdk.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libugv_sdk.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libugv_sdk.so"
 )
 
 # Per-language clean rules from dependency scanning.

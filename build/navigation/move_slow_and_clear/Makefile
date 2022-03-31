@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/wego/wego_ws/src
+CMAKE_SOURCE_DIR = /home/kw-cobot/wego_ws/auto-driving-project/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/wego/wego_ws/build
+CMAKE_BINARY_DIR = /home/kw-cobot/wego_ws/auto-driving-project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -126,14 +126,14 @@ install/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles /home/wego/wego_ws/build/navigation/move_slow_and_clear/CMakeFiles/progress.marks
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/wego/wego_ws/build/CMakeFiles 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles /home/kw-cobot/wego_ws/auto-driving-project/build/navigation/move_slow_and_clear/CMakeFiles/progress.marks
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kw-cobot/wego_ws/auto-driving-project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/clean
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/clean
 .PHONY : clean
 
 # The main clean target
@@ -143,22 +143,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/preinstall
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/rule
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f CMakeFiles/Makefile2 navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/rule
 .PHONY : navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/rule
 
 # Convenience name for target.
@@ -168,7 +168,7 @@ move_slow_and_clear: navigation/move_slow_and_clear/CMakeFiles/move_slow_and_cle
 
 # fast build rule for target.
 move_slow_and_clear/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build
 .PHONY : move_slow_and_clear/fast
 
 src/move_slow_and_clear.o: src/move_slow_and_clear.cpp.o
@@ -177,7 +177,7 @@ src/move_slow_and_clear.o: src/move_slow_and_clear.cpp.o
 
 # target to build an object file
 src/move_slow_and_clear.cpp.o:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.o
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.o
 .PHONY : src/move_slow_and_clear.cpp.o
 
 src/move_slow_and_clear.i: src/move_slow_and_clear.cpp.i
@@ -186,7 +186,7 @@ src/move_slow_and_clear.i: src/move_slow_and_clear.cpp.i
 
 # target to preprocess a source file
 src/move_slow_and_clear.cpp.i:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.i
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.i
 .PHONY : src/move_slow_and_clear.cpp.i
 
 src/move_slow_and_clear.s: src/move_slow_and_clear.cpp.s
@@ -195,7 +195,7 @@ src/move_slow_and_clear.s: src/move_slow_and_clear.cpp.s
 
 # target to generate assembly for a file
 src/move_slow_and_clear.cpp.s:
-	cd /home/wego/wego_ws/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.s
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(MAKE) -f navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/build.make navigation/move_slow_and_clear/CMakeFiles/move_slow_and_clear.dir/src/move_slow_and_clear.cpp.s
 .PHONY : src/move_slow_and_clear.cpp.s
 
 # Help Target
@@ -225,6 +225,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kw-cobot/wego_ws/auto-driving-project/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

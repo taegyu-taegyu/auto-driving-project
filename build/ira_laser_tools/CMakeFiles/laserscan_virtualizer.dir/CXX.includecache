@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/wego/wego_ws/devel/include/ira_laser_tools/laserscan_virtualizerConfig.h
+/home/kw-cobot/wego_ws/auto-driving-project/devel/include/ira_laser_tools/laserscan_virtualizerConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -24,7 +24,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/wego/wego_ws/src/ira_laser_tools/src/laserscan_virtualizer.cpp
+/home/kw-cobot/wego_ws/auto-driving-project/src/ira_laser_tools/src/laserscan_virtualizer.cpp
 ros/ros.h
 -
 string.h
@@ -46,7 +46,7 @@ pcl/io/pcd_io.h
 sensor_msgs/point_cloud_conversion.h
 -
 sensor_msgs/LaserScan.h
-/home/wego/wego_ws/src/ira_laser_tools/src/sensor_msgs/LaserScan.h
+/home/kw-cobot/wego_ws/auto-driving-project/src/ira_laser_tools/src/sensor_msgs/LaserScan.h
 pcl_ros/point_cloud.h
 -
 Eigen/Dense

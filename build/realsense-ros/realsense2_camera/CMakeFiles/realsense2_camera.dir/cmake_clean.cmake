@@ -2,8 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/realsense2_camera.dir/src/realsense_node_factory.cpp.o"
   "CMakeFiles/realsense2_camera.dir/src/base_realsense_node.cpp.o"
   "CMakeFiles/realsense2_camera.dir/src/t265_realsense_node.cpp.o"
-  "/home/wego/wego_ws/devel/lib/librealsense2_camera.pdb"
-  "/home/wego/wego_ws/devel/lib/librealsense2_camera.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/librealsense2_camera.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/librealsense2_camera.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/navfn.dir/src/navfn.cpp.o"
   "CMakeFiles/navfn.dir/src/navfn_ros.cpp.o"
-  "/home/wego/wego_ws/devel/lib/libnavfn.pdb"
-  "/home/wego/wego_ws/devel/lib/libnavfn.so"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libnavfn.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/libnavfn.so"
 )
 
 # Per-language clean rules from dependency scanning.

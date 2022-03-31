@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/fake_localization.dir/fake_localization.cpp.o"
-  "/home/wego/wego_ws/devel/lib/fake_localization/fake_localization.pdb"
-  "/home/wego/wego_ws/devel/lib/fake_localization/fake_localization"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/fake_localization/fake_localization.pdb"
+  "/home/kw-cobot/wego_ws/auto-driving-project/devel/lib/fake_localization/fake_localization"
 )
 
 # Per-language clean rules from dependency scanning.
