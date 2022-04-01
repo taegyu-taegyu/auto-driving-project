@@ -2,7 +2,7 @@ prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
 
 Name: hector_map_server
 Description: Description of hector_map_server
-Version: 0.5.2
+Version: 0.4.1
 Cflags: 
 Libs: -L${prefix}/lib 
-Requires: roscpp hector_map_tools hector_marker_drawing hector_nav_msgs nav_msgs tf
+Requires: 
