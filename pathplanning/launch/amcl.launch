@@ -7,6 +7,8 @@
 
   <!-- AMCL -->
   <node pkg="amcl" type="amcl" name="amcl">
+
+    <param name="use_map_topic"             value="true"/>
     <param name="min_particles"             value="100"/>
     <param name="max_particles"             value="5000"/>
     <param name="kld_err"                   value="0.02"/>
