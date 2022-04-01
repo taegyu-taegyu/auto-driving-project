@@ -1,8 +1,0 @@
-prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
-
-Name: voxel_grid
-Description: Description of voxel_grid
-Version: 1.16.7
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib -lvoxel_grid
-Requires: roscpp
