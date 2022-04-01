@@ -1,8 +1,0 @@
-prefix=/home/kw-cobot/wego_ws/auto-driving-project/install
-
-Name: wego
-Description: Description of wego
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
