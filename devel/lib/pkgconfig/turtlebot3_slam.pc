@@ -1,8 +1,0 @@
-prefix=/home/kw-cobot/wego_ws/auto-driving-project/devel
-
-Name: turtlebot3_slam
-Description: Description of turtlebot3_slam
-Version: 1.2.6
-Cflags: -I/home/kw-cobot/wego_ws/auto-driving-project/src/turtlebot3/turtlebot3_slam/include
-Libs: -L${prefix}/lib 
-Requires: roscpp sensor_msgs
