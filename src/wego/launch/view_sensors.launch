@@ -2,3 +2,8 @@
   <!-- run rviz -->
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wego)/rviz/view_sensors.rviz" />
 </launch>
+
+
+
+
+
