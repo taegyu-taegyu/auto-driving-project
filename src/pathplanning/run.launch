@@ -1,0 +1,5 @@
+<launch>
+    <node pkg="$(find gmapping)" type="$(find gmapping)/scripts/odom.py" name="odometry" />
+    <include file="$(find pathplanning)/launch/path_navigation.launch"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find pathplanning)/rviz_config.rviz" />
+</launch>

@@ -252,17 +252,27 @@ namespace westonrobot
   void ScoutROSMessenger::PublishOdometryToROS(double linear, double angular,
                                                double dt)
   {
-    // perform numerical integration to get an estimation of pose
     linear_speed_ = linear*0.9;
     angular_speed_ = angular*1.1;
 
-    double d_x = linear_speed_ * std::cos(theta_) * dt;
-    double d_y = linear_speed_ * std::sin(theta_) * dt;
-    double d_theta = angular_speed_ * dt;
+    if(angular_speed_ == 0){
+      double d_x = linear_speed_ * std::cos(theta_) * dt;
+      double d_y = linear_speed_ * std::sin(theta_) * dt;
+      double d_theta = angular_speed_ * dt;
 
-    position_x_ += d_x;
-    position_y_ += d_y;
-    theta_ += d_theta;
+      position_x_ += d_x;
+      position_y_ += d_y;
+      theta_ += d_theta;
+    }
+    else {
+      double d_theta = angular_speed_ * dt;
+      double d_x = (linear_speed_ / angular_speed_) * (std::sin(theta_+d_theta) - std::sin(theta_));
+      double d_y = (-1) * (linear_speed_ / angular_speed_) * (std::cos(theta_+d_theta) - std::cos(theta_));
+      
+      position_x_ += d_x;
+      position_y_ += d_y;
+      theta_ += d_theta;
+    }
 
     geometry_msgs::Quaternion odom_quat = tf::createQuaternionMsgFromYaw(theta_);
 
