@@ -27,3 +27,6 @@
 [submodule "src/ROS-Object-Detection-2Dto3D-RealsenseD435"]
 	path = src/ROS-Object-Detection-2Dto3D-RealsenseD435
 	url = https://github.com/Mazhichaoruya/ROS-Object-Detection-2Dto3D-RealsenseD435.git
+[submodule "src/auto_clear_costmap"]
+	path = src/auto_clear_costmap
+	url = https://github.com/NoThingA11/auto_clear_costmap.git
