@@ -12,7 +12,7 @@
   <remap from="odom" to="odom" />
 </node>
 
-<node pkg="tf" type="static_transform_publisher" name="map_to_odom_ekf" args="0 0 1 0 0 0 map odom_ekf 50" />
+<!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom_ekf" args="0 0 1 0 0 0 map odom_ekf 50" /> -->
 
 </launch>
 
