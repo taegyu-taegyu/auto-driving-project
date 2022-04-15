@@ -15,6 +15,3 @@
 [submodule "src/auto_clear_costmap"]
 	path = src/auto_clear_costmap
 	url = https://github.com/NoThingA11/auto_clear_costmap.git
-[submodule "src/robot_pose_ekf"]
-	path = src/robot_pose_ekf
-	url = https://github.com/ros-planning/robot_pose_ekf.git
