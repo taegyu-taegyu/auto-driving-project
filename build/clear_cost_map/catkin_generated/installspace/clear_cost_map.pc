@@ -1,0 +1,8 @@
+prefix=/home/wego/wego_ws/install
+
+Name: clear_cost_map
+Description: Description of clear_cost_map
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

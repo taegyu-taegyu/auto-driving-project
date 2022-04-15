@@ -12,7 +12,7 @@ from copy import deepcopy
 import tf
 
 rospy.init_node('map_navigation',anonymous=False)
-ac = actionlib.SimpleActionClient("move_bae",MoveBaseAction)
+ac = actionlib.SimpleActionClient("move_base",MoveBaseAction)
 
 current_pose = PoseWithCovarianceStamped()
 

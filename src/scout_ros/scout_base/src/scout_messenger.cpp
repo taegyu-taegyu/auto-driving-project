@@ -252,7 +252,7 @@ namespace westonrobot
   void ScoutROSMessenger::PublishOdometryToROS(double linear, double angular,
                                                double dt)
   {
-    linear_speed_ = linear*0.9;
+    linear_speed_ = linear*1.03;
     angular_speed_ = angular*1.1;
 
     if(angular_speed_ == 0){
