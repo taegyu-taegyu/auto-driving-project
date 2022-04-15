@@ -104,11 +104,14 @@ bool EncodeCanFrameV1(const AgxMessage *msg, struct can_frame *tx_frame) {
       frame.control_mode = CTRL_MODE_CMD_CAN;
       frame.error_clear_byte = ERROR_CLR_NONE;
       frame.linear_percentage =
-          (int8_t)(msg->body.v1_motion_command_msg.linear);
+          (int8_t)(msg->body.v1_motion_command_msg.linear * 0.56);
       frame.angular_percentage =
-          (int8_t)(msg->body.v1_motion_command_msg.angular);
+          (int8_t)(msg->body.v1_motion_command_msg.angular * 0.22);
       frame.lateral_percentage =
           (int8_t)(msg->body.v1_motion_command_msg.lateral);
+      // printf("linear %d\n", frame.linear_percentage);
+      // printf("angular %d\n", frame.angular_percentage);
+      
       frame.reserved0 = 0;
       frame.count = count++;
       memcpy(tx_frame->data, (uint8_t *)(&frame), tx_frame->can_dlc);

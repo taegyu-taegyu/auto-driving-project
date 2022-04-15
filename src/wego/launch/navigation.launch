@@ -7,6 +7,9 @@
   
   <!-- amcl -->
   <include file="$(find scout_mini_2dnav)/launch/amcl.launch" />
+
+  <!-- auto_clear_map -->
+  <node name = "auto_clear_map" pkg="auto_clear_costmap" type="auto_clear_costmap_node"/>
   
   <!-- move base -->
   <include file="$(find scout_mini_2dnav)/launch/move_base_only.launch" />

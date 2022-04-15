@@ -1,9 +1,9 @@
 <launch>
-    <node name="map_server" pkg="map_server" type="map_server" args="$(find pathplanning)/map/all_map.yaml"/>
+    <!-- <node name="map_server" pkg="map_server" type="map_server" args="$(find pathplanning)/map/all_map.yaml"/>
 
     <node pkg="amcl" type="amcl" name="amcl" output="screen">
         <rosparam file="$(find pathplanning)/config/amcl_params.yaml" command="load"/>
-    </node>
+    </node> -->
 
     <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
         <rosparam file="$(find pathplanning)/config/move_base_params.yaml" command="load" />
