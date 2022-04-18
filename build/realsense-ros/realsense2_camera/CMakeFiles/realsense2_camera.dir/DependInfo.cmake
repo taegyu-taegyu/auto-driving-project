@@ -23,12 +23,14 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/wego/wego_ws/devel/include"
   "/home/wego/wego_ws/src/realsense-ros/realsense2_camera/include"
   "/opt/ros/melodic/include"
+  "/home/wego/wego_ws/src/ddynamic_reconfigure/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/opencv"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/wego/wego_ws/build/ddynamic_reconfigure/CMakeFiles/ddynamic_reconfigure.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

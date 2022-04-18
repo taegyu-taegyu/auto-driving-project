@@ -827,3 +827,5 @@ Linking C executable cmTC_32a2d
 make[1]: Leaving directory '/home/wego/wego_ws/build/CMakeFiles/CMakeTmp'
 
 
+The target system is: Linux - 5.4.0-107-generic - x86_64
+The host system is: Linux - 5.4.0-107-generic - x86_64

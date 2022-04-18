@@ -101,17 +101,6 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -122,6 +111,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
 
 # Special rule for the target install
 install: preinstall
@@ -166,6 +166,21 @@ preinstall/fast:
 depend:
 	cd /home/wego/wego_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
+
+# Convenience name for target.
+realsense2_camera: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
+
+.PHONY : realsense2_camera
+
+# fast build rule for target.
+realsense2_camera/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build
+.PHONY : realsense2_camera/fast
 
 # Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_gennodejs.dir/rule:
@@ -228,6 +243,21 @@ realsense2_camera_generate_messages_lisp/fast:
 .PHONY : realsense2_camera_generate_messages_lisp/fast
 
 # Convenience name for target.
+realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
+
+# Convenience name for target.
+realsense2_camera_geneus: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
+
+.PHONY : realsense2_camera_geneus
+
+# fast build rule for target.
+realsense2_camera_geneus/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/build
+.PHONY : realsense2_camera_geneus/fast
+
+# Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/rule:
 	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/rule
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_eus.dir/rule
@@ -258,94 +288,49 @@ realsense2_camera_gencpp/fast:
 .PHONY : realsense2_camera_gencpp/fast
 
 # Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
+realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-realsense2_camera_geneus: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/rule
+std_srvs_generate_messages_lisp: realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
 
-.PHONY : realsense2_camera_geneus
+.PHONY : std_srvs_generate_messages_lisp
 
 # fast build rule for target.
-realsense2_camera_geneus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_geneus.dir/build
-.PHONY : realsense2_camera_geneus/fast
+std_srvs_generate_messages_lisp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+.PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_gencfg: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+std_srvs_generate_messages_eus: realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
 
-.PHONY : dynamic_reconfigure_gencfg
+.PHONY : std_srvs_generate_messages_eus
 
 # fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
+std_srvs_generate_messages_eus/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+.PHONY : std_srvs_generate_messages_eus/fast
 
 # Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
+realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-realsense2_camera: realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/rule
+std_srvs_generate_messages_nodejs: realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
 
-.PHONY : realsense2_camera
+.PHONY : std_srvs_generate_messages_nodejs
 
 # fast build rule for target.
-realsense2_camera/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera.dir/build
-.PHONY : realsense2_camera/fast
-
-# Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
+std_srvs_generate_messages_nodejs/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+.PHONY : std_srvs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
@@ -363,34 +348,19 @@ diagnostic_msgs_generate_messages_lisp/fast:
 .PHONY : diagnostic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+std_srvs_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/rule
 
-.PHONY : dynamic_reconfigure_generate_messages_eus
+.PHONY : std_srvs_generate_messages_py
 
 # fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-diagnostic_msgs_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
-
-.PHONY : diagnostic_msgs_generate_messages_py
-
-# fast build rule for target.
-diagnostic_msgs_generate_messages_py/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
-.PHONY : diagnostic_msgs_generate_messages_py/fast
+std_srvs_generate_messages_py/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_py.dir/build
+.PHONY : std_srvs_generate_messages_py/fast
 
 # Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/rule:
@@ -406,6 +376,21 @@ realsense2_camera_generate_messages: realsense-ros/realsense2_camera/CMakeFiles/
 realsense2_camera_generate_messages/fast:
 	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages.dir/build
 .PHONY : realsense2_camera_generate_messages/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# fast build rule for target.
+std_srvs_generate_messages_cpp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+.PHONY : std_srvs_generate_messages_cpp/fast
 
 # Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
@@ -483,21 +468,6 @@ realsense2_camera_generate_messages_py/fast:
 .PHONY : realsense2_camera_generate_messages_py/fast
 
 # Convenience name for target.
-realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 .PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
@@ -511,6 +481,21 @@ diagnostic_msgs_generate_messages_nodejs: realsense-ros/realsense2_camera/CMakeF
 diagnostic_msgs_generate_messages_nodejs/fast:
 	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
 .PHONY : diagnostic_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+.PHONY : realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+diagnostic_msgs_generate_messages_py: realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+
+.PHONY : diagnostic_msgs_generate_messages_py
+
+# fast build rule for target.
+diagnostic_msgs_generate_messages_py/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make realsense-ros/realsense2_camera/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+.PHONY : diagnostic_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 realsense-ros/realsense2_camera/CMakeFiles/realsense2_camera_generate_messages_cpp.dir/rule:
@@ -663,32 +648,31 @@ help:
 	@echo "... install/local"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
+	@echo "... realsense2_camera"
 	@echo "... realsense2_camera_gennodejs"
 	@echo "... edit_cache"
 	@echo "... realsense2_camera_generate_messages_nodejs"
 	@echo "... realsense2_camera_genlisp"
 	@echo "... realsense2_camera_generate_messages_lisp"
+	@echo "... realsense2_camera_geneus"
 	@echo "... realsense2_camera_generate_messages_eus"
 	@echo "... realsense2_camera_gencpp"
-	@echo "... realsense2_camera_geneus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... realsense2_camera"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
+	@echo "... std_srvs_generate_messages_lisp"
+	@echo "... test"
+	@echo "... std_srvs_generate_messages_eus"
+	@echo "... std_srvs_generate_messages_nodejs"
 	@echo "... diagnostic_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... diagnostic_msgs_generate_messages_py"
+	@echo "... std_srvs_generate_messages_py"
 	@echo "... install"
 	@echo "... realsense2_camera_generate_messages"
+	@echo "... std_srvs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_cpp"
 	@echo "... diagnostic_msgs_generate_messages_eus"
 	@echo "... realsense2_camera_genpy"
 	@echo "... _realsense2_camera_generate_messages_check_deps_Metadata"
 	@echo "... realsense2_camera_generate_messages_py"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... diagnostic_msgs_generate_messages_nodejs"
+	@echo "... diagnostic_msgs_generate_messages_py"
 	@echo "... realsense2_camera_generate_messages_cpp"
 	@echo "... _realsense2_camera_generate_messages_check_deps_DeviceInfo"
 	@echo "... _realsense2_camera_generate_messages_check_deps_IMUInfo"

@@ -164,7 +164,7 @@ realsense2_camera_EXTERNAL_OBJECTS =
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libactionlib.so
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libmessage_filters.so
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libtf2.so
-/home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libddynamic_reconfigure.so
+/home/wego/wego_ws/devel/lib/librealsense2_camera.so: /home/wego/wego_ws/devel/lib/libddynamic_reconfigure.so
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libdiagnostic_updater.so
 /home/wego/wego_ws/devel/lib/librealsense2_camera.so: /opt/ros/melodic/lib/libroscpp.so
