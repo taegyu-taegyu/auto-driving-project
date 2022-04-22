@@ -168,6 +168,171 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+scout_msgs_generate_messages_lisp: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : scout_msgs_generate_messages_lisp
+
+# fast build rule for target.
+scout_msgs_generate_messages_lisp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/build
+.PHONY : scout_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
+
+# Convenience name for target.
+scout_msgs_gennodejs: scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
+
+.PHONY : scout_msgs_gennodejs
+
+# fast build rule for target.
+scout_msgs_gennodejs/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/build
+.PHONY : scout_msgs_gennodejs/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
+
+# Convenience name for target.
+scout_msgs_generate_messages: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
+
+.PHONY : scout_msgs_generate_messages
+
+# fast build rule for target.
+scout_msgs_generate_messages/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/build
+.PHONY : scout_msgs_generate_messages/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_nodejs: scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+std_msgs_generate_messages_nodejs/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+.PHONY : std_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
+
+# Convenience name for target.
+_scout_msgs_generate_messages_check_deps_ScoutStatus: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
+
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutStatus
+
+# fast build rule for target.
+_scout_msgs_generate_messages_check_deps_ScoutStatus/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/build
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutStatus/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_py: scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/rule
+
+.PHONY : std_msgs_generate_messages_py
+
+# fast build rule for target.
+std_msgs_generate_messages_py/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build.make scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_py.dir/build
+.PHONY : std_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+scout_msgs_generate_messages_nodejs: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : scout_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+scout_msgs_generate_messages_nodejs/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/build
+.PHONY : scout_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
+
+# Convenience name for target.
+scout_msgs_genlisp: scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
+
+.PHONY : scout_msgs_genlisp
+
+# fast build rule for target.
+scout_msgs_genlisp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/build
+.PHONY : scout_msgs_genlisp/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
+
+# Convenience name for target.
+_scout_msgs_generate_messages_check_deps_ScoutBmsStatus: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
+
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutBmsStatus
+
+# fast build rule for target.
+_scout_msgs_generate_messages_check_deps_ScoutBmsStatus/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/build
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutBmsStatus/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# fast build rule for target.
+std_msgs_generate_messages_cpp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+.PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
+
+# Convenience name for target.
+_scout_msgs_generate_messages_check_deps_ScoutMotorState: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
+
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutMotorState
+
+# fast build rule for target.
+_scout_msgs_generate_messages_check_deps_ScoutMotorState/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/build
+.PHONY : _scout_msgs_generate_messages_check_deps_ScoutMotorState/fast
+
+# Convenience name for target.
 scout_ros/scout_msgs/CMakeFiles/scout_msgs_genpy.dir/rule:
 	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_genpy.dir/rule
 .PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_genpy.dir/rule
@@ -228,34 +393,19 @@ _scout_msgs_generate_messages_check_deps_ScoutLightCmd/fast:
 .PHONY : _scout_msgs_generate_messages_check_deps_ScoutLightCmd/fast
 
 # Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
+scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-_scout_msgs_generate_messages_check_deps_ScoutMotorState: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/rule
+std_msgs_generate_messages_lisp: scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutMotorState
+.PHONY : std_msgs_generate_messages_lisp
 
 # fast build rule for target.
-_scout_msgs_generate_messages_check_deps_ScoutMotorState/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutMotorState.dir/build
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutMotorState/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
-
-# Convenience name for target.
-_scout_msgs_generate_messages_check_deps_ScoutStatus: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/rule
-
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutStatus
-
-# fast build rule for target.
-_scout_msgs_generate_messages_check_deps_ScoutStatus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutStatus.dir/build
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutStatus/fast
+std_msgs_generate_messages_lisp/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+.PHONY : std_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutDriverState.dir/rule:
@@ -286,6 +436,21 @@ scout_msgs_generate_messages_cpp: scout_ros/scout_msgs/CMakeFiles/scout_msgs_gen
 scout_msgs_generate_messages_cpp/fast:
 	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_cpp.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_cpp.dir/build
 .PHONY : scout_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule:
+	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+.PHONY : scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_eus: scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
+
+.PHONY : std_msgs_generate_messages_eus
+
+# fast build rule for target.
+std_msgs_generate_messages_eus/fast:
+	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make scout_ros/scout_msgs/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+.PHONY : std_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 scout_ros/scout_msgs/CMakeFiles/scout_msgs_gencpp.dir/rule:
@@ -332,96 +497,6 @@ scout_msgs_generate_messages_eus/fast:
 	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_eus.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_eus.dir/build
 .PHONY : scout_msgs_generate_messages_eus/fast
 
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-scout_msgs_generate_messages_lisp: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : scout_msgs_generate_messages_lisp
-
-# fast build rule for target.
-scout_msgs_generate_messages_lisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_lisp.dir/build
-.PHONY : scout_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
-
-# Convenience name for target.
-_scout_msgs_generate_messages_check_deps_ScoutBmsStatus: scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/rule
-
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutBmsStatus
-
-# fast build rule for target.
-_scout_msgs_generate_messages_check_deps_ScoutBmsStatus/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/build.make scout_ros/scout_msgs/CMakeFiles/_scout_msgs_generate_messages_check_deps_ScoutBmsStatus.dir/build
-.PHONY : _scout_msgs_generate_messages_check_deps_ScoutBmsStatus/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
-
-# Convenience name for target.
-scout_msgs_genlisp: scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/rule
-
-.PHONY : scout_msgs_genlisp
-
-# fast build rule for target.
-scout_msgs_genlisp/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_genlisp.dir/build
-.PHONY : scout_msgs_genlisp/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-scout_msgs_generate_messages_nodejs: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : scout_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-scout_msgs_generate_messages_nodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages_nodejs.dir/build
-.PHONY : scout_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
-
-# Convenience name for target.
-scout_msgs_generate_messages: scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/rule
-
-.PHONY : scout_msgs_generate_messages
-
-# fast build rule for target.
-scout_msgs_generate_messages/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_generate_messages.dir/build
-.PHONY : scout_msgs_generate_messages/fast
-
-# Convenience name for target.
-scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule:
-	cd /home/wego/wego_ws/build && $(MAKE) -f CMakeFiles/Makefile2 scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
-.PHONY : scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
-
-# Convenience name for target.
-scout_msgs_gennodejs: scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/rule
-
-.PHONY : scout_msgs_gennodejs
-
-# fast build rule for target.
-scout_msgs_gennodejs/fast:
-	cd /home/wego/wego_ws/build && $(MAKE) -f scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/build.make scout_ros/scout_msgs/CMakeFiles/scout_msgs_gennodejs.dir/build
-.PHONY : scout_msgs_gennodejs/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -434,24 +509,29 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... test"
+	@echo "... scout_msgs_generate_messages_lisp"
+	@echo "... scout_msgs_gennodejs"
+	@echo "... scout_msgs_generate_messages"
+	@echo "... std_msgs_generate_messages_nodejs"
+	@echo "... _scout_msgs_generate_messages_check_deps_ScoutStatus"
+	@echo "... std_msgs_generate_messages_py"
+	@echo "... scout_msgs_generate_messages_nodejs"
+	@echo "... scout_msgs_genlisp"
+	@echo "... _scout_msgs_generate_messages_check_deps_ScoutBmsStatus"
+	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... _scout_msgs_generate_messages_check_deps_ScoutMotorState"
 	@echo "... list_install_components"
 	@echo "... scout_msgs_genpy"
 	@echo "... _scout_msgs_generate_messages_check_deps_ScoutLightState"
 	@echo "... scout_msgs_geneus"
 	@echo "... _scout_msgs_generate_messages_check_deps_ScoutLightCmd"
-	@echo "... _scout_msgs_generate_messages_check_deps_ScoutMotorState"
-	@echo "... _scout_msgs_generate_messages_check_deps_ScoutStatus"
+	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... _scout_msgs_generate_messages_check_deps_ScoutDriverState"
 	@echo "... scout_msgs_generate_messages_cpp"
+	@echo "... std_msgs_generate_messages_eus"
 	@echo "... scout_msgs_gencpp"
 	@echo "... scout_msgs_generate_messages_py"
 	@echo "... scout_msgs_generate_messages_eus"
-	@echo "... scout_msgs_generate_messages_lisp"
-	@echo "... _scout_msgs_generate_messages_check_deps_ScoutBmsStatus"
-	@echo "... scout_msgs_genlisp"
-	@echo "... scout_msgs_generate_messages_nodejs"
-	@echo "... scout_msgs_generate_messages"
-	@echo "... scout_msgs_gennodejs"
 .PHONY : help
 
 

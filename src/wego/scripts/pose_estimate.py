@@ -3,9 +3,11 @@
 import rospy
 from geometry_msgs.msg import PoseStamped,PoseWithCovarianceStamped ,Twist
 from nav_msgs.msg import Odometry 
+import tf
 
 class Goal:
     def __init__(self):
+
         rospy.init_node("Goal")
         # self.goal_position_x = float(input())
         # self.goal_position_y = float(input())
@@ -19,15 +21,16 @@ class Goal:
         self.quaternion_w = None
         self.pos = None
 
+        # self.listener =tf.TransformListener()
         
         self.seq = None
 
-        self.covariance = []
+
         self.pose_count = 1
         self.cmd_pub = rospy.Publisher("cmd_vel",Twist,queue_size=1)
         self.pub = rospy.Publisher("/move_base_simple/goal",PoseStamped,queue_size=10)
         self.pose_pub = rospy.Publisher("/initialpose",PoseWithCovarianceStamped,queue_size=10)
-        rospy.Subscriber("/odom",Odometry,self.pose_callback)
+        rospy.Subscriber("/odom_raw",Odometry,self.pose_callback)
         rospy.Subscriber("/amcl_pose",PoseWithCovarianceStamped,self.seq_callback)
         rospy.Subscriber("cmd_vel",Twist,self.cmd_vel_callback)
         rospy.Timer(rospy.Duration(3.0),self.callback)
@@ -42,14 +45,17 @@ class Goal:
         self.seq = data.header.seq
     def pose_callback(self, data):
 
-        self.current_x = data.pose.pose.position.x
-        self.current_y = data.pose.pose.position.y
-        self.quaternion_x = data.pose.pose.orientation.x
-        self.quaternion_y = data.pose.pose.orientation.y
-        self.quaternion_z = data.pose.pose.orientation.z
-        self.quaternion_w = data.pose.pose.orientation.w
-        self.covariance = data.pose.covariance
+        self.listener =tf.TransformListener()
+        self.listener.waitForTransform('/base_link','/map',rospy.Time(),rospy.Duration(4.0))
+        (trans, rot )= self.listener.lookupTransform('/map','/base_link',rospy.Time(0))
 
+        self.current_x = trans[0]
+        self.current_y = trans[1]
+        self.quaternion_x = rot[0]
+        self.quaternion_y = rot[1]
+        self.quaternion_z = rot[2]
+        self.quaternion_w = rot[3]
+    
     def Posecallback(self,data):
 
         print("initialized")
@@ -68,11 +74,10 @@ class Goal:
         self.pos.pose.pose.orientation.z = self.quaternion_z
         self.pos.pose.pose.orientation.w =  self.quaternion_w
 
-        self.pos.pose.covariance = self.covariance
         # if self.seq != None:
             # self.pose_pub.publish(self.pos)
 
-        rospy.loginfo(self.pos)
+        # rospy.loginfo(self.pos)
         self.pose_count += 1
 
     def callback(self,event):
@@ -86,15 +91,15 @@ class Goal:
         pub_data.pose.orientation.y =  self.quaternion_y
         pub_data.pose.orientation.z = self.quaternion_z
         pub_data.pose.orientation.w =  self.quaternion_w
-        goal_xy = [[0 , -2],[2  ,0]]
+        goal_xy = [[1.0 , 14.0],[1.1  ,10]]
         
         pub_data.pose.position.x = goal_xy[self.count][0]
         pub_data.pose.position.y = goal_xy[self.count][1]
-        self.pub.publish(pub_data)
+        # self.pub.publish(pub_data)
         # print("current speed x :{0} z : {1}".format(self.vel_x,self.vel_yaw))
         # print("current goal x : {0} y : {1}".format(goal_xy[self.count][0],goal_xy[self.count][1]))
-        # print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
-        # print("x distance :{0} y distance : {1}".format(abs(self.current_x - goal_xy[self.count][0]),abs(self.current_y - goal_xy[self.count][1])))
+        print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
+        print("x distance :{0} y distance : {1}".format(abs(self.current_x - goal_xy[self.count][0]),abs(self.current_y - goal_xy[self.count][1])))
         distance = ((self.current_x - goal_xy[self.count][0])**2 +(self.current_y - goal_xy[self.count][1])**2)**0.5
         # if abs(self.current_x - goal_xy[self.count][0]) < 1 and abs(self.current_y - goal_xy[self.count][1]) < 1:
         print("distance = {}".format(distance))

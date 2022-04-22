@@ -1,7 +1,7 @@
 <launch>
 
   <node pkg="robot_pose_ekf" type="robot_pose_ekf" name="robot_pose_ekf" >
-    <param name="output_frame" value="odom_ekf"/>
+    <param name="output_frame" value=""/>
     <param name="base_footprint_frame" value="base_link"/>
     <param name="freq" value="30.0"/>
     <param name="sensor_timeout" value="1.0"/>  
@@ -14,7 +14,7 @@
   </node>
 
   <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom_ekf" args="0 0 1 0 0 0 map odom_ekf 50" />  -->
-  <node pkg="tf" type="static_transform_publisher" name="odom_ekf_to_baselink" args="0 0 1 0 0 0 odom_ekf base_link 50" />
+  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_ekf_to_baselink" args="0 0 1 0 0 0 odom_ekf base_link 50" /> -->
 
 </launch>
 

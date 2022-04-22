@@ -1,5 +1,3 @@
-
-######################### the parameters of yaml are using to robot (22.4.15) ########################
 DWAPlannerROS:
 
 # Robot Configuration Parameters
