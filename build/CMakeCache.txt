@@ -1016,6 +1016,9 @@ clear_costmap_recovery_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/clear
 //The directory containing a CMake configuration file for cmake_modules.
 cmake_modules_DIR:PATH=/opt/ros/melodic/share/cmake_modules/cmake
 
+//Dependencies for the target
+combine_grids_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_freetype;general;opencv_fuzzy;general;opencv_hdf;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
 //Value Computed by CMake
 costmap_2d_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/costmap_2d
 
@@ -1063,6 +1066,12 @@ dwa_local_planner_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/dwa_local_
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
+
+//Value Computed by CMake
+explore_lite_BINARY_DIR:STATIC=/home/wego/wego_ws/build/m-explore/explore
+
+//Value Computed by CMake
+explore_lite_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/m-explore/explore
 
 //Value Computed by CMake
 fake_localization_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/fake_localization
@@ -1260,6 +1269,9 @@ hector_trajectory_server_BINARY_DIR:STATIC=/home/wego/wego_ws/build/hector_slam/
 //Value Computed by CMake
 hector_trajectory_server_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/hector_slam/hector_trajectory_server
 
+//The directory containing a CMake configuration file for image_geometry.
+image_geometry_DIR:PATH=/opt/ros/melodic/share/image_geometry/cmake
+
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/melodic/share/image_transport/cmake
 
@@ -1334,6 +1346,12 @@ move_slow_and_clear_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboos
 
 //Value Computed by CMake
 move_slow_and_clear_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/move_slow_and_clear
+
+//Value Computed by CMake
+multirobot_map_merge_BINARY_DIR:STATIC=/home/wego/wego_ws/build/m-explore/map_merge
+
+//Value Computed by CMake
+multirobot_map_merge_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/m-explore/map_merge
 
 //Value Computed by CMake
 nav_core_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/nav_core
@@ -1851,7 +1869,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=42
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
