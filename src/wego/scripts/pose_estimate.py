@@ -29,8 +29,8 @@ class Goal:
         self.pose_count = 1
         self.cmd_pub = rospy.Publisher("cmd_vel",Twist,queue_size=1)
         self.pub = rospy.Publisher("/move_base_simple/goal",PoseStamped,queue_size=10)
-        self.pose_pub = rospy.Publisher("/initialpose",PoseWithCovarianceStamped,queue_size=10)
-        rospy.Subscriber("/odom_raw",Odometry,self.pose_callback)
+        self.pose_pub = rospy.Publisher("/initialpose",PoseWithCovarianceStamped,queue_size=1)
+        rospy.Subscriber("/odom",Odometry,self.pose_callback)
         rospy.Subscriber("/amcl_pose",PoseWithCovarianceStamped,self.seq_callback)
         rospy.Subscriber("cmd_vel",Twist,self.cmd_vel_callback)
         rospy.Timer(rospy.Duration(3.0),self.callback)
@@ -46,7 +46,7 @@ class Goal:
     def pose_callback(self, data):
 
         self.listener =tf.TransformListener()
-        self.listener.waitForTransform('/base_link','/map',rospy.Time(),rospy.Duration(4.0))
+        self.listener.waitForTransform('/base_link','/map',rospy.Time(0),rospy.Duration(4.0))
         (trans, rot )= self.listener.lookupTransform('/map','/base_link',rospy.Time(0))
 
         self.current_x = trans[0]
@@ -55,14 +55,12 @@ class Goal:
         self.quaternion_y = rot[1]
         self.quaternion_z = rot[2]
         self.quaternion_w = rot[3]
+        print(self.current_x , self.current_y)
     
-    def Posecallback(self,data):
-
-        print("initialized")
-        
+    def Posecallback(self,data):        
         self.pos = PoseWithCovarianceStamped()
         self.pos.header.seq = self.seq
-        print(self.pos.header.seq)
+
         self.pos.header.stamp = rospy.Time.now()
         self.pos.header.frame_id = "map"
 
@@ -73,12 +71,10 @@ class Goal:
         self.pos.pose.pose.orientation.y = self.quaternion_y
         self.pos.pose.pose.orientation.z = self.quaternion_z
         self.pos.pose.pose.orientation.w =  self.quaternion_w
-
-        # if self.seq != None:
-            # self.pose_pub.publish(self.pos)
+        print("initialized")
+        self.pose_pub.publish(self.pos)
 
         # rospy.loginfo(self.pos)
-        self.pose_count += 1
 
     def callback(self,event):
         # print("okay")
@@ -91,11 +87,12 @@ class Goal:
         pub_data.pose.orientation.y =  self.quaternion_y
         pub_data.pose.orientation.z = self.quaternion_z
         pub_data.pose.orientation.w =  self.quaternion_w
-        goal_xy = [[1.0 , 14.0],[1.1  ,10]]
-        
+
+        goal_xy = [[-5.0 , 6.0],[1.35  ,-17.30],[5.0,-12.0],[1.5,14.5]]
+
         pub_data.pose.position.x = goal_xy[self.count][0]
         pub_data.pose.position.y = goal_xy[self.count][1]
-        # self.pub.publish(pub_data)
+        self.pub.publish(pub_data)
         # print("current speed x :{0} z : {1}".format(self.vel_x,self.vel_yaw))
         # print("current goal x : {0} y : {1}".format(goal_xy[self.count][0],goal_xy[self.count][1]))
         print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
@@ -106,8 +103,8 @@ class Goal:
         print("goal number : {}".format(self.count+1))
         # print()
         if distance < 0.1:
-            # if self.vel_x <= 0.1 and self.vel_yaw < 0.2 :
             self.count +=1
+            self.pose_pub.publish(self.pos)
         if self.count == 7:
             self.count =0
   
