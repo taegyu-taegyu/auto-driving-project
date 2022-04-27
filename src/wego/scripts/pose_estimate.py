@@ -91,10 +91,10 @@ class Goal:
         pub_data.pose.orientation.w =  self.current_quaternion_w
 
         # goal_xy = [[-5.0 , 6.0],[1.35  ,-17.30],[5.0,-12.0],[1.5,14.5]]
-        goal_xy = [[1.06 , -17.4],[1.06,-12.2],[5.22,-14.98],[1.5,14.0],[-8.8,7.0],[-6.0,-0.8],[-6.75,-1.12]]
+        goal_xy = [[1.2896 , -17.1],[5.22,-14.98],[-0.968,14.75],[-8.8,7.0],[-6.65,-1.0]]
         pub_data.pose.position.x = goal_xy[self.count][0]
         pub_data.pose.position.y = goal_xy[self.count][1]
-        
+
         self.pub.publish(pub_data)
       
         print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
@@ -107,18 +107,20 @@ class Goal:
         print("goal number : {}".format(self.count+1))
     
 
-        if self.count == 0 and distance < 0.05 and self.vel_x == 0:
-            print("point1 arrived")
-            rospy.sleep(5.0)
-            self.count +=1
-        if self.count == 2 and distance < 0.05 and self.vel_x == 0:
-            rospy.sleep(5.0)
-            self.count +=1
-        if self.count ==1 and distance < 1.0:
-            self.count +=1
+        # if self.count == 0 and distance < 0.05 and self.vel_x == 0:
+        #     print("point1 arrived")
+        #     rospy.sleep(5.0)
+        #     self.count +=1
+        # if self.count == 2 and distance < 0.05 and self.vel_x == 0:
+        #     rospy.sleep(5.0)
+        #     self.count +=1
+        if distance < 0.1:
+            if self.count == 0:
+                rospy.sleep(5.0)
+                self.count +=1
+            
 
-        if self.count ==3 and distance < 2.0:
-            self.count +=1
+            
 
 
 
@@ -151,10 +153,12 @@ class Goal:
         elif ((self.current_x - 1.0)**2 + (self.current_y - 13.5)**2)**0.5 < 0.5:
             self.pose_pub.publish(self.pos)
             print("point6")
+            self.count += 1
             rospy.sleep(1.0)
 
         elif ((self.current_x + 5.6)**2 + (self.current_y - 14.75)**2)**0.5 < 0.5:
             self.pose_pub.publish(self.pos)
+            self.count += 1
             print("point7")
             rospy.sleep(1.0)
 

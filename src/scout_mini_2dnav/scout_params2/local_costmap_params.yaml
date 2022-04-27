@@ -10,5 +10,6 @@ local_costmap:
   rolling_window: true
   width: 6
   height: 6
-  resolution: 0.02
+  resolution: 0.01
+  footprint_padding: 0.001
   inflation_radius: 1.3
