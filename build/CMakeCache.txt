@@ -1068,10 +1068,10 @@ dwa_local_planner_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/dwa_local_
 dynamic_reconfigure_DIR:PATH=/opt/ros/melodic/share/dynamic_reconfigure/cmake
 
 //Value Computed by CMake
-explore_lite_BINARY_DIR:STATIC=/home/wego/wego_ws/build/m-explore/explore
+explore_lite_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/m-explore/explore
 
 //Value Computed by CMake
-explore_lite_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/m-explore/explore
+explore_lite_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/m-explore/explore
 
 //Value Computed by CMake
 fake_localization_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/fake_localization
@@ -1348,10 +1348,10 @@ move_slow_and_clear_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libboos
 move_slow_and_clear_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/move_slow_and_clear
 
 //Value Computed by CMake
-multirobot_map_merge_BINARY_DIR:STATIC=/home/wego/wego_ws/build/m-explore/map_merge
+multirobot_map_merge_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/m-explore/map_merge
 
 //Value Computed by CMake
-multirobot_map_merge_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/m-explore/map_merge
+multirobot_map_merge_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/navigation/m-explore/map_merge
 
 //Value Computed by CMake
 nav_core_BINARY_DIR:STATIC=/home/wego/wego_ws/build/navigation/nav_core
