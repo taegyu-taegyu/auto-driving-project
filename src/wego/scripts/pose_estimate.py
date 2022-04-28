@@ -95,7 +95,7 @@ class Goal:
         pub_data.pose.position.x = goal_xy[self.count][0]
         pub_data.pose.position.y = goal_xy[self.count][1]
 
-        self.pub.publish(pub_data)
+        # self.pub.publish(pub_data)
       
         print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
         print("current_quaternion x = {0} y = {1}, z = {2}, w = {3}".format(self.current_quaternion_x,self.current_quaternion_y,self.current_quaternion_z,self.current_quaternion_w))

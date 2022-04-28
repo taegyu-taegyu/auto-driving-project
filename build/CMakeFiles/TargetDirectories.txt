@@ -197,6 +197,13 @@
 /home/wego/wego_ws/build/scout_ros/scout_description/CMakeFiles/install/local.dir
 /home/wego/wego_ws/build/scout_ros/scout_description/CMakeFiles/rebuild_cache.dir
 /home/wego/wego_ws/build/scout_ros/scout_description/CMakeFiles/install.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/install/strip.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/edit_cache.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/list_install_components.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/test.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/install/local.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/rebuild_cache.dir
+/home/wego/wego_ws/build/slam/CMakeFiles/install.dir
 /home/wego/wego_ws/build/timed_roslaunch/CMakeFiles/install/strip.dir
 /home/wego/wego_ws/build/timed_roslaunch/CMakeFiles/list_install_components.dir
 /home/wego/wego_ws/build/timed_roslaunch/CMakeFiles/rebuild_cache.dir

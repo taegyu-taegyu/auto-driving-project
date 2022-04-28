@@ -1546,6 +1546,12 @@ scout_msgs_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/scout_ros/scout_msgs
 sensor_msgs_DIR:PATH=/opt/ros/melodic/share/sensor_msgs/cmake
 
 //Value Computed by CMake
+slam_BINARY_DIR:STATIC=/home/wego/wego_ws/build/slam
+
+//Value Computed by CMake
+slam_SOURCE_DIR:STATIC=/home/wego/wego_ws/src/slam
+
+//Value Computed by CMake
 slam_gmapping_BINARY_DIR:STATIC=/home/wego/wego_ws/build/slam_gmapping/slam_gmapping
 
 //Value Computed by CMake
@@ -1869,7 +1875,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=44
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=45
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

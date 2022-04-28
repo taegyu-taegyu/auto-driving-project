@@ -3482,6 +3482,24 @@ scout_ros/scout_description/preinstall:
 .PHONY : scout_ros/scout_description/preinstall
 
 #=============================================================================
+# Directory level rules for directory slam
+
+# Convenience name for "all" pass in the directory.
+slam/all:
+
+.PHONY : slam/all
+
+# Convenience name for "clean" pass in the directory.
+slam/clean:
+
+.PHONY : slam/clean
+
+# Convenience name for "preinstall" pass in the directory.
+slam/preinstall:
+
+.PHONY : slam/preinstall
+
+#=============================================================================
 # Directory level rules for directory timed_roslaunch
 
 # Convenience name for "all" pass in the directory.
