@@ -4038,7 +4038,7 @@ _run_tests_multirobot_map_merge_roslaunch-check_launch_experiments: cmake_check_
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge_roslaunch-check_launch_experiments/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build
 .PHONY : _run_tests_multirobot_map_merge_roslaunch-check_launch_experiments/fast
 
 #=============================================================================
@@ -4051,7 +4051,7 @@ run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch: cmake_ch
 
 # fast build rule for target.
 run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build
 .PHONY : run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch/fast
 
 #=============================================================================
@@ -4064,7 +4064,7 @@ _run_tests_multirobot_map_merge_roslaunch-check: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge_roslaunch-check/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check.dir/build
 .PHONY : _run_tests_multirobot_map_merge_roslaunch-check/fast
 
 #=============================================================================
@@ -4077,7 +4077,7 @@ run_tests_multirobot_map_merge_roslaunch-check: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_multirobot_map_merge_roslaunch-check/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check.dir/build
 .PHONY : run_tests_multirobot_map_merge_roslaunch-check/fast
 
 #=============================================================================
@@ -4090,7 +4090,7 @@ _run_tests_multirobot_map_merge_gtest_test_merging_pipeline: cmake_check_build_s
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge_gtest_test_merging_pipeline/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build
 .PHONY : _run_tests_multirobot_map_merge_gtest_test_merging_pipeline/fast
 
 #=============================================================================
@@ -4103,7 +4103,7 @@ run_tests_multirobot_map_merge_roslaunch-check_launch_experiments: cmake_check_b
 
 # fast build rule for target.
 run_tests_multirobot_map_merge_roslaunch-check_launch_experiments/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_roslaunch-check_launch_experiments.dir/build
 .PHONY : run_tests_multirobot_map_merge_roslaunch-check_launch_experiments/fast
 
 #=============================================================================
@@ -4116,7 +4116,7 @@ map_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_py/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_py.dir/build.make m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_py.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_py.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_py.dir/build
 .PHONY : map_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -4129,7 +4129,7 @@ map_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_eus/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_eus.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_eus.dir/build
 .PHONY : map_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -4142,7 +4142,7 @@ multirobot_map_merge_map05.pgm: cmake_check_build_system
 
 # fast build rule for target.
 multirobot_map_merge_map05.pgm/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/multirobot_map_merge_map05.pgm.dir/build.make m-explore/map_merge/CMakeFiles/multirobot_map_merge_map05.pgm.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_map05.pgm.dir/build.make navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_map05.pgm.dir/build
 .PHONY : multirobot_map_merge_map05.pgm/fast
 
 #=============================================================================
@@ -4155,7 +4155,7 @@ multirobot_map_merge_map00.pgm: cmake_check_build_system
 
 # fast build rule for target.
 multirobot_map_merge_map00.pgm/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/multirobot_map_merge_map00.pgm.dir/build.make m-explore/map_merge/CMakeFiles/multirobot_map_merge_map00.pgm.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_map00.pgm.dir/build.make navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_map00.pgm.dir/build
 .PHONY : multirobot_map_merge_map00.pgm/fast
 
 #=============================================================================
@@ -4168,7 +4168,7 @@ _run_tests_multirobot_map_merge_gtest: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge_gtest/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_gtest.dir/build
 .PHONY : _run_tests_multirobot_map_merge_gtest/fast
 
 #=============================================================================
@@ -4181,7 +4181,7 @@ _run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch: cmake_c
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch.dir/build
 .PHONY : _run_tests_multirobot_map_merge_roslaunch-check_launch_map_merge.launch/fast
 
 #=============================================================================
@@ -4194,7 +4194,7 @@ map_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_nodejs.dir/build
 .PHONY : map_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -4207,7 +4207,7 @@ map_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_lisp.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_lisp.dir/build
 .PHONY : map_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -4220,7 +4220,7 @@ clean_test_results_multirobot_map_merge: cmake_check_build_system
 
 # fast build rule for target.
 clean_test_results_multirobot_map_merge/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/clean_test_results_multirobot_map_merge.dir/build.make m-explore/map_merge/CMakeFiles/clean_test_results_multirobot_map_merge.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/clean_test_results_multirobot_map_merge.dir/build.make navigation/m-explore/map_merge/CMakeFiles/clean_test_results_multirobot_map_merge.dir/build
 .PHONY : clean_test_results_multirobot_map_merge/fast
 
 #=============================================================================
@@ -4233,7 +4233,7 @@ combine_grids: cmake_check_build_system
 
 # fast build rule for target.
 combine_grids/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/combine_grids.dir/build.make m-explore/map_merge/CMakeFiles/combine_grids.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/combine_grids.dir/build.make navigation/m-explore/map_merge/CMakeFiles/combine_grids.dir/build
 .PHONY : combine_grids/fast
 
 #=============================================================================
@@ -4246,7 +4246,7 @@ map_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 map_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_cpp.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_msgs_generate_messages_cpp.dir/build
 .PHONY : map_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -4259,7 +4259,7 @@ multirobot_map_merge_2011-08-09-12-22-52.pgm: cmake_check_build_system
 
 # fast build rule for target.
 multirobot_map_merge_2011-08-09-12-22-52.pgm/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/multirobot_map_merge_2011-08-09-12-22-52.pgm.dir/build.make m-explore/map_merge/CMakeFiles/multirobot_map_merge_2011-08-09-12-22-52.pgm.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_2011-08-09-12-22-52.pgm.dir/build.make navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_2011-08-09-12-22-52.pgm.dir/build
 .PHONY : multirobot_map_merge_2011-08-09-12-22-52.pgm/fast
 
 #=============================================================================
@@ -4272,7 +4272,7 @@ map_merge: cmake_check_build_system
 
 # fast build rule for target.
 map_merge/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/map_merge.dir/build.make m-explore/map_merge/CMakeFiles/map_merge.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/map_merge.dir/build.make navigation/m-explore/map_merge/CMakeFiles/map_merge.dir/build
 .PHONY : map_merge/fast
 
 #=============================================================================
@@ -4285,7 +4285,7 @@ multirobot_map_merge_2012-01-28-11-12-01.pgm: cmake_check_build_system
 
 # fast build rule for target.
 multirobot_map_merge_2012-01-28-11-12-01.pgm/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/multirobot_map_merge_2012-01-28-11-12-01.pgm.dir/build.make m-explore/map_merge/CMakeFiles/multirobot_map_merge_2012-01-28-11-12-01.pgm.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_2012-01-28-11-12-01.pgm.dir/build.make navigation/m-explore/map_merge/CMakeFiles/multirobot_map_merge_2012-01-28-11-12-01.pgm.dir/build
 .PHONY : multirobot_map_merge_2012-01-28-11-12-01.pgm/fast
 
 #=============================================================================
@@ -4298,7 +4298,7 @@ test_merging_pipeline: cmake_check_build_system
 
 # fast build rule for target.
 test_merging_pipeline/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/test_merging_pipeline.dir/build.make m-explore/map_merge/CMakeFiles/test_merging_pipeline.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/test_merging_pipeline.dir/build.make navigation/m-explore/map_merge/CMakeFiles/test_merging_pipeline.dir/build
 .PHONY : test_merging_pipeline/fast
 
 #=============================================================================
@@ -4311,7 +4311,7 @@ run_tests_multirobot_map_merge: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_multirobot_map_merge/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge.dir/build
 .PHONY : run_tests_multirobot_map_merge/fast
 
 #=============================================================================
@@ -4324,7 +4324,7 @@ run_tests_multirobot_map_merge_gtest_test_merging_pipeline: cmake_check_build_sy
 
 # fast build rule for target.
 run_tests_multirobot_map_merge_gtest_test_merging_pipeline/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest_test_merging_pipeline.dir/build
 .PHONY : run_tests_multirobot_map_merge_gtest_test_merging_pipeline/fast
 
 #=============================================================================
@@ -4337,7 +4337,7 @@ _run_tests_multirobot_map_merge: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_multirobot_map_merge/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge.dir/build.make m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge.dir/build.make navigation/m-explore/map_merge/CMakeFiles/_run_tests_multirobot_map_merge.dir/build
 .PHONY : _run_tests_multirobot_map_merge/fast
 
 #=============================================================================
@@ -4350,7 +4350,7 @@ run_tests_multirobot_map_merge_gtest: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_multirobot_map_merge_gtest/fast:
-	$(MAKE) -f m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest.dir/build.make m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest.dir/build
+	$(MAKE) -f navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest.dir/build.make navigation/m-explore/map_merge/CMakeFiles/run_tests_multirobot_map_merge_gtest.dir/build
 .PHONY : run_tests_multirobot_map_merge_gtest/fast
 
 #=============================================================================
@@ -5169,7 +5169,7 @@ explore: cmake_check_build_system
 
 # fast build rule for target.
 explore/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/explore.dir/build.make m-explore/explore/CMakeFiles/explore.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/explore.dir/build.make navigation/m-explore/explore/CMakeFiles/explore.dir/build
 .PHONY : explore/fast
 
 #=============================================================================
@@ -5182,7 +5182,7 @@ move_base_msgs_generate_messages_py: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_py/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_py.dir/build.make navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_py.dir/build
 .PHONY : move_base_msgs_generate_messages_py/fast
 
 #=============================================================================
@@ -5195,7 +5195,7 @@ _run_tests_explore_lite_roslaunch-check_launch: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_explore_lite_roslaunch-check_launch/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check_launch.dir/build.make m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check_launch.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check_launch.dir/build.make navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check_launch.dir/build
 .PHONY : _run_tests_explore_lite_roslaunch-check_launch/fast
 
 #=============================================================================
@@ -5208,7 +5208,7 @@ clean_test_results_explore_lite: cmake_check_build_system
 
 # fast build rule for target.
 clean_test_results_explore_lite/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/clean_test_results_explore_lite.dir/build.make m-explore/explore/CMakeFiles/clean_test_results_explore_lite.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/clean_test_results_explore_lite.dir/build.make navigation/m-explore/explore/CMakeFiles/clean_test_results_explore_lite.dir/build
 .PHONY : clean_test_results_explore_lite/fast
 
 #=============================================================================
@@ -5221,7 +5221,7 @@ move_base_msgs_generate_messages_nodejs: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build.make navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_nodejs.dir/build
 .PHONY : move_base_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
@@ -5234,7 +5234,7 @@ move_base_msgs_generate_messages_cpp: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_cpp/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build.make navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_cpp.dir/build
 .PHONY : move_base_msgs_generate_messages_cpp/fast
 
 #=============================================================================
@@ -5247,7 +5247,7 @@ move_base_msgs_generate_messages_eus: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_eus/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build.make navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_eus.dir/build
 .PHONY : move_base_msgs_generate_messages_eus/fast
 
 #=============================================================================
@@ -5260,7 +5260,7 @@ _run_tests_explore_lite: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_explore_lite/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/_run_tests_explore_lite.dir/build.make m-explore/explore/CMakeFiles/_run_tests_explore_lite.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite.dir/build.make navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite.dir/build
 .PHONY : _run_tests_explore_lite/fast
 
 #=============================================================================
@@ -5273,7 +5273,7 @@ run_tests_explore_lite: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_explore_lite/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/run_tests_explore_lite.dir/build.make m-explore/explore/CMakeFiles/run_tests_explore_lite.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite.dir/build.make navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite.dir/build
 .PHONY : run_tests_explore_lite/fast
 
 #=============================================================================
@@ -5286,7 +5286,7 @@ _run_tests_explore_lite_roslaunch-check: cmake_check_build_system
 
 # fast build rule for target.
 _run_tests_explore_lite_roslaunch-check/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check.dir/build.make m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check.dir/build.make navigation/m-explore/explore/CMakeFiles/_run_tests_explore_lite_roslaunch-check.dir/build
 .PHONY : _run_tests_explore_lite_roslaunch-check/fast
 
 #=============================================================================
@@ -5299,7 +5299,7 @@ move_base_msgs_generate_messages_lisp: cmake_check_build_system
 
 # fast build rule for target.
 move_base_msgs_generate_messages_lisp/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build.make navigation/m-explore/explore/CMakeFiles/move_base_msgs_generate_messages_lisp.dir/build
 .PHONY : move_base_msgs_generate_messages_lisp/fast
 
 #=============================================================================
@@ -5312,7 +5312,7 @@ run_tests_explore_lite_roslaunch-check_launch: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_explore_lite_roslaunch-check_launch/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check_launch.dir/build.make m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check_launch.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check_launch.dir/build.make navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check_launch.dir/build
 .PHONY : run_tests_explore_lite_roslaunch-check_launch/fast
 
 #=============================================================================
@@ -5325,7 +5325,7 @@ run_tests_explore_lite_roslaunch-check: cmake_check_build_system
 
 # fast build rule for target.
 run_tests_explore_lite_roslaunch-check/fast:
-	$(MAKE) -f m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check.dir/build.make m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check.dir/build
+	$(MAKE) -f navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check.dir/build.make navigation/m-explore/explore/CMakeFiles/run_tests_explore_lite_roslaunch-check.dir/build
 .PHONY : run_tests_explore_lite_roslaunch-check/fast
 
 #=============================================================================
