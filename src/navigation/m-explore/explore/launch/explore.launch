@@ -22,8 +22,8 @@
   <!-- <arg name="odom_topic" default="robot_pose_ekf/odom_combined" /> -->
   <arg name="move_forward_only" default="false"/>
 
-<!--  
-  <node pkg="gmapping" type="slam_gmapping" name="gmapping_node" output="log">
+
+  <!-- <node pkg="gmapping" type="slam_gmapping" name="gmapping_node" output="log">
     <param name="base_frame" value="base_link" />
     <param name="odom_frame" value="odom" />
     <param name="delta" value="0.01" />
@@ -37,16 +37,16 @@
     <param name="angularUpdate" value="0.05" />
     <param name="temporalUpdate" value="0.1" />
     <param name="particles" value="100" />
-  </node>
-  -->
+  </node> -->
+  
   <!-- move_base -->
   <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
     <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
     <rosparam file="$(find scout_mini_2dnav)/scout_params2/costmap_common_params_waffle_pi.yaml" command="load" ns="global_costmap" />
     <rosparam file="$(find scout_mini_2dnav)/scout_params2/costmap_common_params_waffle_pi.yaml" command="load" ns="local_costmap" />
-    <rosparam file="$(find scout_mini_2dnav)/scout_params2/local_costmap_params.yaml" command="load" />
-    <rosparam file="$(find scout_mini_2dnav)/scout_params2/global_costmap_params.yaml" command="load" />
+    <rosparam file="$(find scout_mini_2dnav)/scout_params2/local_costmap_params.yaml" command="load" /> 
+    <rosparam file="$(find scout_mini_2dnav)/scout_params2/global_costmap_params.yaml" command="load" /> 
     <rosparam file="$(find scout_mini_2dnav)/scout_params2/move_base_params.yaml" command="load" />
     <rosparam file="$(find scout_mini_2dnav)/scout_params2/dwa_local_planner_params_waffle_pi.yaml" command="load" />
     <remap from="cmd_vel" to="$(arg cmd_vel_topic)"/>
