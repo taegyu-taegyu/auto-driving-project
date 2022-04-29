@@ -531,24 +531,6 @@ clean: navigation/navigation/CMakeFiles/_catkin_empty_exported_target.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory pathplanning
-
-# Convenience name for "all" pass in the directory.
-pathplanning/all:
-
-.PHONY : pathplanning/all
-
-# Convenience name for "clean" pass in the directory.
-pathplanning/clean:
-
-.PHONY : pathplanning/clean
-
-# Convenience name for "preinstall" pass in the directory.
-pathplanning/preinstall:
-
-.PHONY : pathplanning/preinstall
-
-#=============================================================================
 # Directory level rules for directory realsense-ros/realsense2_description
 
 # Convenience name for "all" pass in the directory.

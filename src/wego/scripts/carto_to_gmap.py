@@ -1,17 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/python
+from re import T
 import rospy
 from nav_msgs.msg import OccupancyGrid
 
-# ***************
-#   OBSTACLE
+
 M = 75
-#   unknown
+
 N = 50
-#   free
-# ----0-----
-#   unknown
-# ***************
-def callback(cmap: OccupancyGrid):
+
+def callback(cmap):
     data = list(cmap.data)
     for y in range(cmap.info.height):
         for x in range(cmap.info.width):
@@ -20,14 +17,14 @@ def callback(cmap: OccupancyGrid):
                 data[i] = 100
             elif (data[i] >= 0) and (data[i] < N):  # free
                 data[i] = 0
-            else:  # unknown
+            else:  
                 data[i] = -1
     cmap.data = tuple(data)
     pub.publish(cmap)
 
 
-rospy.init_node('mapc_node', anonymous=True)
-sub = rospy.Subscriber('/cmap', OccupancyGrid, callback)
-pub = rospy.Publisher('/map', OccupancyGrid, queue_size=20)
+rospy.init_node('mapc_node', anonymous=True) 
+sub = rospy.Subscriber('/map', OccupancyGrid, callback)
+pub = rospy.Publisher('/cmap', OccupancyGrid, queue_size=20)
 
 rospy.spin()

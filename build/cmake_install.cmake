@@ -132,7 +132,6 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/wego/wego_ws/build/gtest/cmake_install.cmake")
   include("/home/wego/wego_ws/build/navigation/navigation/cmake_install.cmake")
-  include("/home/wego/wego_ws/build/pathplanning/cmake_install.cmake")
   include("/home/wego/wego_ws/build/realsense-ros/realsense2_description/cmake_install.cmake")
   include("/home/wego/wego_ws/build/slam_gmapping/slam_gmapping/cmake_install.cmake")
   include("/home/wego/wego_ws/build/scout_ros/scout_msgs/cmake_install.cmake")

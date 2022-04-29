@@ -43,13 +43,6 @@
 /home/wego/wego_ws/build/navigation/navigation/CMakeFiles/_catkin_empty_exported_target.dir
 /home/wego/wego_ws/build/navigation/navigation/CMakeFiles/rebuild_cache.dir
 /home/wego/wego_ws/build/navigation/navigation/CMakeFiles/install.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/install/strip.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/edit_cache.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/list_install_components.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/test.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/install/local.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/rebuild_cache.dir
-/home/wego/wego_ws/build/pathplanning/CMakeFiles/install.dir
 /home/wego/wego_ws/build/realsense-ros/realsense2_description/CMakeFiles/install.dir
 /home/wego/wego_ws/build/realsense-ros/realsense2_description/CMakeFiles/list_install_components.dir
 /home/wego/wego_ws/build/realsense-ros/realsense2_description/CMakeFiles/rebuild_cache.dir

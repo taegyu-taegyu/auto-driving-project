@@ -6,7 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("navigation/navigation")
-subdirs("pathplanning")
 subdirs("realsense-ros/realsense2_description")
 subdirs("slam_gmapping/slam_gmapping")
 subdirs("scout_ros/scout_msgs")
