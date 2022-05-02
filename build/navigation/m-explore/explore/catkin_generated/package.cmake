@@ -1,5 +1,5 @@
 set(_CATKIN_CURRENT_PACKAGE "explore_lite")
-set(explore_lite_VERSION "2.1.4")
+set(explore_lite_VERSION "2.1.1")
 set(explore_lite_MAINTAINER "Jiri Horner <laeqten@gmail.com>")
 set(explore_lite_PACKAGE_FORMAT "2")
 set(explore_lite_BUILD_DEPENDS "roscpp" "std_msgs" "move_base_msgs" "visualization_msgs" "geometry_msgs" "map_msgs" "nav_msgs" "actionlib_msgs" "tf" "costmap_2d" "actionlib")

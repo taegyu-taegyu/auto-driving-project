@@ -18,11 +18,11 @@ roslaunch multirobot_map_merge from_map_server.launch map1:=PATH_TO_m-explore-ex
     <remap from="map" to="/robot1/map"/>
     <remap from="map_metadata" to="/robot1/map_metadata"/>
   </node>
-  <!-- <node pkg="map_server" type="map_server" name="robot2_publisher" args="$(arg map2)" output="screen">
+  <node pkg="map_server" type="map_server" name="robot2_publisher" args="$(arg map2)" output="screen">
     <param name="frame_id" value="robot2"/>
     <remap from="map" to="/robot2/map"/>
     <remap from="map_metadata" to="/robot2/map_metadata"/>
-  </node> -->
+  </node>
 
   <node if="$(arg rviz)" pkg="rviz" type="rviz" name="rviz" args="-d $(find multirobot_map_merge)/launch/map_merge.rviz"/>
 </launch>

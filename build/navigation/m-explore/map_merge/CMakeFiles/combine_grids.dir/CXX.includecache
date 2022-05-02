@@ -29,19 +29,11 @@ opencv2/core/utility.hpp
 /home/wego/wego_ws/src/navigation/m-explore/map_merge/src/combine_grids/estimation_internal.h
 combine_grids/merging_pipeline.h
 -
-cassert
--
 opencv2/core/utility.hpp
--
-opencv2/core/version.hpp
--
-opencv2/features2d.hpp
 -
 opencv2/imgcodecs.hpp
 -
 opencv2/stitching/detail/matchers.hpp
--
-opencv2/xfeatures2d/nonfree.hpp
 -
 
 /home/wego/wego_ws/src/navigation/m-explore/map_merge/src/combine_grids/grid_compositor.cpp

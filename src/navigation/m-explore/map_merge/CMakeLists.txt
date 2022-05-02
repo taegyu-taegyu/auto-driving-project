@@ -1,10 +1,9 @@
-cmake_minimum_required(VERSION 3.1)
+cmake_minimum_required(VERSION 2.8.3)
 project(multirobot_map_merge)
 
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
   geometry_msgs
-  image_geometry
   map_msgs
   nav_msgs
   roscpp
@@ -14,13 +13,9 @@ find_package(catkin REQUIRED COMPONENTS
 find_package(Boost REQUIRED COMPONENTS thread)
 
 # OpenCV is required for merging without initial positions
-find_package(OpenCV REQUIRED)
+find_package(OpenCV 3 REQUIRED)
 if("${OpenCV_VERSION}" VERSION_LESS "3.0")
   message(FATAL_ERROR "This package needs OpenCV >= 3.0")
-endif()
-if("${OpenCV_VERSION}" VERSION_LESS "4.0")
-  message(WARNING "This package supports OpenCV 3, but some features may not be "
-    "available. Upgrade to OpenCV 4 to take advantage of all features.")
 endif()
 
 ################################################
@@ -36,18 +31,20 @@ catkin_package(
     geometry_msgs
     map_msgs
     nav_msgs
-    roscpp
     tf2_geometry_msgs
-  DEPENDS
-    OpenCV
 )
 
 ###########
 ## Build ##
 ###########
-set(CMAKE_CXX_STANDARD 14)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_EXTENSIONS OFF)
+# c++11 support required
+include(CheckCXXCompilerFlag)
+check_cxx_compiler_flag("-std=c++11" COMPILER_SUPPORTS_CXX11)
+if(COMPILER_SUPPORTS_CXX11)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+else()
+  message(FATAL_ERROR "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
+endif()
 
 ## Specify additional locations of header files
 include_directories(

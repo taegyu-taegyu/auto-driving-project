@@ -82,8 +82,8 @@ class Goal:
 
 
         # goal point 
-        goal_xy = [[1.17 , -17.1],[1.5,-11.5],[3.1,-11.5],[5.23,-15.0],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-6.95,-1.0]]
-        goal_quaternion = [[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[0.0240369741332,0.999711070197],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
+        goal_xy = [[1.17 , -17.1],[1.5,-11.5],[3.1,-11.5],[5.4,-15.0],[1.78,-11.2],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-7.20,-1.25]]
+        goal_quaternion = [[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[0.0240369741332,0.999711070197],[0.9989,-0.046640],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
 
 
         # goal
@@ -131,9 +131,12 @@ class Goal:
                 # self.pose_pub.publish(self.pos)
                 rospy.sleep(5.0)
                 self.count += 1
-        elif self.count== 5:
+        elif self.count== 6:
             if distance < 1.0:
                 self.count +=1
+        elif self.count == 7:
+            if distance < 1.0:
+                self.count +=1 
         else:
             if distance < 1.0:
                 self.count += 1

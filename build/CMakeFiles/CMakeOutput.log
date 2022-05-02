@@ -839,3 +839,22 @@ The target system is: Linux - 5.4.0-107-generic - x86_64
 The host system is: Linux - 5.4.0-109-generic - x86_64
 The target system is: Linux - 5.4.0-107-generic - x86_64
 The host system is: Linux - 5.4.0-109-generic - x86_64
+The target system is: Linux - 5.4.0-107-generic - x86_64
+The host system is: Linux - 5.4.0-109-generic - x86_64
+Performing C++ SOURCE FILE Test COMPILER_SUPPORTS_CXX11 succeeded with the following output:
+Change Dir: /home/wego/wego_ws/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8c817/fast"
+make[1]: Entering directory '/home/wego/wego_ws/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_8c817.dir/build.make CMakeFiles/cmTC_8c817.dir/build
+make[2]: Entering directory '/home/wego/wego_ws/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_8c817.dir/src.cxx.o
+/usr/bin/c++    -DCOMPILER_SUPPORTS_CXX11   -std=c++11 -o CMakeFiles/cmTC_8c817.dir/src.cxx.o -c /home/wego/wego_ws/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_8c817
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c817.dir/link.txt --verbose=1
+/usr/bin/c++   -DCOMPILER_SUPPORTS_CXX11    -rdynamic CMakeFiles/cmTC_8c817.dir/src.cxx.o  -o cmTC_8c817 
+make[2]: Leaving directory '/home/wego/wego_ws/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/wego/wego_ws/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main() { return 0; }

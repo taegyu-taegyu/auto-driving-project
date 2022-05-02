@@ -20,8 +20,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/opt/ros/melodic/share/orocos_kdl/cmake/../../../include"
-  "/usr/include/opencv"
   "/usr/include/eigen3"
+  "/usr/include/opencv"
   "/home/wego/wego_ws/src/navigation/m-explore/map_merge/include"
   "/usr/src/googletest/googletest/include"
   )
