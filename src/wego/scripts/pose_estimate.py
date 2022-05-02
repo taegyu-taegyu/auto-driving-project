@@ -82,9 +82,8 @@ class Goal:
 
 
         # goal point 
-        goal_xy = [[1.2896 , -17.1],[1.5,-12.0],[3.1,-11.5],[5.31,-14.98],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-6.95,-1.0]]
-        goal_quaternion = []
-
+        goal_xy = [[1.17 , -17.1],[1.5,-11.5],[3.1,-11.5],[5.23,-15.0],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-6.95,-1.0]]
+        goal_quaternion = [[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[0.0240369741332,0.999711070197],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
 
 
         # goal
@@ -95,8 +94,8 @@ class Goal:
         pub_data.pose.position.y = goal_xy[self.count][1]
         pub_data.pose.orientation.x = 0
         pub_data.pose.orientation.y =  0
-        pub_data.pose.orientation.z = self.current_quaternion_z
-        pub_data.pose.orientation.w =  self.current_quaternion_w
+        pub_data.pose.orientation.z = goal_quaternion[self.count][0]
+        pub_data.pose.orientation.w =  goal_quaternion[self.count][1]
 
 
         self.pub.publish(pub_data)
@@ -126,6 +125,7 @@ class Goal:
         elif self.count == 2:
             if distance < 1.0:
                 self.count += 1
+                self.pose_pub.publish(self.pos)
         elif self.count == 3 :
             if distance < 0.1 and self.vel_x == 0:
                 # self.pose_pub.publish(self.pos)
@@ -140,7 +140,7 @@ class Goal:
 
 
         # initial pose update
-        if ((self.current_x + 8.9)**2 + (self.current_y - 7.0)**2)**0.5 < 0.5:
+        if ((self.current_x + 7.4)**2 + (self.current_y - 7.0)**2)**0.5 < 0.5:
             self.pose_pub.publish(self.pos)
             print("point1") 
             rospy.sleep(2.0)

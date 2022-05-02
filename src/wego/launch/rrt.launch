@@ -1,0 +1,6 @@
+ <launch>
+    <!-- <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)"/> -->
+    <include file="$(find scout_mini_2dnav)/launch/scout_move_base.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    </include>
+</launch>
