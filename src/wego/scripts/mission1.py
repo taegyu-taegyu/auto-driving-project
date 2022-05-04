@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 
+from ast import In
 import rospy
 from geometry_msgs.msg import PoseStamped,PoseWithCovarianceStamped ,Twist
 from nav_msgs.msg import Odometry 
 import tf
+from std_msgs.msg import String
 
 class Goal:
     def __init__(self):
@@ -30,9 +32,11 @@ class Goal:
         self.cmd_pub = rospy.Publisher("cmd_vel",Twist,queue_size=1)
         self.pub = rospy.Publisher("/move_base_simple/goal",PoseStamped,queue_size = 10)
         self.pose_pub = rospy.Publisher("/initialpose",PoseWithCovarianceStamped,queue_size = 10)
+        self.goal_pub = rospy.Publisher("goal_reached",String,queue_size=10)
         rospy.Subscriber("/odom",Odometry,self.pose_setting_callback)
         rospy.Subscriber("/amcl_pose",PoseWithCovarianceStamped,self.quaternion_callback)
         rospy.Subscriber("cmd_vel",Twist,self.cmd_vel_callback)
+        
         rospy.spin()
 
 
@@ -82,10 +86,10 @@ class Goal:
 
 
         # goal point 
-        goal_xy = [[1.17 , -17.1],[1.5,-11.5],[3.1,-11.5],[5.4,-15.0],[1.78,-11.2],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-7.20,-1.25]]
-        goal_quaternion = [[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[0.0240369741332,0.999711070197],[0.9989,-0.046640],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
+        goal_xy = [[-5.8,-1.3],[0.89,-0.476],[1.17 , -17.1],[1.3,-11.5],[3.1,-11.5],[5.3,-15.0],[1.78,-11.2],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-7.0,-1.0]]
+        goal_quaternion = [[-0.714,0.6998],[-0.714,0.6998],[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[-0.748823092479,0.662769927026],[0.9989,-0.046640],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
 
-
+                                                
         # goal
         pub_data = PoseStamped()
         pub_data.header.stamp = rospy.Time.now()
@@ -98,7 +102,7 @@ class Goal:
         pub_data.pose.orientation.w =  goal_quaternion[self.count][1]
 
 
-        self.pub.publish(pub_data)
+        # self.pub.publish(pub_data)
 
         # print 
         print("currnt x :{0} y: {1}".format(self.current_x, self.current_y))
@@ -110,30 +114,45 @@ class Goal:
         print("distance = {0}".format(distance))
         print("goal number : {0}".format(self.count+1))
 
-
+        goal = String()
+        goal.data = "1"
 
         # mission 1
-
-        if self.count == 0:
+        if self.count == 2:
             if distance < 0.1:
-                self.pose_pub.publish(self.pos)
+                # clear cost map 
+                self.goal_pub.publish(goal)
+                # wait
+                rospy.loginfo("point1")
                 rospy.sleep(5.0)
                 self.count += 1
-        elif self.count == 1:
+
+                self.pose_pub.publish(self.pos)
+        elif self.count == 3:
             if distance < 1.5:
                 self.count += 1
-        elif self.count == 2:
+        elif self.count == 4:
             if distance < 1.0:
                 self.count += 1
-                self.pose_pub.publish(self.pos)
-        elif self.count == 3 :
-            if distance < 0.1 and self.vel_x == 0:
                 # self.pose_pub.publish(self.pos)
+        elif self.count == 5 :
+            if distance < 0.1 and self.vel_yaw == 0:
+                # clear cost map
+                self.goal_pub.publish(goal)
+                # wait
+                rospy.loginfo("point2")
                 rospy.sleep(5.0)
+
                 self.count += 1
-        elif self.count== 6:
+
+        elif self.count == 6:
+            if distance < 1.0:
+                self.count += 1
+
+        elif self.count== 8:
             if distance < 1.0:
                 self.count +=1
+
         elif self.count == 7:
             if distance < 1.0:
                 self.count +=1 
@@ -148,24 +167,24 @@ class Goal:
             print("point1") 
             rospy.sleep(2.0)
 
-        elif ((self.current_x + 3.8)**2 + (self.current_y + 1.0)**2)**0.5 < 0.5:
-            self.pose_pub.publish(self.pos)
-            print("point2")
-            rospy.sleep(2.0)
-        elif ((self.current_x - 1.0)**2 + (self.current_y + 6.5)**2)**0.5 < 0.5:
-            self.pose_pub.publish(self.pos)
-            print("point3")
-            rospy.sleep(2.0)
+        # elif ((self.current_x + 3.8)**2 + (self.current_y + 1.0)**2)**0.5 < 0.5:
+        #     self.pose_pub.publish(self.pos)
+        #     print("point2")
+        #     rospy.sleep(2.0)
+        # elif ((self.current_x - 1.0)**2 + (self.current_y + 6.5)**2)**0.5 < 0.5:
+        #     self.pose_pub.publish(self.pos)
+        #     print("point3")
+        #     rospy.sleep(2.0)
 
-        elif ((self.current_x - 1.3)**2 + (self.current_y + 14.0)**2)**0.5 < 0.5:
-            # self.pose_pub.publish(self.pos)
-            print("point4")
-            rospy.sleep(2.0)
+        # elif ((self.current_x - 1.3)**2 + (self.current_y + 14.0)**2)**0.5 < 0.5:
+        #     # self.pose_pub.publish(self.pos)
+        #     print("point4")
+        #     rospy.sleep(2.0)
 
-        elif ((self.current_x - 1.2)**2 + (self.current_y - 2.0)**2)**0.5 < 0.5:
-            # self.pose_pub.publish(self.pos)
-            print("point5")
-            rospy.sleep(2.0)
+        # elif ((self.current_x - 1.2)**2 + (self.current_y - 2.0)**2)**0.5 < 0.5:
+        #     # self.pose_pub.publish(self.pos)
+        #     print("point5")
+        #     rospy.sleep(2.0)
 
         elif ((self.current_x - 1.25)**2 + (self.current_y - 9.0)**2)**0.5 < 0.5:
             # self.pose_pub.publish(self.pos)

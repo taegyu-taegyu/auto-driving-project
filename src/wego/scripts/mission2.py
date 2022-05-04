@@ -4,6 +4,7 @@ import rospy
 from geometry_msgs.msg import PoseStamped,PoseWithCovarianceStamped ,Twist
 from nav_msgs.msg import Odometry 
 import tf
+from std_msgs.msg import String
 
 class Goal:
     def __init__(self):
@@ -26,7 +27,7 @@ class Goal:
         # self.listener =tf.TransformListener()
         
         self.seq = None
-
+        self.goal_pub = rospy.Publisher("goal_reached",String,queue_size=10)
         self.cmd_pub = rospy.Publisher("cmd_vel",Twist,queue_size=1)
         self.pub = rospy.Publisher("/move_base_simple/goal",PoseStamped,queue_size = 10)
         self.pose_pub = rospy.Publisher("/initialpose",PoseWithCovarianceStamped,queue_size = 10)
@@ -82,8 +83,53 @@ class Goal:
 
 
         # goal point 
-        goal_xy = [[1.17 , -17.1],[1.5,-11.5],[3.1,-11.5],[5.4,-15.0],[1.78,-11.2],[-0.968,14.75],[-8.0,7.3],[-5.7,7.16],[-7.20,-1.25]]
-        goal_quaternion = [[-0.714,0.6998],[0.69712,0.7169],[-0.52,0.8536],[0.0240369741332,0.999711070197],[0.9989,-0.046640],[self.current_quaternion_z,self.current_quaternion_w],[self.current_quaternion_z,self.current_quaternion_w],[0.00370350052555,0.999993142018],[0.999688033277,0.024976711614]]
+        goal_xy = [[1.4,11.2],[0.824962854385,-0.301981925964],[-5.86247592418,7.3302264351],[1.40595856748,11.2159350485],[-7.03,-0.94],[1.00,-13.5],[-0.29,-12.19],[-2.6,13.94],[1.49,-11.3],[4.23,-15.3]]
+
+        # currnt x :1.49659313188 y: -11.3354747947 4rkddmlwkd dkv
+        # currnt x :-5.69941851859 y: -1.2655211505 tkantlf dkvdp
+
+        # currnt x :-5.86247592418 y: 7.3302264351  point 4
+
+
+#     x: 0.824962
+#     y: -0.30198
+
+
+
+#         # currnt x :-5.69941851859 y: -1.2655211505 tkantlf dkvdp
+
+#         currnt x :1.40595856748 y: 11.2159350485   
+
+#         currnt x :0.492039823533 y: 11.1391706655 point2
+
+#         currnt x :-2.50533688622 y: 14.938261851
+
+#         currnt x :-2.67035945166 y: 13.9440043445 point1
+
+#         currnt x :1.00357917739 y: -13.5033084975 ruddb1
+
+#         currnt x :-0.139447018397 y: -13.4679528612 ruddb 2
+        
+#         currnt x :-0.29814386193 y: -12.1901362965 point 3
+
+
+#     currnt x :-7.03884007968 y: -0.941910995744 point 5
+
+
+# ^Ccurrnt x :4.23463068593 y: -15.3309724056 goal  point 
+
+
+
+
+
+
+
+
+
+        # goal reached
+        g_r = String()
+        g_r.data = "goal_reached"
+
 
 
         # goal
@@ -94,8 +140,8 @@ class Goal:
         pub_data.pose.position.y = goal_xy[self.count][1]
         pub_data.pose.orientation.x = 0
         pub_data.pose.orientation.y =  0
-        pub_data.pose.orientation.z = goal_quaternion[self.count][0]
-        pub_data.pose.orientation.w =  goal_quaternion[self.count][1]
+        pub_data.pose.orientation.z = self.current_quaternion_z
+        pub_data.pose.orientation.w =  self.current_quaternion_w
 
 
         self.pub.publish(pub_data)
@@ -112,31 +158,54 @@ class Goal:
 
 
 
-        # mission 1
+        # mission 2
 
         if self.count == 0:
             if distance < 0.1:
-                self.pose_pub.publish(self.pos)
+                self.goal_pub.publish(self.goal_pub)
                 rospy.sleep(5.0)
                 self.count += 1
+
         elif self.count == 1:
-            if distance < 1.5:
-                self.count += 1
-        elif self.count == 2:
-            if distance < 1.0:
-                self.count += 1
-                self.pose_pub.publish(self.pos)
-        elif self.count == 3 :
-            if distance < 0.1 and self.vel_x == 0:
-                # self.pose_pub.publish(self.pos)
+            if distance < 0.1:
                 rospy.sleep(5.0)
                 self.count += 1
+
+        elif self.count == 2:
+
+            if distance < 0.1:
+                rospy.sleep(5.0)
+                self.count += 1
+
+        elif self.count == 3 :
+
+            if distance < 0.1 and self.vel_yaw == 0:
+                self.goal_pub.publish(self.goal_pub)
+                rospy.sleep(5.0)
+                self.count += 1
+
+        elif self.count == 4:
+            
+            if distance < 0.1:
+                rospy.sleep(5.0)
+                self.count +=1
+
+        elif self.count == 5:
+            if distance < 0.1:
+
+                rospy.sleep(5.0)
+                self.count +=1
+
         elif self.count== 6:
             if distance < 1.0:
+                rospy.sleep(5.0)
                 self.count +=1
+
         elif self.count == 7:
             if distance < 1.0:
+                rospy.sleep(5.0)
                 self.count +=1 
+
         else:
             if distance < 1.0:
                 self.count += 1
@@ -170,12 +239,12 @@ class Goal:
         elif ((self.current_x - 1.25)**2 + (self.current_y - 9.0)**2)**0.5 < 0.5:
             # self.pose_pub.publish(self.pos)
             print("point6")
-            self.count += 1
+  
             rospy.sleep(2.0)
 
         elif ((self.current_x + 2.7)**2 + (self.current_y - 14.75)**2)**0.5 < 0.5:
             self.pose_pub.publish(self.pos)
-            self.count += 1
+  
             print("point7")
             rospy.sleep(2.0)
 

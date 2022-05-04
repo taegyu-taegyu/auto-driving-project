@@ -30,6 +30,6 @@
   </node> 
   <node name='rviz' pkg='rviz' type='rviz' args="-d $(find slam)/carto.rviz" />
 
-  <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0 0 1 0 0 0 map odom 50" /> -->
+  <!-- <node pkg="tf" type="static_transform_publisher" name="map_to_laser_f" args="0 0 1 0 0 0 map laser_f 50" /> -->
 
 </launch>
